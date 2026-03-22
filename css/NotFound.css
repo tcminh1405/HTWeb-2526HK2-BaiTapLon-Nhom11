@@ -1,0 +1,100 @@
+body {
+    background: linear-gradient(to bottom, #eff6ff, #ffffff);
+}
+
+.text-primary-base {
+    color: #2563eb;
+}
+
+.btn-primary-custom {
+    background: #93c5fd;
+    color: black;
+    transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* Animation fade up */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating image animation */
+.floating {
+    animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-10px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* Blur background */
+.blur-bg {
+    position: absolute;
+    inset: 0;
+    background: #bfdbfe;
+    opacity: 0.3;
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+/* Decorative dots */
+.dot {
+    position: absolute;
+    background: #2563eb;
+    border-radius: 50%;
+    animation: dotPulse infinite alternate;
+}
+
+@keyframes dotPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,353 @@
+/* ========== Variables & Font Setup ========== */
+:root {
+  --color-primary: #083050;
+  --color-gold: #e0a96d;
+  --color-gold-hover: #c99354;
+  --color-light: #f8f9fa;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+  --transition-smooth: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #333;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-playfair {
+  font-family: var(--font-heading);
+}
+
+/* Typography & Utilities */
+.text-dark-blue {
+  color: var(--color-primary) !important;
+}
+
+.bg-dark-blue {
+  background-color: var(--color-primary) !important;
+}
+
+.text-gold {
+  color: var(--color-gold) !important;
+}
+
+.bg-gold {
+  background-color: var(--color-gold) !important;
+}
+
+.tracking-wide {
+  letter-spacing: 2px;
+}
+
+.font-sm {
+  font-size: 0.9rem;
+}
+
+.section-padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* ========== Buttons ========== */
+.btn-gold {
+  background-color: var(--color-gold);
+  color: var(--color-primary);
+  border: 2px solid var(--color-gold);
+  transition: var(--transition-smooth);
+}
+
+.btn-gold:hover {
+  background-color: transparent;
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.btn-outline-dark-blue {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  transition: var(--transition-smooth);
+}
+
+.btn-outline-dark-blue:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-dark-blue {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: 2px solid var(--color-primary);
+  transition: var(--transition-smooth);
+}
+
+.btn-dark-blue:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+/* Hover Zoom Effect */
+.hover-zoom {
+  transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* ========== Navbar ========== */
+#mainNav {
+  transition: background-color 0.4s ease, padding 0.4s ease;
+  padding: 1.5rem 0;
+  background-color: transparent;
+}
+
+#mainNav.navbar-scrolled {
+  background-color: var(--color-primary);
+  padding: 0.8rem 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+#mainNav .nav-link {
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+#mainNav .nav-link:hover,
+#mainNav .nav-link.active {
+  color: var(--color-gold);
+}
+
+/* Indicator line on hover */
+#mainNav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--color-gold);
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s;
+}
+
+#mainNav .nav-link:hover::after,
+#mainNav .nav-link.active::after {
+  width: 80%;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat;
+  background-attachment: fixed;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(13, 27, 42, 0.4);
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* ========== Cards & Hover Effects ========== */
+.room-card {
+  transition: var(--transition-smooth);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.room-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+}
+
+.room-img {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.room-card:hover .room-img {
+  transform: scale(1.1);
+}
+
+/* ========== Services ========== */
+.service-box {
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1) !important;
+  border-color: var(--color-gold);
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(224, 169, 109, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+/* ========== Dining Section ========== */
+.dining-section {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat;
+  background-attachment: fixed;
+  padding: 120px 0;
+}
+
+.dining-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(13, 27, 42, 0.7);
+}
+
+/* ========== Gallery ========== */
+.gallery-item {
+  cursor: pointer;
+}
+
+.gallery-img {
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.05);
+}
+
+/* ========== Footer ========== */
+.footer {
+  background-color: var(--color-primary);
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.footer-link:hover {
+  color: var(--color-gold);
+  padding-left: 5px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: var(--color-gold);
+  color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+/* ========== Form Inputs ========== */
+.form-control:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 0.25rem rgba(224, 169, 109, 0.25);
+}
+
+/* ========== Animations ========== */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 {
+  transition-delay: 0.2s;
+}
+
+.delay-2 {
+  transition-delay: 0.4s;
+}
+
+.delay-3 {
+  transition-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
