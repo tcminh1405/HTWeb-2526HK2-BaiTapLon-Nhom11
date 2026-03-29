@@ -7,16 +7,16 @@
     <title>Vinpearl Luxury Nha Trang - Nghỉ Dưỡng Đẳng Cấp 5 Sao</title>
     <meta name="description"
         content="Vinpearl Luxury Nha Trang – Khu nghỉ dưỡng cao cấp 5 sao với 84 villa sang trọng bên bờ biển Nha Trang. Đặt phòng ngay để tận hưởng kỳ nghỉ hoàn hảo.">
-    <link rel="icon" type="image/svg+xml" href="assets/images/logo/lux Nha trang-02_1679990219.svg">
+    <link rel="icon" type="image/png" href="./assets/images/logo/favicon.png">
 
 
     <!-- Font Awesome & Bootstrap (offline) -->
-    <link rel="stylesheet" href="assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css">
-    <link rel="stylesheet" href="assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
 
     <!-- Custom CSS (Versioned to break cache) -->
-    <link rel="stylesheet" href="css/globalStyle.css?v=1.1">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="./css/globalStyle.css?v=1.1">
+    <link rel="stylesheet" href="./css/home.css">
 </head>
 
 <body>
@@ -43,7 +43,7 @@
                     <span class="text-white opacity-50">|</span>
                     <a href="#"
                         class="text-white text-decoration-none d-flex align-items-center gap-1 top-utility-link">
-                        <img src="assets/images/flag-vn.png" alt="VN" class="rounded-circle"
+                        <img src="./assets/images/flag-vn.png" alt="VN" class="rounded-circle"
                             style="width:15px;height:15px;object-fit:cover;"> VIE
                         <i class="fa-solid fa-chevron-down" style="font-size:0.55rem;"></i>
                     </a>
@@ -74,7 +74,7 @@
             <!-- Center: Logo -->
             <div class="nav-col nav-center">
                 <a class="d-inline-block" href="./home.html">
-                    <img src="assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Vinpearl Luxury Nha Trang"
+                    <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Vinpearl Luxury Nha Trang"
                         class="nav-logo">
                 </a>
             </div>
@@ -82,7 +82,7 @@
             <!-- Right: Desktop Links + CTA -->
             <div class="nav-col nav-right d-flex align-items-center justify-content-end gap-3 gap-xl-4">
                 <div class="d-none d-xl-flex align-items-center gap-4">
-                    <a class="nav-link px-0" href="./booking.html">Ưu đãi</a>
+                    <a class="nav-link px-0" href="./search-results.html">Ưu đãi</a>
                     <a class="nav-link px-0" href="./gallery.html">Thư viện ảnh</a>
                     <a class="nav-link px-0" href="#">VinClub</a>
                 </div>
@@ -97,7 +97,7 @@
         <div class="h-100 position-relative w-100 overflow-hidden" style="background-color: #000;">
             <video autoplay loop muted playsinline class="w-100 h-100"
                 style="object-fit: cover; position: absolute; inset: 0; z-index: 0;">
-                <source src="assets/videos/Banner Video Website Vinpearl_1743759342.mp4" type="video/mp4">
+                <source src="./assets/videos/Banner Video Website Vinpearl_1743759342.mp4" type="video/mp4">
             </video>
             <div class="hero-overlay" style="z-index: 1;"></div>
             <div class="hero-caption" style="z-index: 2; opacity: 1; animation: captionFadeUp 1s ease forwards 0.4s;">
@@ -151,50 +151,9 @@
 
                         <hr class="text-muted opacity-10 my-3">
 
-                        <!-- Phòng 1 -->
-                        <div class="mb-2">
-                            <div class="fw-medium text-secondary mb-3" style="font-size: 1rem;">Phòng 1</div>
-                            <div class="row text-center g-2">
-                                <div class="col-4">
-                                    <div class="text-muted mb-2" style="font-size: 0.85rem;">Người lớn</div>
-                                    <div class="d-flex justify-content-center align-items-center gap-2">
-                                        <button type="button" class="guest-qty-btn"
-                                            onclick="updateGuestCount('adult', -1)"><i
-                                                class="fa-solid fa-minus"></i></button>
-                                        <span class="fw-medium text-dark" id="val-adult"
-                                            style="width: 14px; text-align: center;">1</span>
-                                        <button type="button" class="guest-qty-btn"
-                                            onclick="updateGuestCount('adult', 1)"><i
-                                                class="fa-solid fa-plus"></i></button>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="text-muted mb-2" style="font-size: 0.85rem;">Trẻ em</div>
-                                    <div class="d-flex justify-content-center align-items-center gap-2">
-                                        <button type="button" class="guest-qty-btn"
-                                            onclick="updateGuestCount('child', -1)"><i
-                                                class="fa-solid fa-minus"></i></button>
-                                        <span class="fw-medium text-dark" id="val-child"
-                                            style="width: 14px; text-align: center;">0</span>
-                                        <button type="button" class="guest-qty-btn"
-                                            onclick="updateGuestCount('child', 1)"><i
-                                                class="fa-solid fa-plus"></i></button>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="text-muted mb-2" style="font-size: 0.85rem;">Em bé</div>
-                                    <div class="d-flex justify-content-center align-items-center gap-2">
-                                        <button type="button" class="guest-qty-btn"
-                                            onclick="updateGuestCount('infant', -1)"><i
-                                                class="fa-solid fa-minus"></i></button>
-                                        <span class="fw-medium text-dark" id="val-infant"
-                                            style="width: 14px; text-align: center;">0</span>
-                                        <button type="button" class="guest-qty-btn"
-                                            onclick="updateGuestCount('infant', 1)"><i
-                                                class="fa-solid fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </div>
+                        <div id="roomRowsContainer"
+                            style="max-height: 280px; overflow-y: auto; overflow-x: hidden; margin-right: -10px; padding-right: 10px;">
+                            <!-- Dynamic Content -->
                         </div>
 
                         <hr class="text-muted opacity-10 my-3">
@@ -204,9 +163,9 @@
                         </div>
                     </div>
                 </div>
-                <a href="./booking.html" class="btn-booking-search">
+                <button type="button" class="btn-booking-search" onclick="saveAndSearch()">
                     <i class="fa-solid fa-magnifying-glass me-2"></i>Tìm Phòng
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -271,7 +230,7 @@
                         <span><i class="fa-solid fa-user-group me-2 text-gold-accent"></i> 2 Người lớn</span>
                     </div>
                     <div class="d-flex align-items-center">
-                        <a href="./booking.html" class="btn-dat-ngay text-white border-0 shadow-sm">Đặt Ngay</a>
+                        <a href="./search-results.html" class="btn-dat-ngay text-white border-0 shadow-sm">Đặt Ngay</a>
                         <a href="./roomdetail.html" class="btn text-uppercase fw-bold ms-3"
                             style="color: var(--color-navy); font-size: 0.8rem; letter-spacing: 1px;">Khám Phá Căn Hộ <i
                                 class="fa-solid fa-angle-right"></i></a>
@@ -295,7 +254,7 @@
                         <span><i class="fa-solid fa-bed me-2 text-gold-accent"></i> King Bed</span>
                     </div>
                     <div class="d-flex align-items-center">
-                        <a href="./booking.html" class="btn-dat-ngay text-white border-0 shadow-sm">Đặt Ngay</a>
+                        <a href="./search-results.html" class="btn-dat-ngay text-white border-0 shadow-sm">Đặt Ngay</a>
                         <a href="./roomdetail.html" class="btn text-uppercase fw-bold ms-3"
                             style="color: var(--color-navy); font-size: 0.8rem; letter-spacing: 1px;">Khám Phá Căn Hộ <i
                                 class="fa-solid fa-angle-right"></i></a>
@@ -404,7 +363,7 @@
                             <p class="text-muted small mb-4 flex-grow-1" style="font-size: 0.95rem; line-height: 1.6;">
                                 Đặt phòng trước 30 ngày để tận hưởng kỳ nghỉ xa hoa với chi phí tiết kiệm chưa từng có.
                             </p>
-                            <a href="./booking.html"
+                            <a href="./search-results.html"
                                 class="text-uppercase fw-bold text-decoration-none text-gold-accent tracking-wide"
                                 style="font-size: 0.8rem;">Xem Chi Tiết <i class="fa-solid fa-angle-right"></i></a>
                         </div>
@@ -419,7 +378,7 @@
                             <p class="text-muted small mb-4 flex-grow-1" style="font-size: 0.95rem; line-height: 1.6;">
                                 Tình yêu thăng hoa với bữa tối riêng tư bên bờ biển cùng những đặc quyền lãng mạn cao
                                 cấp.</p>
-                            <a href="./booking.html"
+                            <a href="./search-results.html"
                                 class="text-uppercase fw-bold text-decoration-none text-gold-accent tracking-wide"
                                 style="font-size: 0.8rem;">Xem Chi Tiết <i class="fa-solid fa-angle-right"></i></a>
                         </div>
@@ -434,7 +393,7 @@
                             <p class="text-muted small mb-4 flex-grow-1" style="font-size: 0.95rem; line-height: 1.6;">
                                 Kết hợp nghỉ dưỡng 5 sao và chinh phục sân Golf tiêu chuẩn quốc tế 18 hố Vinpearl Golf
                                 Nha Trang.</p>
-                            <a href="./booking.html"
+                            <a href="./search-results.html"
                                 class="text-uppercase fw-bold text-decoration-none text-gold-accent tracking-wide"
                                 style="font-size: 0.8rem;">Xem Chi Tiết <i class="fa-solid fa-angle-right"></i></a>
                         </div>
@@ -520,7 +479,7 @@
                 <div class="row g-5">
                     <!-- Brand -->
                     <div class="col-lg-3 col-md-6">
-                        <img src="assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Vinpearl Luxury Nha Trang"
+                        <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Vinpearl Luxury Nha Trang"
                             style="height:60px;" class="mb-4">
                         <p class="footer-desc">Khu nghỉ dưỡng biển đẳng cấp quốc tế tại bán đảo Hòn Tre, Nha Trang. Mang
                             đến trải nghiệm nghỉ dưỡng hoàn hảo và không thể nào quên.</p>
@@ -597,7 +556,7 @@
     <!-- ======================== MOBILE OFFCANVAS MENU ======================== -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
         <div class="offcanvas-header" style="background-color: var(--color-primary);">
-            <img src="assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Logo" style="height:45px;">
+            <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Logo" style="height:45px;">
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                 aria-label="Close"></button>
         </div>
@@ -624,7 +583,7 @@
                 <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
                         href="./contact.html"><i class="fa-solid fa-envelope me-3 text-gold-accent"></i>Liên Hệ</a></li>
                 <li class="p-3">
-                    <a href="./booking.html" class="btn-dat-ngay d-block text-center">Đặt Phòng Ngay</a>
+                    <a href="./search-results.html" class="btn-dat-ngay d-block text-center">Đặt Phòng Ngay</a>
                 </li>
             </ul>
         </div>
@@ -660,7 +619,7 @@
                             <a href="./dinning.html"
                                 class="badge bg-light text-dark text-decoration-none p-2 px-3 border"
                                 data-bs-dismiss="modal">Nhà Hàng</a>
-                            <a href="./booking.html"
+                            <a href="./search-results.html"
                                 class="badge bg-light text-dark text-decoration-none p-2 px-3 border"
                                 data-bs-dismiss="modal">Ưu Đãi</a>
                         </div>
@@ -671,10 +630,10 @@
     </div>
 
     <!-- Bootstrap Bundle -->
-    <script src="assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom Scripts -->
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
 
     <script>
         // Set default booking dates
@@ -688,35 +647,135 @@
         document.getElementById('checkoutDate').valueAsDate = dayAfter;
 
         // Guest Selection Dropdown Logic
-        function updateGuestCount(type, delta) {
-            const valSpan = document.getElementById('val-' + type);
-            let val = parseInt(valSpan.innerText);
+        // Guest Selection Dropdown Logic
+        // --- GUEST SELECTION LOGIC (Multiple Rooms) ---
+        let roomData = [{ adults: 1, children: 0, infants: 0 }];
 
-            if (type === 'room' && val + delta < 1) return;
-            if (type === 'adult' && val + delta < 1) return;
-            if ((type === 'child' || type === 'infant') && val + delta < 0) return;
+        function updateGuestCount(type, delta, roomIdx = 0) {
+            if (type === 'room') {
+                const newVal = roomData.length + delta;
+                if (newVal < 1 || newVal > 9) return;
 
-            // Limit to max 10 for demo purposes
-            if (val + delta > 10) return;
+                if (delta > 0) {
+                    roomData.push({ adults: 1, children: 0, infants: 0 });
+                } else {
+                    roomData.pop();
+                }
+                document.getElementById('val-room').innerText = roomData.length;
+            } else {
+                const val = roomData[roomIdx][type === 'adult' ? 'adults' : type === 'child' ? 'children' : 'infants'];
+                if (type === 'adult' && val + delta < 1) return;
+                if ((type === 'child' || type === 'infant') && val + delta < 0) return;
+                if (val + delta > 9) return;
 
-            val += delta;
-            valSpan.innerText = val;
+                if (type === 'adult') roomData[roomIdx].adults += delta;
+                else if (type === 'child') roomData[roomIdx].children += delta;
+                else roomData[roomIdx].infants += delta;
+            }
 
+            renderRoomRows();
             updateGuestSummary();
+            saveSearchToLocal();
+        }
+
+        function renderRoomRows() {
+            const container = document.getElementById('roomRowsContainer');
+            container.innerHTML = roomData.map((room, idx) => `
+                <div class="mb-4">
+                    <div class="fw-medium text-secondary mb-3 d-flex justify-content-between" style="font-size: 0.95rem;">
+                        <span>Phòng ${idx + 1}</span>
+                    </div>
+                    <div class="row text-center g-2">
+                        <div class="col-4">
+                            <div class="text-muted mb-2" style="font-size: 0.8rem;">Người lớn</div>
+                            <div class="d-flex justify-content-center align-items-center gap-2">
+                                <button type="button" class="guest-qty-btn" onclick="updateGuestCount('adult', -1, ${idx})"><i class="fa-solid fa-minus"></i></button>
+                                <span class="fw-medium text-dark" style="min-width: 14px;">${room.adults}</span>
+                                <button type="button" class="guest-qty-btn" onclick="updateGuestCount('adult', 1, ${idx})"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="text-muted mb-2" style="font-size: 0.8rem;">Trẻ em</div>
+                            <div class="d-flex justify-content-center align-items-center gap-2">
+                                <button type="button" class="guest-qty-btn" onclick="updateGuestCount('child', -1, ${idx})"><i class="fa-solid fa-minus"></i></button>
+                                <span class="fw-medium text-dark" style="min-width: 14px;">${room.children}</span>
+                                <button type="button" class="guest-qty-btn" onclick="updateGuestCount('child', 1, ${idx})"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="text-muted mb-2" style="font-size: 0.8rem;">Em bé</div>
+                            <div class="d-flex justify-content-center align-items-center gap-2">
+                                <button type="button" class="guest-qty-btn" onclick="updateGuestCount('infant', -1, ${idx})"><i class="fa-solid fa-minus"></i></button>
+                                <span class="fw-medium text-dark" style="min-width: 14px;">${room.infants}</span>
+                                <button type="button" class="guest-qty-btn" onclick="updateGuestCount('infant', 1, ${idx})"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                ${idx < roomData.length - 1 ? '<hr class="text-muted opacity-10 my-3">' : ''}
+            `).join('');
+
+            // Apply scroll if > 2 rooms
+            container.style.overflowY = roomData.length > 2 ? 'auto' : 'hidden';
         }
 
         function updateGuestSummary() {
-            const rooms = document.getElementById('val-room').innerText;
-            const adults = document.getElementById('val-adult').innerText;
-            const children = parseInt(document.getElementById('val-child').innerText);
-            const infants = parseInt(document.getElementById('val-infant').innerText);
+            const totalRooms = roomData.length;
+            const totalAdults = roomData.reduce((sum, r) => sum + r.adults, 0);
+            const totalChildren = roomData.reduce((sum, r) => sum + r.children, 0);
+            const totalInfants = roomData.reduce((sum, r) => sum + r.infants, 0);
 
-            let summary = rooms + ' Phòng - ' + adults + ' Người lớn';
-            if (children > 0 || infants > 0) {
+            let summary = totalRooms + ' Phòng - ' + totalAdults + ' Người lớn';
+            if (totalChildren > 0 || totalInfants > 0) {
                 summary += ' ...';
             }
             document.getElementById('guestSummaryText').innerText = summary;
         }
+
+        function saveSearchToLocal() {
+            const searchData = {
+                hotel: "Vinpearl Luxury Nha Trang",
+                checkin: document.getElementById('checkinDate').value,
+                checkout: document.getElementById('checkoutDate').value,
+                roomData: roomData // Save the full array
+            };
+            localStorage.setItem('vp_search_data', JSON.stringify(searchData));
+        }
+
+        function saveAndSearch() {
+            saveSearchToLocal();
+            window.location.href = './search-results.html';
+        }
+
+        // Initialize from local storage if available
+        window.addEventListener('load', () => {
+            const saved = localStorage.getItem('vp_search_data');
+            if (saved) {
+                const data = JSON.parse(saved);
+                if (data.checkin) document.getElementById('checkinDate').value = data.checkin;
+                if (data.checkout) document.getElementById('checkoutDate').value = data.checkout;
+
+                if (data.roomData && Array.isArray(data.roomData)) {
+                    roomData = data.roomData;
+                } else if (data.rooms) {
+                    // Fallback for old format
+                    roomData = [];
+                    const rCount = parseInt(data.rooms) || 1;
+                    const aCount = parseInt(data.adults) || 1;
+                    const cCount = parseInt(data.children) || 0;
+                    const iCount = parseInt(data.infants) || 0;
+                    for (let i = 0; i < rCount; i++) {
+                        roomData.push({ adults: i === 0 ? aCount : 1, children: i === 0 ? cCount : 0, infants: i === 0 ? iCount : 0 });
+                    }
+                }
+
+                document.getElementById('val-room').innerText = roomData.length;
+                renderRoomRows();
+                updateGuestSummary();
+            } else {
+                renderRoomRows();
+            }
+        });
     </script>
 </body>
 

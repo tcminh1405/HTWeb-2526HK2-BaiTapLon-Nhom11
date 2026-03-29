@@ -1,0 +1,409 @@
+/* ================================================================
+   BOOKING.CSS – High-Fidelity Refinement for Vinpearl Detail
+   Refined to match search-results.html header/bar
+   ================================================================ */
+
+body {
+    background: linear-gradient(180deg, #f0f4f8 0%, #e8eef3 100%);
+    min-height: 100vh;
+    padding-top: 70px;
+    /* Match the 70px header height */
+}
+
+/* ================================================================
+   NAVBAR (White variant for Booking)
+   ================================================================ */
+/* ================================================================
+   HEADER (Centered Logo Vinpearl style)
+   ================================================================ */
+#mainNav {
+    height: 70px !important;
+    /* Exact height of home.html scrolled header */
+    display: flex;
+    align-items: center;
+    background-color: var(--color-navy) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    padding: 0 30px;
+}
+
+#mainNav.navbar-scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    height: 70px !important;
+}
+
+/* Ensure consistent logo size */
+#mainNav.navbar-scrolled .nav-logo,
+.nav-logo {
+    height: 63px !important;
+    display: block;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header-center {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-logo {
+    height: 62px;
+    display: block;
+}
+
+/* Removed navbar-scrolled .nav-logo rule to keep size constant */
+
+.hamburger-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 0;
+}
+
+.header-utility-link {
+    font-family: var(--font-montserrat);
+    font-size: 0.8rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* ================================================================
+   TOP SEARCH SUMMARY BAR
+   ================================================================ */
+/* ================================================================
+   TOP SEARCH SECTION (Harmonized with home.html)
+   ================================================================ */
+.booking-bar-wrapper {
+    position: sticky;
+    top: 70px;
+    /* Match header height perfectly */
+    z-index: 1020;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+/* Removed static sticky logic to favor JS calculation */
+
+.booking-bar-section {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.booking-bar {
+    background: #f8f5f0;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    /* overflow: hidden; REMOVED to prevent dropdown clipping */
+    position: relative;
+    z-index: 100;
+}
+
+.booking-field {
+    flex: 1;
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.booking-field:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.booking-field label {
+    display: block;
+    font-family: var(--font-montserrat);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+.booking-value,
+.booking-input {
+    font-family: var(--font-montserrat);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-navy);
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: 100%;
+    outline: none;
+}
+
+.booking-divider {
+    width: 1px;
+    height: 40px;
+    background: #e1e1e1;
+}
+
+.btn-booking-search {
+    background: #f3a436;
+    /* Vinpearl orange */
+    color: #fff;
+    border: none;
+    padding: 0 40px;
+    height: 65px;
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-booking-search:hover {
+    background: #e29325;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.summary-icon {
+    font-size: 1.25rem;
+    color: #555;
+    width: 24px;
+    text-align: center;
+}
+
+.summary-label {
+    font-family: var(--font-montserrat);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.summary-val {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-navy);
+}
+
+.btn-thay-doi {
+    border: 1px solid var(--color-gold-accent);
+    color: var(--color-gold-accent);
+    background: #fff;
+    border-radius: 20px;
+    padding: 6px 24px;
+    font-family: var(--font-montserrat);
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-thay-doi:hover {
+    background: var(--color-gold-accent);
+    color: #fff;
+}
+
+/* 3. HOTEL INFO AREA */
+.hotel-hero-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.hotel-banner-img {
+    height: 380px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hotel-details-box {
+    padding: 30px;
+}
+
+/* 4. ROOM CARDS & PACKAGES */
+.room-card-main {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.room-top-info {
+    display: flex;
+    padding: 24px;
+}
+
+.room-img-thumb {
+    width: 320px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.room-desc-right {
+    flex-grow: 1;
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* PACKAGE SECTION (DROPDOWN) */
+.package-dropdown-area {
+    background: #fafafc;
+    border-top: 1px solid #f0f0f0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.package-dropdown-area.active {
+    max-height: 2000px;
+    /* Expandable */
+    padding-bottom: 20px;
+}
+
+.package-item {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin: 15px 24px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.package-item:hover {
+    border-color: var(--color-gold);
+}
+
+.package-item.selected {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 1px var(--color-gold);
+}
+
+.pkg-info {
+    flex-grow: 1;
+}
+
+.pkg-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pkg-amenities {
+    display: flex;
+    gap: 15px;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.pkg-amenities span i {
+    color: var(--color-gold);
+    margin-right: 5px;
+}
+
+.pkg-pricing {
+    text-align: right;
+    min-width: 200px;
+}
+
+.pkg-price-orig {
+    font-size: 0.85rem;
+    color: #888;
+    text-decoration: line-through;
+}
+
+.pkg-price-member {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-navy);
+}
+
+.pkg-select-indicator {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    margin-left: 20px;
+    position: relative;
+}
+
+.package-item.selected .pkg-select-indicator {
+    border-color: var(--color-gold);
+}
+
+.package-item.selected .pkg-select-indicator::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    background: var(--color-gold);
+    border-radius: 50%;
+}
+
+/* TRIP SIDEBAR */
+.trip-sidebar-fixed {
+    position: sticky;
+    top: 150px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+    .room-top-info {
+        flex-direction: column;
+    }
+
+    .room-img-thumb {
+        width: 100%;
+        height: 220px;
+    }
+
+    .room-desc-right {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+}
