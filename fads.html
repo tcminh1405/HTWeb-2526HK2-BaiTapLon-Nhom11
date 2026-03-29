@@ -1,54 +1,356 @@
-<section id="faqs" class="py-5 section-padding">
-  <div class="container pb-5 pt-3">
-    <div class="text-center mb-5 fade-in-up">
-      <h6 class="text-gold fw-bold text-uppercase tracking-wide">
-        Hỗ Trợ Khách Hàng
-      </h6>
-      <h2 class="display-5 fw-bold text-dark-blue">Câu Hỏi Thường Gặp</h2>
-    </div>
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQs - Premier Pearl Hotel Vũng Tàu</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-    <div class="row g-4 mt-2">
-      <div class="col-md-4 fade-in-up delay-1">
-        <div class="p-4 bg-white border rounded shadow-sm h-100">
-          <h5 class="text-dark-blue fw-bold mb-3">
-            <i class="far fa-clock text-gold me-2"></i> Giờ nhận và trả phòng?
-          </h5>
-          <p class="text-muted fs-6 mb-0">
-            Giờ nhận phòng tiêu chuẩn là từ <strong>14:00</strong> và giờ trả
-            phòng là <strong>12:00</strong> trưa. Quý khách có thể yêu cầu nhận
-            phòng sớm hoặc trả trễ tùy thuộc vào tình trạng phòng trống tại thời
-            điểm lưu trú.
-          </p>
+    <style>
+      :root {
+        --color-primary: #0a1f3a;
+        --color-secondary: #c69c6d;
+        --color-secondary-hover: #af8b5b;
+        --color-text-main: #ffffff;
+        --color-text-muted: #e0e0e0;
+        --color-background-light: #f9f9f9;
+        --font-main: "Montserrat", sans-serif;
+        --font-heading: "Playfair Display", serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: var(--font-main);
+        color: #333333;
+        line-height: 1.6;
+        background-color: var(--color-background-light);
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+      } /* FAQs hẹp hơn cho dễ đọc */
+      .text-center {
+        text-align: center;
+      }
+      .text-gold {
+        color: var(--color-secondary) !important;
+      }
+      .section-padding {
+        padding: 80px 0;
+      }
+      .mb-5 {
+        margin-bottom: 40px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: var(--font-heading);
+        color: var(--color-primary);
+        font-weight: 700;
+      }
+      h2.title-main {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        color: var(--color-primary);
+      }
+      .section-subtitle {
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--color-secondary);
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      #faq-hero {
+        height: 30vh;
+        background-image: url("https://images.unsplash.com/photo-1542314831-c6a4203251f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      #faq-hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(10, 31, 58, 0.7);
+        z-index: 1;
+      }
+      #faq-hero .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: var(--color-text-main);
+      }
+      #faq-hero h1 {
+        font-size: 3rem;
+        color: var(--color-text-main);
+        margin-bottom: 10px;
+      }
+      #faq-hero p {
+        font-size: 1.1rem;
+        color: var(--color-text-muted);
+      }
+
+      .accordion-wrapper {
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+      }
+      .accordion-item {
+        border-bottom: 1px solid #e0e0e0;
+      }
+      .accordion-item:last-child {
+        border-bottom: none;
+      }
+
+      .accordion-header {
+        padding: 25px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+      .accordion-header:hover {
+        background-color: rgba(198, 156, 109, 0.05);
+      }
+      .accordion-header h4 {
+        font-family: var(--font-main);
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333333;
+        margin-bottom: 0;
+      }
+      .accordion-header .accordion-icon {
+        font-size: 1rem;
+        color: var(--color-primary);
+        transition: transform 0.3s ease;
+      }
+
+      .accordion-item.active .accordion-header {
+        background-color: var(--color-background-light);
+      }
+      .accordion-item.active .accordion-header h4 {
+        color: var(--color-primary);
+        font-weight: 700;
+      }
+      .accordion-item.active .accordion-header .accordion-icon {
+        transform: rotate(180deg);
+        color: var(--color-secondary);
+      }
+
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 30px;
+        transition: all 0.5s cubic-bezier(0, 1, 0, 1); /* Hiệu ứng mở mượt */
+      }
+      .accordion-content p {
+        color: #555555;
+        font-size: 1rem;
+        padding-bottom: 25px;
+        line-height: 1.7;
+      }
+      .accordion-content .faq-category {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: var(--color-secondary);
+        font-weight: 600;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .accordion-item.active {
+        border-left: 4px solid var(--color-secondary);
+      }
+      .accordion-item {
+        border-left: 4px solid transparent;
+        transition: border-left 0.3s ease;
+      }
+
+      @media (max-width: 768px) {
+        h2.title-main {
+          font-size: 2.2rem;
+        }
+        #faq-hero h1 {
+          font-size: 2.5rem;
+        }
+        .accordion-header {
+          padding: 20px;
+        }
+        .accordion-content {
+          padding: 0 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="faq-hero">
+      <div class="hero-content">
+        <span class="section-subtitle">Hỗ Trợ</span>
+        <h1>Câu Hỏi Thường Gặp</h1>
+        <p>Giải đáp nhanh chóng các thắc mắc phổ biến nhất.</p>
+      </div>
+    </section>
+
+    <section id="faq-section" class="section-padding">
+      <div class="container">
+        <div class="form-title text-center mb-5">
+          <span class="section-subtitle">FAQs</span>
+          <h2 class="title-main">Thông Tin Kỳ Nghỉ</h2>
+        </div>
+
+        <div class="accordion-wrapper">
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <h4>Tôi có thể nhận phòng lúc mấy giờ?</h4>
+              <div class="accordion-icon">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <span class="faq-category">Giờ Nhận/Trả Phòng</span>
+              <p>
+                Giờ nhận phòng tiêu chuẩn là từ 14:00. Chúng tôi có thể hỗ trợ
+                nhận phòng sớm nếu phòng trống, vui lòng liên hệ trực tiếp với
+                chúng tôi để được tư vấn.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h4>Khách sạn có cung cấp dịch vụ xe đưa đón sân bay không?</h4>
+              <div class="accordion-icon">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <span class="faq-category">Dịch Vụ</span>
+              <p>
+                Có, Premier Pearl cung cấp dịch vụ xe riêng đưa đón sân bay với
+                chi phí phụ phí. Bạn có thể đặt dịch vụ này khi đặt phòng hoặc
+                liên hệ trực tiếp.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h4>Hồ bơi vô cực có mở cửa cho khách ngoài không?</h4>
+              <div class="accordion-icon">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <span class="faq-category">Tiện Ích</span>
+              <p>
+                Hồ bơi vô cực của chúng tôi chủ yếu phục vụ cho khách lưu trú.
+                Khách ngoài có thể mua vé để sử dụng các tiện ích khác.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h4>Khách sạn có bãi đậu xe an toàn không?</h4>
+              <div class="accordion-icon">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <span class="faq-category">Tiện Ích</span>
+              <p>
+                Vâng, khách sạn có bãi đậu xe riêng an toàn và miễn phí cho
+                khách lưu trú.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h4>Tôi có cần đặt bàn trước tại nhà hàng không?</h4>
+              <div class="accordion-icon">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <span class="faq-category">Ẩm Thực</span>
+              <p>
+                Đặt bàn trước luôn được khuyến khích, đặc biệt là vào giờ cao
+                điểm, để đảm bảo bạn có chỗ ngồi tốt nhất.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="col-md-4 fade-in-up delay-2">
-        <div class="p-4 bg-white border rounded shadow-sm h-100">
-          <h5 class="text-dark-blue fw-bold mb-3">
-            <i class="fas fa-paw text-gold me-2"></i> Khách sạn có cho phép mang
-            theo thú cưng không?
-          </h5>
-          <p class="text-muted fs-6 mb-0">
-            Để đảm bảo không gian nghỉ dưỡng yên tĩnh và thoải mái cho tất cả
-            khách hàng, Premier Pearl hiện tại <strong>chưa hỗ trợ</strong> việc
-            mang theo vật nuôi vào khuôn viên khách sạn.
-          </p>
-        </div>
-      </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const accordionHeaders = document.querySelectorAll(".accordion-header");
 
-      <div class="col-md-4 fade-in-up delay-3">
-        <div class="p-4 bg-white border rounded shadow-sm h-100">
-          <h5 class="text-dark-blue fw-bold mb-3">
-            <i class="fas fa-swimmer text-gold me-2"></i> Dịch vụ tiện ích bao
-            gồm những gì?
-          </h5>
-          <p class="text-muted fs-6 mb-0">
-            Giá phòng đã bao gồm bữa sáng buffet tiêu chuẩn, truy cập Wi-Fi tốc
-            độ cao, sử dụng phòng Gym và đặc biệt là đặc quyền sử dụng hồ bơi vô
-            cực ngắm toàn cảnh biển Vũng Tàu.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        accordionHeaders.forEach((header) => {
+          header.addEventListener("click", function () {
+            const item = this.parentElement;
+            const content = this.nextElementSibling;
+            const isActive = item.classList.contains("active");
+
+            // Đóng tất cả các item khác
+            document
+              .querySelectorAll(".accordion-item")
+              .forEach((otherItem) => {
+                if (otherItem !== item) {
+                  otherItem.classList.remove("active");
+                  otherItem.querySelector(
+                    ".accordion-content",
+                  ).style.maxHeight = null;
+                }
+              });
+
+            if (!isActive) {
+              item.classList.add("active");
+              content.style.maxHeight = content.scrollHeight + "px"; // Mở mượt theo chiều cao nội dung
+            } else {
+              item.classList.remove("active");
+              content.style.maxHeight = null; // Đóng mượt
+            }
+          });
+        });
+
+        const defaultActive = document.querySelector(
+          ".accordion-item.active .accordion-content",
+        );
+        if (defaultActive) {
+          defaultActive.style.maxHeight = defaultActive.scrollHeight + "px";
+        }
+      });
+    </script>
+  </body>
+</html>

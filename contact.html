@@ -1,38 +1,398 @@
-<section id="about" class="py-5 section-padding">
-  <div class="container pb-5 pt-3">
-    <div class="row align-items-center">
-      <div class="col-lg-6 mb-4 mb-lg-0 fade-in-up">
-        <div class="position-relative">
-          <img
-            src="https://images.unsplash.com/photo-1542314831-c6a4203251f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-            alt="About Premier Pearl"
-            class="img-fluid rounded shadow-lg w-100"
-          />
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên Hệ - Premier Pearl Hotel Vũng Tàu</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --color-primary: #0a1f3a;
+        --color-secondary: #c69c6d;
+        --color-secondary-hover: #af8b5b;
+        --color-text-main: #ffffff;
+        --color-text-muted: #e0e0e0;
+        --color-background-light: #f9f9f9;
+        --font-main: "Montserrat", sans-serif;
+        --font-heading: "Playfair Display", serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: var(--font-main);
+        color: #333333;
+        line-height: 1.6;
+        background-color: #ffffff;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+      .col {
+        padding: 0 15px;
+        flex: 1;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-gold {
+        color: var(--color-secondary) !important;
+      }
+      .section-padding {
+        padding: 80px 0;
+      }
+      .mb-4 {
+        margin-bottom: 24px;
+      }
+      .mb-5 {
+        margin-bottom: 40px;
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: var(--font-heading);
+        color: var(--color-primary);
+        font-weight: 700;
+      }
+      h2.title-main {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        color: var(--color-primary);
+      }
+      .section-subtitle {
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--color-secondary);
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 14px 40px;
+        font-family: var(--font-main);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+      }
+      .btn-filled-gold {
+        background-color: var(--color-secondary);
+        color: var(--color-text-main);
+        border: none;
+        cursor: pointer;
+      }
+      .btn-filled-gold:hover {
+        background-color: var(--color-secondary-hover);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(198, 156, 109, 0.3);
+      }
+
+      /* Banner Section (Contact Hero) */
+      #contact-hero {
+        height: 40vh;
+        background-image: url("https://images.unsplash.com/photo-1542314831-c6a4203251f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      #contact-hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(10, 31, 58, 0.7);
+        z-index: 1;
+      }
+      #contact-hero .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: var(--color-text-main);
+      }
+      #contact-hero h1 {
+        font-size: 3.5rem;
+        color: var(--color-text-main);
+        margin-bottom: 10px;
+      }
+      #contact-hero p {
+        font-size: 1.1rem;
+        color: var(--color-text-muted);
+      }
+
+      .contact-info-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 60px;
+      }
+      .info-card {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        border: 1px solid #e0e0e0;
+        transition: all 0.3s ease;
+      }
+      .info-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--color-secondary);
+      }
+      .info-card .icon-box {
+        background-color: var(--color-background-light);
+        color: var(--color-secondary);
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        font-size: 2rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+      .info-card h4 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+      }
+      .info-card p {
+        color: #666666;
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
+      .info-card a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .info-card a:hover {
+        color: var(--color-secondary);
+      }
+
+      #contact-form-section {
+        background-color: var(--color-background-light);
+      }
+      .contact-form-wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 60px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+      .form-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .form-title h3 {
+        font-size: 2.2rem;
+      }
+
+      .luxury-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+      .luxury-form .col-full {
+        grid-column: 1 / -1;
+      }
+      .form-group {
+        position: relative;
+      }
+
+      .luxury-form input,
+      .luxury-form textarea {
+        width: 100%;
+        padding: 15px 5px;
+        border: none;
+        border-bottom: 2px solid #e0e0e0;
+        font-family: var(--font-main);
+        font-size: 1rem;
+        color: #333333;
+        background: transparent;
+        transition: border-color 0.3s ease;
+      }
+
+      .luxury-form input:focus,
+      .luxury-form textarea:focus {
+        outline: none;
+        border-color: var(--color-secondary);
+      }
+
+      .luxury-form label {
+        position: absolute;
+        top: 15px;
+        left: 5px;
+        color: #999999;
+        font-size: 1rem;
+        font-weight: 400;
+        transition: all 0.3s ease;
+        pointer-events: none;
+      }
+
+      .luxury-form input:focus ~ label,
+      .luxury-form input:valid ~ label,
+      .luxury-form textarea:focus ~ label,
+      .luxury-form textarea:valid ~ label {
+        top: -10px;
+        left: 0;
+        color: var(--color-secondary);
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .luxury-form textarea {
+        height: 120px;
+        resize: none;
+      }
+
+      .map-section {
+        height: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        h2.title-main {
+          font-size: 2.2rem;
+        }
+        #contact-hero h1 {
+          font-size: 2.5rem;
+        }
+        .contact-info-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .contact-form-wrapper {
+          padding: 40px 20px;
+        }
+        .luxury-form {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="contact-hero">
+      <div class="hero-content">
+        <span class="section-subtitle">Liên Hệ</span>
+        <h1>Kết Nối Với Chúng Tôi</h1>
+        <p>
+          Chúng tôi luôn sẵn sàng hỗ trợ để mang đến cho bạn kỳ nghỉ hoàn hảo
+          nhất.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact-info" class="section-padding">
+      <div class="container">
+        <div class="contact-info-grid text-center mb-5">
+          <div class="info-card">
+            <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+            <h4>Địa Chỉ</h4>
+            <p>123 Ocean Drive, Vũng Tàu, Việt Nam</p>
+          </div>
+          <div class="info-card">
+            <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+            <h4>Điện Thoại</h4>
+            <p><a href="tel:+84123456789">+84 123 456 789</a></p>
+          </div>
+          <div class="info-card">
+            <div class="icon-box"><i class="fas fa-envelope"></i></div>
+            <h4>Email</h4>
+            <p>
+              <a href="mailto:info@premierpearl.com">info@premierpearl.com</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="map-section">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15705.545806614486!2d107.085038!3d10.354013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31756f7f3a9e2db3%3A0xc3f8e583f72153b!2zMTIzIMSQxrDhu51uZyBUaHXhuqduIFZp4buHdCwgVnA!5e0!3m2!1svi!2s!4v1688640000000"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
-      <div class="col-lg-6 px-lg-5 fade-in-up delay-1">
-        <h6 class="text-gold fw-bold text-uppercase mb-2 tracking-wide">
-          Về Chúng Tôi
-        </h6>
-        <h2 class="display-5 fw-bold text-dark-blue mb-4">
-          Khách Sạn 5 Sao Đẳng Cấp Xuyên Lục Địa
-        </h2>
-        <p class="text-muted fs-5 lh-lg mb-4">
-          Nằm ngay bờ biển xinh đẹp của thành phố Vũng Tàu, Premier Pearl mang
-          đến trải nghiệm nghỉ dưỡng hoàn hảo hòa quyện giữa không gian thiên
-          nhiên tuyệt mỹ và dịch vụ đẳng cấp thế giới.
-        </p>
-        <p class="text-muted fs-5 lh-lg mb-4">
-          Chúng tôi tự hào cung cấp các tiện ích bậc nhất như hồ bơi vô cực, nhà
-          hàng hải sản cao cấp và không gian phòng nghỉ sang trọng, được thiết
-          kế tinh tế với tầm nhìn ôm trọn đại dương.
-        </p>
-        <a
-          href="Services.html"
-          class="btn btn-outline-dark btn-lg rounded-pill px-4 mt-2"
-          >Khám phá dịch vụ</a
-        >
+    </section>
+
+    <section id="contact-form-section" class="section-padding">
+      <div class="container">
+        <div class="contact-form-wrapper">
+          <div class="form-title">
+            <span class="section-subtitle">Gửi Yêu Cầu</span>
+            <h3>Chúng Tôi Sẵn Sàng Phục Vụ</h3>
+          </div>
+
+          <form action="#" method="POST" class="luxury-form">
+            <div class="form-group">
+              <input type="text" id="name" name="name" required />
+              <label for="name">Họ và Tên</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required />
+              <label for="email">Email Của Bạn</label>
+            </div>
+            <div class="form-group col-full">
+              <input type="text" id="subject" name="subject" required />
+              <label for="subject">Tiêu đề (Chủ đề)</label>
+            </div>
+            <div class="form-group col-full">
+              <textarea id="message" name="message" required></textarea>
+              <label for="message">Nội dung tin nhắn</label>
+            </div>
+            <div class="form-group col-full text-center mt-4">
+              <button
+                type="submit"
+                class="btn btn-filled-gold rounded-pill px-5 fw-bold"
+              >
+                Gửi Tin Nhắn
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+  </body>
+</html>
