@@ -8,10 +8,19 @@ body {
 
 .terms-content p,
 .terms-content li {
-    font-size: 15px;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.content-box p,
+.content-box li,
+.content-box div.text-justify,
+.content-box td {
+    font-size: 14px;
+    color: #555;
+    font-weight: 400;
 }
 
 .breadcrumb-link {
@@ -81,6 +90,7 @@ body {
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    color: #555;
 }
 
 .cursor-pointer {
