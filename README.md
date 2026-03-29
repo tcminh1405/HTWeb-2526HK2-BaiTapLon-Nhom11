@@ -1,6 +1,6 @@
 # HTWeb-2526HK2-BaiTapLon-Nhom11
 
-## 🏨 Premier Pearl Hotel Vũng Tàu - Luxury Experience
+## 🏨 Vinpearl Luxury Nha Trangu - Luxury Experience
 
 Final term project for Web System / Web Programming course (Academic Year 2025-2026, Semester 2).
 Topic: Build a hotel introduction and online booking website.
@@ -8,7 +8,7 @@ Topic: Build a hotel introduction and online booking website.
 **Team**: Group 11
 
 ### 📑 Overview
-The **Premier Pearl Hotel Vũng Tàu** website is designed with a modern and luxurious style (Luxury Experience), providing an optimal user experience for exploring information and booking hotel rooms. The interface is user-friendly and fully responsive across all devices.
+The **Vinpearl Luxury Nha Trangu** website is designed with a modern and luxurious style (Luxury Experience), providing an optimal user experience for exploring information and booking hotel rooms. The interface is user-friendly and fully responsive across all devices.
 
 ### ✨ Main Features & Pages
 - **Home (`index.html` / `home.html`)**: Hotel overview, video banner, short introduction.
@@ -89,6 +89,6 @@ Follow conventional commits:
 | **Phan Minh Quân** | Team member| [@quan12032006](https://github.com/quan-12032006) |
 
 ## Source Reference:
-Get ideas from [Premier Pearl Hotel Vũng Tàu](https://premierpearlhotel.vn/) for reference purposes only and not for business purposes.
+Get ideas from [Vinpearl Luxury Nha Trang](https://vinpearl.com/vi/hotels/vinpearl-luxury-nha-trang) for reference purposes only and not for business purposes.
 ---
-*© 2026 Premier Pearl Hotel Vũng Tàu Project - Group 11.*
+*© 2026 Vinpearl Luxury Nha Trang Project - Group 11.*

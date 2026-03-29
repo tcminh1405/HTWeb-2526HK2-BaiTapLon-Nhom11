@@ -19,27 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', onScroll);
 
     // 2. Smooth Scrolling for Anchor Links
-    document.querySelectorAll('a.nav-link, a.btn').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            if (href.startsWith('#')) {
-                e.preventDefault();
+            if (href && href.startsWith('#') && href.length > 1) {
                 const target = document.querySelector(href);
                 if (target) {
-                    const navbarHeight = navbar.offsetHeight;
+                    e.preventDefault();
+                    const navbarHeight = navbar ? navbar.offsetHeight : 80;
                     const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Collapse mobile menu if open
-                    const navbarCollapse = document.getElementById('navbarResponsive');
-                    if (navbarCollapse.classList.contains('show')) {
-                        const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
-                        bsCollapse.hide();
-                    }
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
                 }
             }
         });

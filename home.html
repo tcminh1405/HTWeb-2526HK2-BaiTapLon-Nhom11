@@ -4,455 +4,720 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khách sạn Premier Pearl Vũng Tàu - Luxury Experience</title>
+    <title>Vinpearl Luxury Nha Trang - Nghỉ Dưỡng Đẳng Cấp 5 Sao</title>
+    <meta name="description"
+        content="Vinpearl Luxury Nha Trang – Khu nghỉ dưỡng cao cấp 5 sao với 84 villa sang trọng bên bờ biển Nha Trang. Đặt phòng ngay để tận hưởng kỳ nghỉ hoàn hảo.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo/lux Nha trang-02_1679990219.svg">
 
-    <!-- Google Fonts: Playfair Display + Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
 
-    <!-- Offline Font Awesome & Bootstrap -->
+    <!-- Font Awesome & Bootstrap (offline) -->
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css">
     <link rel="stylesheet" href="assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/globalStyle.css">
+    <!-- Custom CSS (Versioned to break cache) -->
+    <link rel="stylesheet" href="css/globalStyle.css?v=1.1">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70">
+<body>
 
-    <!-- Header / Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand text-gold fs-3 fw-bold" href="#hero">
-                Premier Pearl
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto py-4 py-lg-0 align-items-center">
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="#hero">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="#rooms">Rooms</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="#dining">Dining</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="#contact">Contact</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-gold rounded-pill px-4 text-dark fw-bold"
-                            href="#contact">Book Now</a></li>
-                </ul>
+    <!-- ======================== NAVBAR ======================== -->
+    <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="mainNav">
+
+        <!-- Top Utility Bar -->
+        <div class="top-utility w-100">
+            <div class="container-fluid px-4 px-xl-5 d-flex align-items-center justify-content-between">
+                <a href="./index.html"
+                    class="text-white text-decoration-none d-flex align-items-center gap-2 top-utility-link">
+                    <i class="fa-solid fa-arrow-left-long"></i> Quay lại trang chủ
+                </a>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#searchModal"
+                        class="text-white text-decoration-none top-utility-link">
+                        <i class="fa-solid fa-magnifying-glass me-1"></i> Tìm kiếm
+                    </a>
+                    <a href="./login.html"
+                        class="text-white text-decoration-none d-flex align-items-center gap-1 top-utility-link">
+                        Đăng nhập <i class="fa-solid fa-chevron-right" style="font-size:0.55rem;"></i>
+                    </a>
+                    <span class="text-white opacity-50">|</span>
+                    <a href="#"
+                        class="text-white text-decoration-none d-flex align-items-center gap-1 top-utility-link">
+                        <img src="assets/images/flag-vn.png" alt="VN" class="rounded-circle"
+                            style="width:15px;height:15px;object-fit:cover;"> VIE
+                        <i class="fa-solid fa-chevron-down" style="font-size:0.55rem;"></i>
+                    </a>
+                </div>
             </div>
+        </div>
+
+        <!-- Main Nav Row -->
+        <div class="navbar-main container-fluid px-4 px-xl-5">
+
+            <!-- Left: Hamburger + Desktop Links -->
+            <div class="nav-col nav-left d-flex align-items-center">
+                <button class="btn text-white p-0 shadow-none d-xl-none me-3" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                    <i class="fa-solid fa-bars" style="font-size:1.3rem;"></i>
+                </button>
+                <button class="btn text-white p-0 shadow-none d-none d-xl-flex me-4" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                    <i class="fa-solid fa-bars" style="font-size:1.15rem;"></i>
+                </button>
+                <div class="d-none d-xl-flex align-items-center gap-4">
+                    <a class="nav-link px-0" href="./rooms.html">Khách sạn</a>
+                    <a class="nav-link px-0" href="./rooms.html">Các hạng phòng</a>
+                    <a class="nav-link px-0" href="./dinning.html">Ẩm thực</a>
+                </div>
+            </div>
+
+            <!-- Center: Logo -->
+            <div class="nav-col nav-center">
+                <a class="d-inline-block" href="./home.html">
+                    <img src="assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Vinpearl Luxury Nha Trang"
+                        class="nav-logo">
+                </a>
+            </div>
+
+            <!-- Right: Desktop Links + CTA -->
+            <div class="nav-col nav-right d-flex align-items-center justify-content-end gap-3 gap-xl-4">
+                <div class="d-none d-xl-flex align-items-center gap-4">
+                    <a class="nav-link px-0" href="./booking.html">Ưu đãi</a>
+                    <a class="nav-link px-0" href="./gallery.html">Thư viện ảnh</a>
+                    <a class="nav-link px-0" href="#">VinClub</a>
+                </div>
+                <a class="btn-dat-ngay" href="./booking.html">Đặt Ngay</a>
+            </div>
+
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero d-flex align-items-center justify-content-center text-center fade-in" id="hero">
-        <div class="hero-overlay"></div>
-        <div class="container position-relative z-index-1">
-            <h1 class="text-white display-2 fw-bold mb-3 text-shadow">Luxury Beach Hotel Experience</h1>
-            <p class="text-white fs-4 mb-5 text-shadow">Trải nghiệm nghỉ dưỡng cao cấp ven biển Vũng Tàu</p>
-            <a class="btn btn-gold btn-lg rounded-pill px-5 py-3 fw-bold shadow-sm hover-zoom" href="#rooms">Explore
-                Now</a>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="py-5 section-padding">
-        <div class="container pb-5 pt-3">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 mb-4 mb-lg-0 fade-in-up">
-                    <div class="position-relative">
-                        <img src="https://images.unsplash.com/photo-1542314831-c6a4203251f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="About Premier Pearl" class="img-fluid rounded shadow-lg w-100">
-                    </div>
-                </div>
-                <div class="col-lg-6 px-lg-5 fade-in-up delay-1">
-                    <h6 class="text-gold fw-bold text-uppercase mb-2 tracking-wide">Về Chúng Tôi</h6>
-                    <h2 class="display-5 fw-bold text-dark-blue mb-4">Khách Sạn 5 Sao Đẳng Cấp Xuyên Lục Địa</h2>
-                    <p class="text-muted fs-5 lh-lg mb-4">
-                        Nằm ngay bờ biển xinh đẹp của thành phố Vũng Tàu, Premier Pearl mang đến trải nghiệm nghỉ dưỡng
-                        hoàn hảo hòa quyện giữa không gian thiên nhiên tuyệt mỹ và dịch vụ đẳng cấp thế giới.
-                        Chúng tôi tự hào cung cấp các tiện ích bậc nhất như hồ bơi vô cực, nhà hàng hải sản cao cấp và
-                        không gian sang trọng vượt thời gian.
-                    </p>
-                    <a href="#services" class="btn btn-outline-dark-blue btn-lg rounded-pill px-4">Khám phá dịch vụ</a>
-                </div>
+    <!-- ======================== HERO VIDEO BANNER ======================== -->
+    <section class="hero-slider" id="hero">
+        <div class="h-100 position-relative w-100 overflow-hidden" style="background-color: #000;">
+            <video autoplay loop muted playsinline class="w-100 h-100"
+                style="object-fit: cover; position: absolute; inset: 0; z-index: 0;">
+                <source src="assets/videos/Banner Video Website Vinpearl_1743759342.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay" style="z-index: 1;"></div>
+            <div class="hero-caption" style="z-index: 2; opacity: 1; animation: captionFadeUp 1s ease forwards 0.4s;">
+                <h1 class="hero-title">Vinpearl Luxury Nha Trang</h1>
+                <span class="hero-sub">Nha Trang · Việt Nam</span>
             </div>
         </div>
     </section>
 
-    <!-- Rooms Section -->
-    <section id="rooms" class="py-5 bg-light section-padding">
-        <div class="container py-4">
-            <div class="text-center mb-5 fade-in-up">
-                <h6 class="text-gold fw-bold text-uppercase tracking-wide">Phòng Nghỉ & Suite</h6>
-                <h2 class="display-5 fw-bold text-dark-blue">Không Gian Nghỉ Dưỡng Hoàn Hảo</h2>
-            </div>
-            <div class="row g-4">
-                <!-- Room 1 -->
-                <div class="col-md-4 fade-in-up">
-                    <div class="card h-100 border-0 shadow-sm room-card">
-                        <div class="overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                                class="card-img-top room-img" alt="Deluxe Ocean View">
-                        </div>
-                        <div class="card-body p-4">
-                            <h4 class="card-title text-dark-blue fw-bold">Deluxe Ocean View</h4>
-                            <div class="d-flex justify-content-between text-muted mb-3 font-sm">
-                                <span><i class="fa-solid fa-vector-square me-2 text-gold"></i>35m²</span>
-                                <span><i class="fa-solid fa-user-group me-2 text-gold"></i>2 Người lớn</span>
-                            </div>
-                            <p class="card-text text-muted">Hướng biển hoàn hảo với ban công riêng biệt, bồn tắm nằm
-                                sang trọng đón ánh mặt trời tự nhiên.</p>
-                            <a href="#" class="btn btn-dark-blue rounded-pill px-4 mt-2">View Details</a>
-                        </div>
-                    </div>
+    <!-- ======================== BOOKING BAR ======================== -->
+    <section class="booking-bar-section pt-2">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="booking-bar">
+                <div class="booking-field">
+                    <label><i class="fa-solid fa-building me-2 text-gold-accent"></i>Khách sạn</label>
+                    <span class="booking-value">Vinpearl Luxury Nha Trang</span>
                 </div>
-                <!-- Room 2 -->
-                <div class="col-md-4 fade-in-up delay-1">
-                    <div class="card h-100 border-0 shadow-sm room-card">
-                        <div class="overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                                class="card-img-top room-img" alt="Premium Suite">
-                        </div>
-                        <div class="card-body p-4">
-                            <h4 class="card-title text-dark-blue fw-bold">Premium Suite</h4>
-                            <div class="d-flex justify-content-between text-muted mb-3 font-sm">
-                                <span><i class="fa-solid fa-vector-square me-2 text-gold"></i>55m²</span>
-                                <span><i class="fa-solid fa-user-group me-2 text-gold"></i>2 - 3 Người</span>
-                            </div>
-                            <p class="card-text text-muted">Không gian rộng lớn với khu vực phòng khách riêng, trang bị
-                                nội thất hoàng gia cao cấp nhất.</p>
-                            <a href="#" class="btn btn-dark-blue rounded-pill px-4 mt-2">View Details</a>
-                        </div>
-                    </div>
+                <div class="booking-divider"></div>
+                <div class="booking-field">
+                    <label><i class="fa-regular fa-calendar me-2 text-gold-accent"></i>Nhận phòng</label>
+                    <input type="date" class="booking-input" id="checkinDate">
                 </div>
-                <!-- Room 3 -->
-                <div class="col-md-4 fade-in-up delay-2">
-                    <div class="card h-100 border-0 shadow-sm room-card">
-                        <div class="overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                                class="card-img-top room-img" alt="Presidential Penthouse">
-                        </div>
-                        <div class="card-body p-4">
-                            <h4 class="card-title text-dark-blue fw-bold">Presidential Penthouse</h4>
-                            <div class="d-flex justify-content-between text-muted mb-3 font-sm">
-                                <span><i class="fa-solid fa-vector-square me-2 text-gold"></i>120m²</span>
-                                <span><i class="fa-solid fa-user-group me-2 text-gold"></i>4 Người</span>
-                            </div>
-                            <p class="card-text text-muted">Trải nghiệm độc bản và thượng lưu với hồ bơi vô cực riêng tư
-                                và dịch vụ quản gia 24/7.</p>
-                            <a href="#" class="btn btn-dark-blue rounded-pill px-4 mt-2">View Details</a>
-                        </div>
-                    </div>
+                <div class="booking-divider"></div>
+                <div class="booking-field">
+                    <label><i class="fa-regular fa-calendar me-2 text-gold-accent"></i>Trả phòng</label>
+                    <input type="date" class="booking-input" id="checkoutDate">
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="booking-divider"></div>
+                <div class="booking-field dropdown position-relative">
+                    <label><i class="fa-regular fa-user me-2 text-gold-accent" style="font-weight: 400;"></i>Số phòng -
+                        Số người</label>
+                    <div class="booking-value d-flex align-items-center justify-content-between text-nowrap user-select-none w-100"
+                        style="cursor: pointer;" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                        aria-expanded="false">
+                        <span id="guestSummaryText">1 Phòng - 1 Người lớn ...</span>
+                    </div>
 
-    <!-- Services Section -->
-    <section id="services" class="py-5 section-padding">
-        <div class="container py-4">
-            <div class="text-center mb-5 fade-in-up">
-                <h6 class="text-gold fw-bold text-uppercase tracking-wide">Tiện Ích Nội Khu</h6>
-                <h2 class="display-5 fw-bold text-dark-blue">Dịch Vụ Chuẩn 5 Sao</h2>
-            </div>
-            <div class="row g-4 text-center">
-                <!-- Service 1 -->
-                <div class="col-6 col-lg-3 fade-in-up">
-                    <div class="service-box p-4 border rounded shadow-sm h-100 bg-white">
-                        <div class="icon-circle mb-3 mx-auto">
-                            <i class="fa-solid fa-spa fs-2 text-gold"></i>
-                        </div>
-                        <h4 class="text-dark-blue fw-bold mb-2">Luxury Spa</h4>
-                        <p class="text-muted small mb-0">Thư giãn hoàn toàn với các liệu pháp thiên nhiên.</p>
-                    </div>
-                </div>
-                <!-- Service 2 -->
-                <div class="col-6 col-lg-3 fade-in-up delay-1">
-                    <div class="service-box p-4 border rounded shadow-sm h-100 bg-white">
-                        <div class="icon-circle mb-3 mx-auto">
-                            <i class="fa-solid fa-water-ladder fs-2 text-gold"></i>
-                        </div>
-                        <h4 class="text-dark-blue fw-bold mb-2">Infinity Pool</h4>
-                        <p class="text-muted small mb-0">Hồ bơi vô cực bắt trọn khoảnh khắc hoàng hôn.</p>
-                    </div>
-                </div>
-                <!-- Service 3 -->
-                <div class="col-6 col-lg-3 fade-in-up delay-2">
-                    <div class="service-box p-4 border rounded shadow-sm h-100 bg-white">
-                        <div class="icon-circle mb-3 mx-auto">
-                            <i class="fa-solid fa-utensils fs-2 text-gold"></i>
-                        </div>
-                        <h4 class="text-dark-blue fw-bold mb-2">Nhà Hàng</h4>
-                        <p class="text-muted small mb-0">Tinh hoa ẩm thực Á - Âu chuẩn fine dining.</p>
-                    </div>
-                </div>
-                <!-- Service 4 -->
-                <div class="col-6 col-lg-3 fade-in-up delay-3">
-                    <div class="service-box p-4 border rounded shadow-sm h-100 bg-white">
-                        <div class="icon-circle mb-3 mx-auto">
-                            <i class="fa-solid fa-dumbbell fs-2 text-gold"></i>
-                        </div>
-                        <h4 class="text-dark-blue fw-bold mb-2">Gym & Fitness</h4>
-                        <p class="text-muted small mb-0">Hệ thống máy tập hiện đại, view toàn cảnh biển.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dining Section -->
-    <section id="dining" class="dining-section text-center text-white d-flex align-items-center fade-in">
-        <div class="dining-overlay"></div>
-        <div class="container position-relative z-index-1 py-5">
-            <h6 class="text-gold fw-bold text-uppercase tracking-wide mb-3">Trải Nghiệm Ẩm Thực</h6>
-            <h2 class="display-3 fw-bold mb-4">Rooftop Seafood Buffet</h2>
-            <p class="fs-4 fw-light mx-auto" style="max-width: 800px;">
-                Thưởng thức hải sản thượng hạng tươi sống hằng ngày với khung cảnh tuyệt sắc của biển Vũng Tàu từ trên
-                cao. Cùng bộ sưu tập rượu vang danh tiếng thế giới.
-            </p>
-            <a href="#contact" class="btn btn-gold btn-lg rounded-pill px-5 mt-4 fw-bold shadow-sm hover-zoom">Đặt Bàn
-                Ngay</a>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-5 section-padding">
-        <div class="container py-4">
-            <div class="text-center mb-5 fade-in-up">
-                <h6 class="text-gold fw-bold text-uppercase tracking-wide">Bộ Sưu Tập Hình Ảnh</h6>
-                <h2 class="display-5 fw-bold text-dark-blue">Không Gian Tráng Lệ</h2>
-            </div>
-            <div class="row g-2">
-                <div class="col-md-8 fade-in-up">
-                    <div class="gallery-item position-relative overflow-hidden rounded">
-                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                            alt="Resort View" class="w-100 h-100 object-fit-cover gallery-img">
-                    </div>
-                </div>
-                <div class="col-md-4 fade-in-up delay-1">
-                    <div class="row g-2 h-100">
-                        <div class="col-12 h-50">
-                            <div class="gallery-item position-relative overflow-hidden rounded h-100">
-                                <img src="https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                                    alt="Spa" class="w-100 h-100 object-fit-cover gallery-img">
+                    <div class="dropdown-menu shadow-lg border-0 p-4 mt-2" style="width: 340px; border-radius: 8px;">
+                        <!-- Số phòng -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="fw-medium text-secondary" style="font-size: 1.05rem;">Số phòng</span>
+                            <div class="d-flex align-items-center gap-3">
+                                <button type="button" class="guest-qty-btn" onclick="updateGuestCount('room', -1)"><i
+                                        class="fa-solid fa-minus"></i></button>
+                                <span class="fw-medium text-dark" id="val-room"
+                                    style="width: 14px; text-align: center;">1</span>
+                                <button type="button" class="guest-qty-btn" onclick="updateGuestCount('room', 1)"><i
+                                        class="fa-solid fa-plus"></i></button>
                             </div>
                         </div>
-                        <div class="col-12 h-50">
-                            <div class="gallery-item position-relative overflow-hidden rounded h-100">
-                                <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                                    alt="Dining" class="w-100 h-100 object-fit-cover gallery-img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="py-5 bg-light section-padding">
-        <div class="container py-4">
-            <div class="text-center mb-5 fade-in-up">
-                <h6 class="text-gold fw-bold text-uppercase tracking-wide">Nhận Xét</h6>
-                <h2 class="display-5 fw-bold text-dark-blue">Khách Hàng Nói Gì Về Chúng Tôi</h2>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 fade-in-up">
-                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel"
-                        data-bs-interval="4000">
-                        <div class="carousel-inner text-center">
-                            <!-- Item 1 -->
-                            <div class="carousel-item active">
-                                <i class="fa-solid fa-quote-left fs-1 text-gold mb-4 opacity-50"></i>
-                                <p class="lead font-italic mb-4">"Khách sạn rất đẹp, dịch vụ hoàn hảo. Buffe sáng đa
-                                    dạng và ngon miệng. Chắc chắn sẽ quay lại!"</p>
-                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User 1"
-                                    class="rounded-circle mb-3 border border-3 border-gold mx-auto d-block" width="80"
-                                    height="80">
-                                <h5 class="fw-bold text-dark-blue">Mai Phương</h5>
-                                <span class="text-muted small">TP. Hồ Chí Minh</span>
-                            </div>
-                            <!-- Item 2 -->
-                            <div class="carousel-item">
-                                <i class="fa-solid fa-quote-left fs-1 text-gold mb-4 opacity-50"></i>
-                                <p class="lead font-italic mb-4">"View phòng hướng biển xuất sắc, nhân viên nhiệt tình,
-                                    chu đáo. Bể bơi vô cực check-in cực đỉnh."</p>
-                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User 2"
-                                    class="rounded-circle mb-3 border border-3 border-gold mx-auto d-block" width="80"
-                                    height="80">
-                                <h5 class="fw-bold text-dark-blue">Trần Hoàng Phong</h5>
-                                <span class="text-muted small">Hà Nội</span>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-                            data-bs-slide="prev">
-                            <i class="fa-solid fa-chevron-left text-dark-blue fs-3"></i>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-                            data-bs-slide="next">
-                            <i class="fa-solid fa-chevron-right text-dark-blue fs-3"></i>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                        <hr class="text-muted opacity-10 my-3">
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 section-padding">
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-lg-5 mb-5 mb-lg-0 fade-in-up">
-                    <h6 class="text-gold fw-bold text-uppercase tracking-wide mb-2">Liên Hệ</h6>
-                    <h2 class="display-6 fw-bold text-dark-blue mb-4">Giữ Kỳ Nghỉ Trong Mơ Của Bạn</h2>
-                    <p class="text-muted mb-5">Đội ngũ của chúng tôi luôn sẵn lòng tư vấn và hỗ trợ bạn mọi lúc.</p>
-
-                    <div class="d-flex mb-4">
-                        <div class="icon-circle bg-light me-3 shrink-0">
-                            <i
-                                class="fa-solid fa-location-dot fs-4 text-gold position-relative top-50 start-50 translate-middle"></i>
-                        </div>
-                        <div>
-                            <h5 class="text-dark-blue fw-bold mb-1">Địa chỉ</h5>
-                            <p class="text-muted mb-0">69-69A Thùy Vân, Phường 2, TP Vũng Tàu</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex mb-4">
-                        <div class="icon-circle bg-light me-3 shrink-0">
-                            <i
-                                class="fa-solid fa-phone fs-4 text-gold position-relative top-50 start-50 translate-middle"></i>
-                        </div>
-                        <div>
-                            <h5 class="text-dark-blue fw-bold mb-1">Điện thoại</h5>
-                            <p class="text-muted mb-0">+84 254 362 6666</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex">
-                        <div class="icon-circle bg-light me-3 shrink-0">
-                            <i
-                                class="fa-solid fa-envelope fs-4 text-gold position-relative top-50 start-50 translate-middle"></i>
-                        </div>
-                        <div>
-                            <h5 class="text-dark-blue fw-bold mb-1">Email</h5>
-                            <p class="text-muted mb-0">info@premierpearlhotel.vn</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-7 px-lg-4 fade-in-up delay-1">
-                    <div class="card border-0 shadow-lg p-4 p-md-5 rounded-4">
-                        <form id="contactForm" novalidate="novalidate">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label fw-bold text-dark-blue">Họ tên *</label>
-                                    <input class="form-control form-control-lg bg-light" id="name" type="text"
-                                        placeholder="Nhập họ tên" required="required">
-                                    <div class="invalid-feedback">Xin vui lòng nhập họ tên!</div>
+                        <!-- Phòng 1 -->
+                        <div class="mb-2">
+                            <div class="fw-medium text-secondary mb-3" style="font-size: 1rem;">Phòng 1</div>
+                            <div class="row text-center g-2">
+                                <div class="col-4">
+                                    <div class="text-muted mb-2" style="font-size: 0.85rem;">Người lớn</div>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <button type="button" class="guest-qty-btn"
+                                            onclick="updateGuestCount('adult', -1)"><i
+                                                class="fa-solid fa-minus"></i></button>
+                                        <span class="fw-medium text-dark" id="val-adult"
+                                            style="width: 14px; text-align: center;">1</span>
+                                        <button type="button" class="guest-qty-btn"
+                                            onclick="updateGuestCount('adult', 1)"><i
+                                                class="fa-solid fa-plus"></i></button>
+                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-bold text-dark-blue">Email *</label>
-                                    <input class="form-control form-control-lg bg-light" id="email" type="email"
-                                        placeholder="Nhập email" required="required">
-                                    <div class="invalid-feedback">Email không đúng định dạng!</div>
+                                <div class="col-4">
+                                    <div class="text-muted mb-2" style="font-size: 0.85rem;">Trẻ em</div>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <button type="button" class="guest-qty-btn"
+                                            onclick="updateGuestCount('child', -1)"><i
+                                                class="fa-solid fa-minus"></i></button>
+                                        <span class="fw-medium text-dark" id="val-child"
+                                            style="width: 14px; text-align: center;">0</span>
+                                        <button type="button" class="guest-qty-btn"
+                                            onclick="updateGuestCount('child', 1)"><i
+                                                class="fa-solid fa-plus"></i></button>
+                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-bold text-dark-blue">Điện thoại *</label>
-                                    <input class="form-control form-control-lg bg-light" id="phone" type="tel"
-                                        placeholder="Nhập số điện thoại" required="required">
-                                    <div class="invalid-feedback">Vui lòng nhập số điện thoại hợp lệ!</div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-bold text-dark-blue">Ngày dự kiến *</label>
-                                    <input class="form-control form-control-lg bg-light" id="date" type="date"
-                                        required="required">
-                                    <div class="invalid-feedback">Vui lòng chọn ngày!</div>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label fw-bold text-dark-blue">Lời nhắn</label>
-                                    <textarea class="form-control form-control-lg bg-light" id="message" rows="4"
-                                        placeholder="Nhập yêu cầu đặc biệt của bạn..."></textarea>
-                                </div>
-                                <div class="col-12 mt-4 text-center">
-                                    <button class="btn btn-dark-blue btn-lg rounded-pill px-5 w-100 fw-bold"
-                                        id="submitButton" type="submit">Gửi Yêu Cầu</button>
+                                <div class="col-4">
+                                    <div class="text-muted mb-2" style="font-size: 0.85rem;">Em bé</div>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <button type="button" class="guest-qty-btn"
+                                            onclick="updateGuestCount('infant', -1)"><i
+                                                class="fa-solid fa-minus"></i></button>
+                                        <span class="fw-medium text-dark" id="val-infant"
+                                            style="width: 14px; text-align: center;">0</span>
+                                        <button type="button" class="guest-qty-btn"
+                                            onclick="updateGuestCount('infant', 1)"><i
+                                                class="fa-solid fa-plus"></i></button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="d-none mt-3 text-success fw-bold text-center" id="submitSuccessMessage">
-                                Cảm ơn bạn! Thông tin đã được gửi thành công.
-                            </div>
-                        </form>
+                        </div>
+
+                        <hr class="text-muted opacity-10 my-3">
+
+                        <div class="text-muted fst-italic" style="font-size: 0.8rem;">
+                            *Em bé: Dưới 4 tuổi/ Trẻ em: Từ 4 - dưới 12 tuổi
+                        </div>
                     </div>
                 </div>
+                <a href="./booking.html" class="btn-booking-search">
+                    <i class="fa-solid fa-magnifying-glass me-2"></i>Tìm Phòng
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer py-5 text-white">
+    <!-- ======================== INTRO SECTION (Thiên đường nghỉ dưỡng) ======================== -->
+    <section class="intro-vp-section py-5 my-5 text-center">
+
         <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h3 class="fw-bold text-gold font-playfair mb-4">Premier Pearl Hotel</h3>
-                    <p class="text-light-50">Mang đến trải nghiệm nghỉ dưỡng đích thực trong không gian sang trọng và
-                        hiện đại bên bờ biển đẹp nhất Vũng Tàu.</p>
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            <h2 class="intro-vp-heading mb-4 fade-in-up">Thiên đường nghỉ dưỡng biển</h2>
+            <p class="intro-vp-text mx-auto text-muted mb-5 fade-in-up delay-1"
+                style="max-width: 800px; line-height: 1.8;">
+                Vinpearl Luxury Nha Trang là điểm đến khó lòng bỏ qua với những du khách trân trọng từng giây phút an
+                tĩnh tuyệt đối bên người mình yêu thương. 84 căn biệt thự xinh đẹp nằm giữa những khu vườn tạo nên khung
+                cảnh yên bình cách xa chốn thị thành bận rộn. Các biệt thự có kiến trúc trang nhã của văn hóa truyền
+                thống Việt Nam với bể bơi riêng, bể jacuzzi cùng ban công rộng rãi nhìn ra vịnh biển Nha Trang xinh đẹp.
+                Trải nghiệm không thể bỏ lỡ ở đây là thưởng thức một ly cocktail tại Wave Bar hay tận hưởng liệu trình
+                massage tại chòi Akoya Spa ngay trên mặt biển.
+            </p>
+
+            <div class="row g-4 mt-4 fade-in-up delay-2">
+                <div class="col-md-4">
+                    <img src="./assets/images/home/gallery-1.png" alt="Vinpearl View 3"
+                        class="img-fluid vp-img-elegant">
+                </div>
+                <div class="col-md-4">
+                    <img src="./assets/images/home/gallery-4.png" alt="Vinpearl View 2"
+                        class="img-fluid vp-img-elegant">
+                </div>
+                <div class="col-md-4">
+                    <img src="./assets/images/home/promo-3.png" alt="Vinpearl View 1" class="img-fluid vp-img-elegant">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== ROOMS SECTION ======================== -->
+    <section class="rooms-vp-section py-5 bg-light" id="rooms">
+        <div class="container py-4">
+            <div class="d-flex justify-content-between align-items-end mb-5 fade-in-up">
+                <div>
+                    <span class="text-gold-accent text-uppercase tracking-wide font-sm fw-bold">Nơi dừng chân hoàn
+                        mỹ</span>
+                    <h2 class="section-heading mt-2 mb-0">Các Hạng Phòng</h2>
+                </div>
+                <a href="./rooms.html" class="btn-outline-dark-vp d-none d-md-inline-block">Xem Tất Cả Phòng <i
+                        class="fa-solid fa-arrow-right ms-2"></i></a>
+            </div>
+
+            <!-- Single Feature Room Layout -->
+            <div class="row g-0 bg-white shadow-sm vp-feature-card mb-5 fade-in-up delay-1">
+                <div class="col-lg-7">
+                    <img src="./assets/images/home/room-1.png" alt="Beach Front Villa"
+                        class="w-100 h-100 object-fit-cover" style="min-height: 400px;">
+                </div>
+                <div class="col-lg-5 p-5 d-flex flex-column justify-content-center">
+                    <h3 class="font-garamond mb-3" style="font-size: 2.2rem; color: var(--color-navy);">Beach Front
+                        Villa</h3>
+                    <p class="text-muted mb-4" style="line-height: 1.8;">Biệt thự hướng biển với tầm nhìn tuyệt đẹp,
+                        mang lại không gian thư giãn tuyệt đối với hồ bơi riêng tư và khu vực tắm nắng thơ mộng.</p>
+                    <div class="d-flex mb-4 gap-4 text-muted small text-uppercase tracking-wide">
+                        <span><i class="fa-solid fa-expand-arrows-alt me-2 text-gold-accent"></i> 120m²</span>
+                        <span><i class="fa-solid fa-user-group me-2 text-gold-accent"></i> 2 Người lớn</span>
                     </div>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
-                    <h5 class="fw-bold mb-4 font-playfair">Khám Phá</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#about" class="footer-link">Về Chúng Tôi</a></li>
-                        <li class="mb-2"><a href="#rooms" class="footer-link">Phòng Nghỉ</a></li>
-                        <li class="mb-2"><a href="#dining" class="footer-link">Ẩm Thực</a></li>
-                        <li class="mb-2"><a href="#gallery" class="footer-link">Bộ Sưu Tập</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
-                    <h5 class="fw-bold mb-4 font-playfair">Dịch Vụ</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#services" class="footer-link">Spa & Massage</a></li>
-                        <li class="mb-2"><a href="#services" class="footer-link">Phòng Gym</a></li>
-                        <li class="mb-2"><a href="#services" class="footer-link">Hội Nghị</a></li>
-                        <li class="mb-2"><a href="#services" class="footer-link">Tổ Chức Tiệc</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <h5 class="fw-bold mb-4 font-playfair">Đăng Ký Nhận Cập Nhật</h5>
-                    <p class="text-light-50">Nhận thông tin ưu đãi mới nhất từ Premier Pearl.</p>
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control rounded-start-pill py-2 border-0"
-                            placeholder="Email của bạn">
-                        <button class="btn btn-gold rounded-end-pill px-4 text-dark fw-bold" type="button">Gửi</button>
+                    <div class="d-flex align-items-center">
+                        <a href="./booking.html" class="btn-dat-ngay text-white border-0 shadow-sm">Đặt Ngay</a>
+                        <a href="./roomdetail.html" class="btn text-uppercase fw-bold ms-3"
+                            style="color: var(--color-navy); font-size: 0.8rem; letter-spacing: 1px;">Khám Phá Căn Hộ <i
+                                class="fa-solid fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
-            <hr class="mt-5 border-secondary">
-            <div class="text-center mt-4">
-                <p class="m-0 text-light-50 small">&copy; 2026 Premier Pearl Hotel Vũng Tàu. All Rights Reserved.</p>
+
+            <!-- Single Feature Room Layout Reversed -->
+            <div class="row g-0 bg-white shadow-sm vp-feature-card fade-in-up delay-2 flex-row-reverse">
+                <div class="col-lg-7">
+                    <img src="./assets/images/home/room-3.png" alt="Presidential Suite"
+                        class="w-100 h-100 object-fit-cover" style="min-height: 400px;">
+                </div>
+                <div class="col-lg-5 p-5 d-flex flex-column justify-content-center">
+                    <h3 class="font-garamond mb-3" style="font-size: 2.2rem; color: var(--color-navy);">Presidential
+                        Suite</h3>
+                    <p class="text-muted mb-4" style="line-height: 1.8;">Tận hưởng sự xa hoa bậc nhất tại Presidential
+                        Suite siêu rộng rãi với quản gia riêng 24/7, bồn sục jacuzzi và thiết kế Hoàng gia việt nam.</p>
+                    <div class="d-flex mb-4 gap-4 text-muted small text-uppercase tracking-wide">
+                        <span><i class="fa-solid fa-expand-arrows-alt me-2 text-gold-accent"></i> 350m²</span>
+                        <span><i class="fa-solid fa-bed me-2 text-gold-accent"></i> King Bed</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <a href="./booking.html" class="btn-dat-ngay text-white border-0 shadow-sm">Đặt Ngay</a>
+                        <a href="./roomdetail.html" class="btn text-uppercase fw-bold ms-3"
+                            style="color: var(--color-navy); font-size: 0.8rem; letter-spacing: 1px;">Khám Phá Căn Hộ <i
+                                class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4 d-md-none">
+                <a href="./rooms.html" class="btn-outline-dark-vp">Xem Tất Cả Phòng <i
+                        class="fa-solid fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== DINING SECTION ======================== -->
+    <section class="dining-vp-section py-5 my-3" id="dining">
+        <div class="container py-4">
+            <div class="text-center mb-5 fade-in-up">
+                <span class="text-gold-accent text-uppercase tracking-wide font-sm fw-bold">Hương Vị Tinh Hoa</span>
+                <h2 class="section-heading mt-2">Ẩm Thực Đỉnh Cao</h2>
+                <div class="section-divider mx-auto"></div>
+            </div>
+
+            <!-- Dining 1 -->
+            <div class="row align-items-center mb-5 pb-4 fade-in-up delay-1">
+                <div class="col-md-6 pe-md-5">
+                    <div class="overflow-hidden shadow-sm">
+                        <img src="./assets/images/home/dining-1.png" alt="Blue Lagoon Restaurant"
+                            class="img-fluid w-100 vp-img-zoom" style="border-radius: 4px;">
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0 ps-md-5">
+                    <h3 class="font-garamond mb-3" style="color: var(--color-navy); font-size: 2rem;">Nhà hàng Blue
+                        Lagoon</h3>
+                    <p class="text-muted mb-4" style="line-height: 1.8;">Mang đến trải nghiệm ẩm thực đa dạng từ Á sang
+                        Âu với hải sản tươi sống đặc trưng của biển Nha Trang. Blue Lagoon gây ấn tượng bởi không gian
+                        sang trọng và tầm nhìn ngoạn mục ra đại dương bao la.</p>
+                    <a href="./dinning.html"
+                        class="text-gold-accent text-uppercase fw-bold text-decoration-none tracking-wide"
+                        style="font-size: 0.85rem;">Tìm hiểu thêm <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+
+            <!-- Dining 2 -->
+            <div class="row align-items-center flex-md-row-reverse fade-in-up delay-2">
+                <div class="col-md-6 ps-md-5">
+                    <div class="overflow-hidden shadow-sm">
+                        <img src="./assets/images/home/dining-2.png" alt="Hương Việt Restaurant"
+                            class="img-fluid w-100 vp-img-zoom" style="border-radius: 4px;">
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0 pe-md-5">
+                    <h3 class="font-garamond mb-3" style="color: var(--color-navy); font-size: 2rem;">Nhà hàng Hương
+                        Việt</h3>
+                    <p class="text-muted mb-4" style="line-height: 1.8;">Nơi hội tụ tinh hoa ẩm thực 3 miền Việt Nam.
+                        Các nghệ nhân bếp của Hương Việt dùng tâm huyết để chế tác nên những kiệt tác ẩm thực mang linh
+                        hồn văn hóa dân tộc trong không gian kiến trúc gỗ truyền thống.</p>
+                    <a href="./dinning.html"
+                        class="text-gold-accent text-uppercase fw-bold text-decoration-none tracking-wide"
+                        style="font-size: 0.85rem;">Tìm hiểu thêm <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="spa-vp-section text-white py-5 position-relative" id="spa"
+        style="background: url('./assets/images/home/spa.png') center/cover no-repeat; min-height: 600px;">
+        <div class="position-absolute inset-0 bg-dark opacity-50 w-100 h-100"
+            style="position: absolute; top:0; left:0;"></div>
+        <div class="container position-relative z-index-1 h-100 d-flex flex-column justify-content-center py-5 my-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-8 fade-in-up">
+                    <span class="text-white text-uppercase tracking-wide font-sm fw-bold opacity-75">Tái Tạo Năng
+                        Lượng</span>
+                    <h2 class="font-garamond display-4 mb-4 mt-2" style="font-size: 3rem;">Akoya Spa Trên Mặt Biển</h2>
+                    <p class="mb-5 opacity-75 fs-5" style="line-height: 1.8; font-weight: 300;">
+                        Thư giãn tuyệt đối trong những chòi spa vươn mình ra biển khơi. Lắng nghe tiếng sóng rầm rì và
+                        trải nghiệm những liệu pháp massage Bali huyền thoại kết hợp đặc sản thiên nhiên Việt Nam.
+                    </p>
+                    <a href="./services.html"
+                        class="btn btn-outline-light text-uppercase tracking-wide fw-bold px-4 py-2 rounded-0 border-2">Khám
+                        Phá Akoya Spa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== PROMOTIONS SECTION ======================== -->
+    <section class="promotions-section py-5 my-4 bg-light" id="promotions">
+        <div class="container py-4">
+            <div class="d-flex justify-content-between align-items-end mb-5 fade-in-up">
+                <div>
+                    <span class="text-gold-accent text-uppercase tracking-wide font-sm fw-bold">Dành Cho Bạn</span>
+                    <h2 class="section-heading mt-2 mb-0">Ưu Đãi Đặc Quyền</h2>
+                </div>
+            </div>
+
+            <div class="row g-4 d-flex">
+                <div class="col-lg-4 col-md-6 fade-in-up">
+                    <div class="card h-100 border-0 rounded-0 shadow-sm vp-promo-card">
+                        <img src="./assets/images/home/promo-1.png" class="card-img-top rounded-0" alt="Promo">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="font-garamond text-navy mb-3" style="font-size: 1.5rem;">Early Bird Offer - Giảm
+                                tới 25%</h4>
+                            <p class="text-muted small mb-4 flex-grow-1" style="font-size: 0.95rem; line-height: 1.6;">
+                                Đặt phòng trước 30 ngày để tận hưởng kỳ nghỉ xa hoa với chi phí tiết kiệm chưa từng có.
+                            </p>
+                            <a href="./booking.html"
+                                class="text-uppercase fw-bold text-decoration-none text-gold-accent tracking-wide"
+                                style="font-size: 0.8rem;">Xem Chi Tiết <i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-in-up delay-1">
+                    <div class="card h-100 border-0 rounded-0 shadow-sm vp-promo-card">
+                        <img src="./assets/images/home/promo-2.png" class="card-img-top rounded-0" alt="Promo">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="font-garamond text-navy mb-3" style="font-size: 1.5rem;">Gói Trăng Mật Lãng Mạn
+                                Tuyệt Đối</h4>
+                            <p class="text-muted small mb-4 flex-grow-1" style="font-size: 0.95rem; line-height: 1.6;">
+                                Tình yêu thăng hoa với bữa tối riêng tư bên bờ biển cùng những đặc quyền lãng mạn cao
+                                cấp.</p>
+                            <a href="./booking.html"
+                                class="text-uppercase fw-bold text-decoration-none text-gold-accent tracking-wide"
+                                style="font-size: 0.8rem;">Xem Chi Tiết <i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-in-up delay-2">
+                    <div class="card h-100 border-0 rounded-0 shadow-sm vp-promo-card">
+                        <img src="./assets/images/home/promo-3.png" class="card-img-top rounded-0" alt="Promo">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="font-garamond text-navy mb-3" style="font-size: 1.5rem;">Stay & Play Golf Package
+                            </h4>
+                            <p class="text-muted small mb-4 flex-grow-1" style="font-size: 0.95rem; line-height: 1.6;">
+                                Kết hợp nghỉ dưỡng 5 sao và chinh phục sân Golf tiêu chuẩn quốc tế 18 hố Vinpearl Golf
+                                Nha Trang.</p>
+                            <a href="./booking.html"
+                                class="text-uppercase fw-bold text-decoration-none text-gold-accent tracking-wide"
+                                style="font-size: 0.8rem;">Xem Chi Tiết <i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== GALLERY SECTION (MOSAIC) ======================== -->
+    <section class="gallery-vp-section py-5 my-4" id="gallery">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="text-center mb-5 fade-in-up">
+                <span class="text-gold-accent text-uppercase tracking-wide font-sm fw-bold">Khám Phá Vẻ Đẹp</span>
+                <h2 class="section-heading mt-2">Thư Viện Ảnh</h2>
+            </div>
+        </div>
+
+        <div class="container-fluid px-0">
+            <div class="row g-1 fade-in-up">
+                <!-- Col 1 -->
+                <div class="col-md-3">
+                    <a href="./gallery.html" class="d-block h-100 position-relative overflow-hidden vp-gallery-item">
+                        <img src="./assets/images/home/gallery-1.png" alt="Gallery"
+                            class="w-100 h-100 object-fit-cover bg-secondary" style="min-height: 600px;">
+                        <div class="vp-gallery-overlay"><i class="fa-solid fa-plus fs-2 text-white"></i></div>
+                    </a>
+                </div>
+                <!-- Col 2 -->
+                <div class="col-md-6">
+                    <div class="row g-1 h-100">
+                        <div class="col-12 pb-0" style="height: 50%;">
+                            <a href="./gallery.html"
+                                class="d-block h-100 position-relative overflow-hidden vp-gallery-item bg-secondary"
+                                style="min-height: 300px;">
+                                <img src="./assets/images/home/hero-2.png" alt="Gallery"
+                                    class="w-100 h-100 object-fit-cover" style="position: absolute; inset:0;">
+                                <div class="vp-gallery-overlay"><i class="fa-solid fa-plus fs-2 text-white"></i></div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 pt-1" style="height: 50%;">
+                            <a href="./gallery.html"
+                                class="d-block h-100 position-relative overflow-hidden vp-gallery-item bg-secondary"
+                                style="min-height: 300px;">
+                                <img src="./assets/images/home/gallery-5.png" alt="Gallery"
+                                    class="w-100 h-100 object-fit-cover" style="position: absolute; inset:0;">
+                                <div class="vp-gallery-overlay"><i class="fa-solid fa-plus fs-2 text-white"></i></div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 pt-1" style="height: 50%;">
+                            <a href="./gallery.html"
+                                class="d-block h-100 position-relative overflow-hidden vp-gallery-item bg-secondary"
+                                style="min-height: 300px;">
+                                <img src="./assets/images/home/gallery-6.png" alt="Gallery"
+                                    class="w-100 h-100 object-fit-cover" style="position: absolute; inset:0;">
+                                <div class="vp-gallery-overlay"><i class="fa-solid fa-plus fs-2 text-white"></i></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Col 3 -->
+                <div class="col-md-3">
+                    <a href="./gallery.html"
+                        class="d-block h-100 position-relative overflow-hidden vp-gallery-item bg-secondary">
+                        <img src="./assets/images/home/gallery-3.png" alt="Gallery" class="w-100 h-100 object-fit-cover"
+                            style="min-height: 600px;">
+                        <div class="vp-gallery-overlay"><i class="fa-solid fa-plus fs-2 text-white"></i></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 mb-3">
+                <a href="./gallery.html" class="btn-outline-dark-vp">Xem Trọn Bộ Sưu Tập <i
+                        class="fa-solid fa-images ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="footer-vp">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row g-5">
+                    <!-- Brand -->
+                    <div class="col-lg-3 col-md-6">
+                        <img src="assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Vinpearl Luxury Nha Trang"
+                            style="height:60px;" class="mb-4">
+                        <p class="footer-desc">Khu nghỉ dưỡng biển đẳng cấp quốc tế tại bán đảo Hòn Tre, Nha Trang. Mang
+                            đến trải nghiệm nghỉ dưỡng hoàn hảo và không thể nào quên.</p>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="footer-social-icon"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" class="footer-social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Về Chúng Tôi -->
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <h5 class="footer-heading">Về Chúng Tôi</h5>
+                        <ul class="footer-links">
+                            <li><a href="./about.html">Giới thiệu</a></li>
+                            <li><a href="./contact.html">Liên hệ</a></li>
+                            <li><a href="./faqs.html">Câu hỏi thường gặp</a></li>
+                            <li><a href="#">Tuyển dụng</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Điều Khoản -->
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <h5 class="footer-heading">Điều Khoản</h5>
+                        <ul class="footer-links">
+                            <li><a href="./terms.html">Điều khoản chung</a></li>
+                            <li><a href="#">Quy định thanh toán</a></li>
+                            <li><a href="#">Chính sách hủy phòng</a></li>
+                            <li><a href="#">Bảo mật dữ liệu</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tin Tức -->
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <h5 class="footer-heading">Tin Tức & Sự Kiện</h5>
+                        <ul class="footer-links">
+                            <li><a href="./news.html">Tin công ty</a></li>
+                            <li><a href="./news.html">Cẩm nang du lịch</a></li>
+                            <li><a href="./news.html">Sự kiện & Lễ hội</a></li>
+                            <li><a href="#">Thành tựu</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <h5 class="footer-heading">Liên Hệ</h5>
+                        <ul class="footer-contact-list">
+                            <li>
+                                <i class="fa-solid fa-location-dot text-gold-accent"></i>
+                                <span>Bán đảo Hòn Tre, Vĩnh Nguyên, Nha Trang, Khánh Hòa</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone text-gold-accent"></i>
+                                <span>+84 258 359 8888</span>
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-envelope text-gold-accent"></i>
+                                <span>luxury.nhatrang@vinpearl.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+                <p class="mb-0 footer-copy">© 2026 Vinpearl Luxury Nha Trang. All Rights Reserved.</p>
+                <p class="mb-0 footer-copy">Nhóm 11 – HTWeb 2526 HK2</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap Bundle with Popper Offline -->
-    <!-- Mapped path for offline bootstrap js -->
+    <!-- ======================== MOBILE OFFCANVAS MENU ======================== -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header" style="background-color: var(--color-primary);">
+            <img src="assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Logo" style="height:45px;">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="list-unstyled mb-0">
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./home.html"><i class="fa-solid fa-house me-3 text-gold-accent"></i>Trang Chủ</a></li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./rooms.html"><i class="fa-solid fa-bed me-3 text-gold-accent"></i>Khách Sạn & Phòng</a>
+                </li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./dinning.html"><i class="fa-solid fa-utensils me-3 text-gold-accent"></i>Ẩm Thực</a></li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./services.html"><i class="fa-solid fa-spa me-3 text-gold-accent"></i>Spa & Dịch Vụ</a>
+                </li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./gallery.html"><i class="fa-solid fa-images me-3 text-gold-accent"></i>Thư Viện Ảnh</a>
+                </li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./news.html"><i class="fa-solid fa-newspaper me-3 text-gold-accent"></i>Tin Tức</a></li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./about.html"><i class="fa-solid fa-circle-info me-3 text-gold-accent"></i>Giới Thiệu</a>
+                </li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./contact.html"><i class="fa-solid fa-envelope me-3 text-gold-accent"></i>Liên Hệ</a></li>
+                <li class="p-3">
+                    <a href="./booking.html" class="btn-dat-ngay d-block text-center">Đặt Phòng Ngay</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ======================== SEARCH MODAL ======================== -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 rounded-4 overflow-hidden">
+                <div class="modal-header border-0 p-4" style="background-color: var(--color-primary);">
+                    <h5 class="modal-title text-white fw-bold" id="searchModalLabel"><i
+                            class="fa-solid fa-magnifying-glass me-2 text-gold-accent"></i>Tìm Kiếm</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control border-0 bg-light"
+                            placeholder="Tìm phòng, dịch vụ, ưu đãi...">
+                        <button class="btn px-4" style="background-color: var(--color-gold-accent); color:#fff;"
+                            type="button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-muted small mb-2 fw-bold text-uppercase">Tìm kiếm phổ biến</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="./rooms.html" class="badge bg-light text-dark text-decoration-none p-2 px-3 border"
+                                data-bs-dismiss="modal">Phòng Biển</a>
+                            <a href="./services.html"
+                                class="badge bg-light text-dark text-decoration-none p-2 px-3 border"
+                                data-bs-dismiss="modal">Spa</a>
+                            <a href="./dinning.html"
+                                class="badge bg-light text-dark text-decoration-none p-2 px-3 border"
+                                data-bs-dismiss="modal">Nhà Hàng</a>
+                            <a href="./booking.html"
+                                class="badge bg-light text-dark text-decoration-none p-2 px-3 border"
+                                data-bs-dismiss="modal">Ưu Đãi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle -->
     <script src="assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom Scripts -->
     <script src="js/script.js"></script>
+
+    <script>
+        // Set default booking dates
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const dayAfter = new Date(today);
+        dayAfter.setDate(dayAfter.getDate() + 2);
+
+        document.getElementById('checkinDate').valueAsDate = tomorrow;
+        document.getElementById('checkoutDate').valueAsDate = dayAfter;
+
+        // Guest Selection Dropdown Logic
+        function updateGuestCount(type, delta) {
+            const valSpan = document.getElementById('val-' + type);
+            let val = parseInt(valSpan.innerText);
+
+            if (type === 'room' && val + delta < 1) return;
+            if (type === 'adult' && val + delta < 1) return;
+            if ((type === 'child' || type === 'infant') && val + delta < 0) return;
+
+            // Limit to max 10 for demo purposes
+            if (val + delta > 10) return;
+
+            val += delta;
+            valSpan.innerText = val;
+
+            updateGuestSummary();
+        }
+
+        function updateGuestSummary() {
+            const rooms = document.getElementById('val-room').innerText;
+            const adults = document.getElementById('val-adult').innerText;
+            const children = parseInt(document.getElementById('val-child').innerText);
+            const infants = parseInt(document.getElementById('val-infant').innerText);
+
+            let summary = rooms + ' Phòng - ' + adults + ' Người lớn';
+            if (children > 0 || infants > 0) {
+                summary += ' ...';
+            }
+            document.getElementById('guestSummaryText').innerText = summary;
+        }
+    </script>
 </body>
 
 </html>

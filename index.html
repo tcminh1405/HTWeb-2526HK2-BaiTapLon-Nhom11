@@ -1,124 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premier Pearl Hotel Vũng Tàu - Luxury Experience</title>
+    <title>Vinpearl Luxury Nha Trang - Chào Mừng Đến Với Thiên Đường</title>
+    <meta name="description"
+        content="Khởi đầu hành trình nghỉ dưỡng đẳng cấp tại Vinpearl Luxury Nha Trang. Trải nghiệm không gian sang trọng và dịch vụ thượng lưu.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo/lux Nha trang-02_1679990219.svg">
 
-    <!-- Google Fonts: Playfair Display + Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+    <!-- Fonts (Integrated in globalStyle.css) -->
+    <link rel="stylesheet" href="css/globalStyle.css?v=1.1">
 
-    <!-- Offline Font Awesome & Bootstrap -->
-    <link rel="stylesheet" href="assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css">
-    <link rel="stylesheet" href="assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/globalStyle.css">
+    <!-- Splash Specific CSS -->
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
-<body>
-    <!-- Header / Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand text-gold fs-3 fw-bold" href="./home.html">
-                <img src="assets/images/logo/Premier-Pearl-Logo-Horizontal-Rev-1-2-1.png" alt="Logo" class="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto py-4 py-lg-0 align-items-center">
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="./home.html">Trang chủ</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="./rooms.html">Phòng và căn hộ</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="./services.html">Dịch vụ</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="./dinning.html">Ẩm thực</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="./gallery.html">Bộ sưu tập</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="./contact.html">Liên hệ</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-gold rounded-pill px-4 text-dark fw-bold"
-                            href="./booking.html">Book Now</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<body class="splash-body">
 
-    <!-- Hero Section -->
-    <header class="hero d-flex align-items-center justify-content-center text-center fade-in" id="hero">
-        <div class="hero-overlay"></div>
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="assets/videos/videoplayback.mp4" type="video/mp4">
+    <!-- Background Layer -->
+    <div class="splash-bg-container">
+        <!-- Using high quality resort video -->
+        <video autoplay muted loop playsinline class="splash-video">
+            <source src="./assets/videos/Banner Video Website Vinpearl_1743759342.mp4" type="video/mp4">
         </video>
-        <div class="container position-relative z-index-1">
-            <h1 class="text-white display-2 fw-bold mb-3 text-shadow">Luxury Beach Hotel Experience</h1>
-            <p class="text-white fs-4 mb-5 text-shadow">Trải nghiệm nghỉ dưỡng cao cấp ven biển Vũng Tàu</p>
-            <a class="btn btn-gold btn-lg rounded-pill px-5 py-3 fw-bold shadow-sm hover-zoom"
-                href="./home.html">Explore
-                Now</a>
+        <div class="splash-overlay"></div>
+    </div>
+
+    <!-- Location Badge -->
+    <div class="location-badge">
+        <div class="location-text">
+            <b>Hòn Tre</b><br>
+            <span>Nha Trang, Việt Nam</span>
         </div>
-    </header>
+        <div class="location-dot"></div>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer py-5 text-white">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h3 class="fw-bold text-gold font-playfair mb-4">Premier Pearl Hotel</h3>
-                    <p class="text-light-50">Mang đến trải nghiệm nghỉ dưỡng đích thực trong không gian sang trọng và
-                        hiện đại bên bờ biển đẹp nhất Vũng Tàu.</p>
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
-                    <h5 class="fw-bold mb-4 font-playfair">Khám Phá</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#about" class="footer-link">Về Chúng Tôi</a></li>
-                        <li class="mb-2"><a href="#rooms" class="footer-link">Phòng Nghỉ</a></li>
-                        <li class="mb-2"><a href="#dining" class="footer-link">Ẩm Thực</a></li>
-                        <li class="mb-2"><a href="#gallery" class="footer-link">Bộ Sưu Tập</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
-                    <h5 class="fw-bold mb-4 font-playfair">Dịch Vụ</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#services" class="footer-link">Spa & Massage</a></li>
-                        <li class="mb-2"><a href="#services" class="footer-link">Phòng Gym</a></li>
-                        <li class="mb-2"><a href="#services" class="footer-link">Hội Nghị</a></li>
-                        <li class="mb-2"><a href="#services" class="footer-link">Tổ Chức Tiệc</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <h5 class="fw-bold mb-4 font-playfair">Đăng Ký Nhận Cập Nhật</h5>
-                    <p class="text-light-50">Nhận thông tin ưu đãi mới nhất từ Premier Pearl.</p>
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control rounded-start-pill py-2 border-0"
-                            placeholder="Email của bạn">
-                        <button class="btn btn-gold rounded-end-pill px-4 text-dark fw-bold" type="button">Gửi</button>
-                    </div>
-                </div>
-            </div>
-            <hr class="mt-5 border-secondary">
-            <div class="text-center mt-4">
-                <p class="m-0 text-light-50 small">&copy; 2026 Premier Pearl Hotel Vũng Tàu. All Rights Reserved.</p>
-            </div>
+    <!-- Main Content Content -->
+    <main class="splash-content">
+        <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Vinpearl Luxury" class="splash-logo">
+        <h1 class="splash-tagline">Nơi Tuyệt Tác <br> Giao Thoa</h1>
+        <p class="splash-sub">Khám phá thiên đường nghỉ dưỡng 5 sao bậc nhất</p>
+
+        <div class="splash-actions">
+            <a href="./home.html" class="btn-splash-explore" id="exploreBtn">
+                Khám Phá Ngay
+            </a>
         </div>
-    </footer>
+    </main>
 
+    <!-- Auto Redirect Progress -->
+    <div class="redirect-notice">
+        Đang đưa bạn vào không gian nghỉ dưỡng...
+    </div>
+    <div class="progress-container">
+        <div class="progress-bar" id="redirectProgress"></div>
+    </div>
 
-    <!-- Bootstrap Bundle with Popper Offline -->
-    <!-- Mapped path for offline bootstrap js -->
-    <script src="assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Redirect Logic -->
+    <script>
+        const REDIRECT_DELAY = 8000; // 8 seconds
+        const progressBar = document.getElementById('redirectProgress');
+        const exploreBtn = document.getElementById('exploreBtn');
 
-    <!-- Custom Scripts -->
-    <script src="js/script.js"></script>
+        let start = null;
+        let animationFrame;
+
+        function animate(timestamp) {
+            if (!start) start = timestamp;
+            const progress = (timestamp - start) / REDIRECT_DELAY;
+            const percentage = Math.min(progress * 100, 100);
+
+            progressBar.style.width = percentage + '%';
+
+            if (progress < 1) {
+                animationFrame = requestAnimationFrame(animate);
+            } else {
+                // Redirect
+                window.location.href = 'home.html';
+            }
+        }
+
+        // Start countdown
+        animationFrame = requestAnimationFrame(animate);
+
+        // Cancel countdown if user clicks manual button
+        exploreBtn.addEventListener('click', (e) => {
+            cancelAnimationFrame(animationFrame);
+        });
+    </script>
 </body>
 
 </html>
