@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Premier Pearl Hotel Vũng Tàu - Luxury Experience</title>
+    <title>VinClub | Tận hưởng đặc quyền vô tận - Vinpearl</title>
 
     <!-- Google Fonts: Playfair Display + Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Offline Font Awesome & Bootstrap -->
@@ -18,13 +18,348 @@
     <link rel="stylesheet" href="assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/globalStyle.css">
-    <link rel="stylesheet" href="./css/services.css">
+    <link rel="stylesheet" href="css/globalStyle.css">
+    <link rel="stylesheet" href="css/services.css">
 </head>
 
 <body>
 
+    <!-- Header Top / Top Links -->
+    <div class="fixed-top" style="background: white; border-bottom: 1px solid #eee;">
+        <div class="container d-flex justify-content-end py-1 header-top-links">
+            <a href="#"><i class="fa-solid fa-magnifying-glass me-1"></i></a>
+            <a href="login.html">Đăng nhập <i class="fa-solid fa-chevron-right ms-1" style="font-size: 10px;"></i></a>
+            <span class="mx-2 text-muted">/</span>
+            <a href="#"><img src="" width="16" class="me-1"> VIE <i class="fa-solid fa-chevron-down ms-1" style="font-size: 10px;"></i></a>
+        </div>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-vinclub">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVinclub">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-flex justify-content-between align-items-center" id="navbarVinclub">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item"><a class="nav-link px-3" href="rooms.html">Khách sạn</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="services.html">Trải nghiệm</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">Ưu đãi khuyến mãi</a></li>
+                    </ul>
+                    
+                    <a class="navbar-brand mx-auto text-center" href="home.html">
+                        <!-- Simulated logo text for Vinpearl -->
+                        <div style="color: #1a2b5e; font-weight: 700; font-size: 24px; font-family: 'Playfair Display', serif;">
+                            <img src="https://vinpearl.com/themes/gavias_edupia/images/logo.png" style="height:40px; filter: brightness(0) saturate(100%) invert(18%) sepia(26%) saturate(3025%) hue-rotate(204deg) brightness(97%) contrast(98%);" alt="VINPEARL" onerror="this.style.display='none';this.parentElement.innerHTML='VINPEARL'">
+                        </div>
+                    </a>
 
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item"><a class="nav-link px-3" href="news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">Hội họp</a></li>
+                        <li class="nav-item"><a class="nav-link px-3 text-gold" href="#">VinClub</a></li>
+                        <li class="nav-item ms-3"><a class="btn btn-dat-ngay" href="booking.html">Đặt Ngay</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-vinclub text-center fade-in">
+        <div class="hero-content">
+            <!-- Simulated VinClub Logo in White -->
+            <div class="mb-3">
+                <i class="fa-solid fa-dove fa-3x mb-2" style="opacity: 0.9;"></i><br>
+                <span class="font-playfair" style="font-size: 42px; letter-spacing: 2px;">VINCLUB</span>
+            </div>
+            <h1 class="hero-title">KẾT NỐI GIÁ TRỊ - TRẢI NGHIỆM TINH HOA</h1>
+            <div class="mt-4">
+                <a href="login.html" class="btn-white-fill me-3">Đăng nhập</a>
+                <a href="#" class="btn-white-outline">Tham gia ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Bar -->
+    <div class="container search-bar-wrapper fade-in-up">
+        <form class="search-form">
+            <div class="search-field" style="flex: 2;">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="w-100">
+                    <input type="text" placeholder="Chọn điểm đến, khách sạn theo sở thích ...">
+                </div>
+            </div>
+            <div class="search-field" style="flex: 1.5;">
+                <i class="fa-regular fa-calendar"></i>
+                <div class="w-100">
+                    <span class="field-label">Ngày nhận - Trả phòng</span>
+                    <div class="field-value">29/03/2026 - 31/03/2026</div>
+                </div>
+            </div>
+            <div class="search-field" style="flex: 1.5;">
+                <i class="fa-regular fa-user"></i>
+                <div class="w-100">
+                    <span class="field-label">Số phòng - Số người</span>
+                    <div class="field-value">1 Phòng - 1 Người lớn...</div>
+                </div>
+            </div>
+            <div class="search-field" style="flex: 1; border-right: none;">
+                <i class="fa-solid fa-ticket"></i>
+                <div class="w-100">
+                    <input type="text" placeholder="Mã ưu đãi">
+                </div>
+            </div>
+            <button type="button" class="btn-search">Tìm kiếm</button>
+        </form>
+    </div>
+
+    <!-- Floating Bell -->
+    <div class="floating-bell">
+        <i class="fa-regular fa-bell"></i>
+        <div class="bell-badge">1</div>
+    </div>
+
+    <!-- Tiers Section -->
+    <section class="tier-section text-center">
+        <div class="container">
+            <h2 class="section-title">VinClub - Tận hưởng đặc quyền và ưu đãi bất tận</h2>
+            <p class="section-subtitle">
+                VinClub là chương trình khách hàng thân thiết đẳng cấp của Tập đoàn Vingroup, mang đến những đặc quyền ưu việt dành riêng cho thành viên khi trải nghiệm các sản phẩm và dịch vụ của các công ty thành viên trong hệ sinh thái toàn diện của Tập đoàn.
+            </p>
+
+            <div class="tier-progress">
+                <div class="tier-step active">
+                    <div class="tier-step-label">Member</div>
+                    <div class="tier-step-icon"><i class="fa-solid fa-check"></i></div>
+                </div>
+                <div class="tier-step active">
+                    <div class="tier-step-label">Gold</div>
+                    <div class="tier-step-icon"><i class="fa-solid fa-check"></i></div>
+                </div>
+                <div class="tier-step current text-gold">
+                    <div class="tier-step-label text-gold">Platinum</div>
+                    <div class="tier-step-icon"><i class="fa-solid fa-check"></i></div>
+                </div>
+                <div class="tier-step">
+                    <div class="tier-step-label">Diamond</div>
+                    <div class="tier-step-icon"></div>
+                </div>
+            </div>
+
+            <div class="tier-details-card">
+                <div class="tier-details-title">Hạng Platinum</div>
+                <div class="tier-details-subtitle">Tích lũy từ 50tr - <100tr hoặc từ 25 - <50 đêm phòng/năm</div>
+                
+                <div class="row mt-5 justify-content-center">
+                    <div class="col-md-3">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-coins bg-light rounded-circle p-2 fs-5"></i>
+                        </div>
+                        <div class="benefit-text">Tích điểm 1,5% trên tất cả các dịch vụ chi tiêu trong hệ sinh thái Vinpearl</div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-tag bg-light rounded-circle p-2 fs-5"></i>
+                        </div>
+                        <div class="benefit-text">Ưu đãi 7% trên giá phòng tốt nhất</div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-wine-glass bg-light rounded-circle p-2 fs-5"></i>
+                        </div>
+                        <div class="benefit-text">Ưu đãi tới 30% dịch vụ ẩm thực</div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-outline-gold mt-5">Khám phá tất cả quyền lợi</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Experience -->
+    <section class="brand-experience pb-0">
+        <div class="container">
+            <h2 class="experience-title">Trải nghiệm thương hiệu</h2>
+            <div class="row g-3">
+                <div class="col-lg-6">
+                    <div class="ex-card ex-large">
+                        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Phú Quốc">
+                        <div class="ex-card-overlay">
+                            <div class="ex-num">03</div>
+                            <div class="ex-text">Quần thể Phú Quốc - Nha Trang - Nam Hội An</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-md-12">
+                            <div class="ex-card ex-small">
+                                <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Golf">
+                                <div class="ex-card-overlay">
+                                    <div class="ex-num fs-2">04</div>
+                                    <div class="ex-text">Sân Golf tiêu chuẩn quốc tế</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="ex-card ex-small">
+                                <img src="https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Amusement">
+                                <div class="ex-card-overlay">
+                                    <div class="ex-num fs-2">08</div>
+                                    <div class="ex-text">Công viên giải trí VinWonders, VinKE & Vinpearl Safari</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="ex-card ex-small">
+                                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Spa">
+                                <div class="ex-card-overlay">
+                                    <div class="ex-num fs-2">09</div>
+                                    <div class="ex-text">Cơ sở Spa</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="ex-card ex-small">
+                                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Resort">
+                                <div class="ex-card-overlay">
+                                    <div class="ex-num fs-2">10</div>
+                                    <div class="ex-text">Khách sạn & Resort</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="ex-card ex-small">
+                                <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dining">
+                                <div class="ex-card-overlay">
+                                    <div class="ex-num fs-2">+50</div>
+                                    <div class="ex-text">Nhà hàng & Bar</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VinClub Guides -->
+    <section class="guide-section bg-light mt-5">
+        <div class="container py-4">
+            <h2 class="experience-title">Cẩm nang VinClub</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <a href="faqs.html" class="text-decoration-none">
+                        <div class="guide-card">
+                            <div class="guide-icon"><i class="fa-regular fa-circle-question"></i></div>
+                            <div class="guide-text">Câu hỏi thường gặp</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="guide-card">
+                            <div class="guide-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="guide-text">Chính sách quyền riêng tư</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="terms.html" class="text-decoration-none">
+                        <div class="guide-card">
+                            <div class="guide-icon"><i class="fa-solid fa-circle-info"></i></div>
+                            <div class="guide-text">Điều kiện điều khoản VinClub</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="guide-card">
+                            <div class="guide-icon"><i class="fa-solid fa-gift"></i></div>
+                            <div class="guide-text">Hướng dẫn tích tiêu VPoint</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Download Banner -->
+    <section class="app-download-section">
+        <div class="container">
+            <div class="app-banner shadow-lg">
+                <div class="app-content-wrapper">
+                    <div class="qr-box shadow-sm">
+                        <p>Quét QR để tải ứng dụng</p>
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example" class="qr-img" alt="QR Code">
+                        <div class="app-stores">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+                        </div>
+                    </div>
+                    <div class="app-text ms-lg-4">
+                        <div class="app-title">Tải ứng dụng <span>VinClub</span></div>
+                        <ul class="app-features">
+                            <li><i class="fa-solid fa-circle-check"></i>Đồng nhất hạng thẻ cao nhất</li>
+                            <li><i class="fa-solid fa-circle-check"></i>Ưu đãi bất tận</li>
+                            <li><i class="fa-solid fa-circle-check"></i>Đặc quyền phi tài chính hấp dẫn</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 text-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="fw-bold text-gold font-playfair mb-4">Premier Pearl Hotel</h3>
+                    <p class="text-light-50">Mang đến trải nghiệm nghỉ dưỡng đích thực trong không gian sang trọng và hiện đại bên bờ biển đẹp nhất Vũng Tàu.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-4 font-playfair">Khám Phá</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="footer-link">Về Chúng Tôi</a></li>
+                        <li class="mb-2"><a href="rooms.html" class="footer-link">Phòng Nghỉ</a></li>
+                        <li class="mb-2"><a href="dinning.html" class="footer-link">Ẩm Thực</a></li>
+                        <li class="mb-2"><a href="gallery.html" class="footer-link">Bộ Sưu Tập</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-4 font-playfair">Dịch Vụ</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="services.html" class="footer-link">Trải nghiệm</a></li>
+                        <li class="mb-2"><a href="news.html" class="footer-link">News</a></li>
+                        <li class="mb-2"><a href="contact.html" class="footer-link">Liên Hệ</a></li>
+                        <li class="mb-2"><a href="terms.html" class="footer-link">Điều khoản</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="fw-bold mb-4 font-playfair">Đăng Ký Nhận Cập Nhật</h5>
+                    <p class="text-light-50">Nhận thông tin ưu đãi mới nhất từ VinClub & Premier Pearl.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control rounded-start-pill py-2 border-0" placeholder="Email của bạn">
+                        <button class="btn btn-gold rounded-end-pill px-4 text-dark fw-bold" type="button">Gửi</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 border-secondary">
+            <div class="text-center mt-4">
+                <p class="m-0 text-light-50 small">&copy; 2026 Premier Pearl Hotel Vũng Tàu - Demo Website. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper Offline -->
+    <script src="assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
