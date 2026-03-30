@@ -1,6 +1,6 @@
 # HTWeb-2526HK2-BaiTapLon-Nhom11
 
-## 🏨 Vinpearl Luxury Nha Trangu - Luxury Experience
+## 🏨 Vinpearl Luxury Nha Trang - Luxury Experience
 
 Final term project for Web System / Web Programming course (Academic Year 2025-2026, Semester 2).
 Topic: Build a hotel introduction and online booking website.
@@ -8,7 +8,7 @@ Topic: Build a hotel introduction and online booking website.
 **Team**: Group 11
 
 ### 📑 Overview
-The **Vinpearl Luxury Nha Trangu** website is designed with a modern and luxurious style (Luxury Experience), providing an optimal user experience for exploring information and booking hotel rooms. The interface is user-friendly and fully responsive across all devices.
+The **Vinpearl Luxury Nha Trang** website is designed with a modern and luxurious style (Luxury Experience), providing an optimal user experience for exploring information and booking hotel rooms. The interface is user-friendly and fully responsive across all devices.
 
 ### ✨ Main Features & Pages
 - **Home (`index.html` / `home.html`)**: Hotel overview, video banner, short introduction.

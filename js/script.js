@@ -1,10 +1,10 @@
 /*!
-* Custom Script for Premier Pearl Hotel
+* Custom Script for Vinpearl Luxury Nha Trang
 * Handles animations, navbar behavior and interactive elements.
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // 1. Navbar Scroll Effect
     const navbar = document.getElementById('mainNav');
     const onScroll = () => {
@@ -62,23 +62,23 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', function (event) {
             event.preventDefault();
             event.stopPropagation();
-            
+
             if (contactForm.checkValidity()) {
                 // Mock API call or successful submission
                 submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Đang gửi...';
                 submitBtn.disabled = true;
-                
+
                 setTimeout(() => {
                     contactForm.classList.remove('was-validated');
                     contactForm.reset();
                     submitBtn.innerText = 'Gửi Yêu Cầu';
                     submitBtn.disabled = false;
-                    
+
                     successMsg.classList.remove('d-none');
                     setTimeout(() => {
                         successMsg.classList.add('d-none');
                     }, 5000);
-                    
+
                 }, 1500);
             } else {
                 contactForm.classList.add('was-validated');

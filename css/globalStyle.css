@@ -163,13 +163,14 @@
 :root {
   /* Legacy colors (index.html, other pages) */
   --color-primary: #0b1a37;
-  --color-gold: #d4a25a;
-  --color-gold-hover: #b8883e;
+  --color-gold: #f3a436;
+  --color-gold-hover: #e29325;
   --color-light: #f8f9fa;
   --transition-smooth: all 0.3s ease-in-out;
 
   /* Vinpearl Luxury system */
-  --color-gold-accent: #e8952f;
+  --color-gold-accent: #f3a436;
+  --color-gold-accent-hover: #e29325;
   --color-gold-light: rgba(212, 162, 90, 0.15);
   --color-navy: #0b1a37;
   --color-navy-mid: #102040;
@@ -326,7 +327,7 @@ img {
 
 .btn-dark-blue:hover {
   background-color: transparent;
-  color: var(--color-primary);
+  color: var(--color-navy);
 }
 
 .btn-outline-dark-blue {
