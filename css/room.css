@@ -1,6 +1,6 @@
-/* ========== Rooms Page Specific Styles ========== */
 
-/* ---- Page Hero Banner ---- */
+
+
 .rooms-hero {
   position: relative;
   height: 55vh;
@@ -102,12 +102,11 @@
   transition: transform 0.5s ease;
 }
 
-/* Hover transform: phóng to hình khi hover vào carousel */
+
 .room-carousel-wrapper:hover .room-carousel-img {
   transform: scale(1.08);
 }
 
-/* Carousel Controls */
 .room-carousel-wrapper .carousel-control-prev,
 .room-carousel-wrapper .carousel-control-next {
   width: 44px;
@@ -145,7 +144,7 @@
   filter: brightness(0) invert(1);
 }
 
-/* ---- Room Info Panel ---- */
+
 .room-info {
   flex: 1;
   padding: 20px 40px 20px 45px;
@@ -176,7 +175,7 @@
   overflow: hidden;
 }
 
-/* Room Meta Icons */
+
 .room-meta {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -198,7 +197,7 @@
   width: 18px;
 }
 
-/* Room Pricing */
+
 .room-pricing {
   margin-bottom: 1.6rem;
   padding-top: 1rem;
@@ -222,7 +221,7 @@
   color: var(--color-gold);
 }
 
-/* Room Action Buttons */
+
 .room-actions {
   display: flex;
   gap: 12px;
@@ -270,7 +269,6 @@
   transform: translateY(-2px);
 }
 
-/* "Contact Hotel" variant */
 .btn-contact-hotel {
   background-color: var(--color-primary);
   color: #fff;
@@ -291,7 +289,7 @@
   transform: translateY(-2px);
 }
 
-/* ---- Section divider ---- */
+
 .section-divider {
   width: 60px;
   height: 3px;
@@ -300,7 +298,6 @@
   border-radius: 2px;
 }
 
-/* ---- Sticky Sidebar Booking CTA ---- */
 .booking-cta-strip {
   background: linear-gradient(135deg, var(--color-primary) 0%, #0e4a7e 100%);
   color: #fff;
@@ -319,7 +316,6 @@
   margin-bottom: 2rem;
 }
 
-/* ---- Amenities Bar ---- */
 .amenities-bar {
   background-color: #f9f6f1;
   padding: 45px 0;
@@ -347,7 +343,6 @@
   letter-spacing: 0.5px;
 }
 
-/* ---- Back link ---- */
 .back-link {
   color: rgba(255,255,255,0.85);
   text-decoration: none;
@@ -362,7 +357,7 @@
   color: var(--color-gold);
 }
 
-/* ---- Responsive ---- */
+
 @media (max-width: 991px) {
   .room-item,
   .room-item:nth-child(even) {

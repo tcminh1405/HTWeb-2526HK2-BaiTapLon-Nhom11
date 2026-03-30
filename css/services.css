@@ -2,42 +2,77 @@
 .navbar-vinclub {
     background-color: #fff !important;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    padding: 10px 0;
+    padding: 0;
 }
 .navbar-vinclub .nav-link {
-    color: #333 !important;
+    color: #444 !important;
     font-weight: 500;
     text-transform: none !important;
-    font-size: 15px;
+    font-size: 14px;
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
 }
 .navbar-vinclub .nav-link:hover {
-    color: #e0a96d !important;
+    color: #c99354 !important;
 }
-.navbar-brand-img {
-    height: 40px;
+
+
+.navbar-brand-centered {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    z-index: 10;
 }
+.brand-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+}
+.bird-icon {
+    color: #cc9933; 
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+.brand-text {
+    color: #1a2b5e;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+}
+
 .header-top-links {
-    font-size: 13px;
+    font-size: 12px;
 }
 .header-top-links a {
-    color: #333;
+    color: #555;
     text-decoration: none;
-    margin-left: 15px;
+    transition: color 0.3s;
 }
 .header-top-links a:hover {
-    color: #e0a96d;
+    color: #cc9933;
 }
+.header-top-links i {
+    color: #777;
+}
+
 .btn-dat-ngay {
     background-color: #e69138;
     color: white;
     font-weight: 600;
-    padding: 8px 20px;
+    padding: 10px 24px;
     border-radius: 4px;
     border: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
 }
 .btn-dat-ngay:hover {
     background-color: #cf7c27;
     color: white;
+    transform: translateY(-2px);
 }
 
 
@@ -348,7 +383,7 @@
     position: relative;
     z-index: 5;
     max-width: 1100px;
-    text-align: center; /* Ensure all content is centered */
+    text-align: center; 
 }
 .tier-details-title {
     font-size: 32px;
@@ -639,6 +674,15 @@
     .search-bar-wrapper {
         margin-top: 0;
         padding: 20px;
+    }
+    .navbar-brand-centered {
+        position: static;
+        transform: none;
+        margin: 10px 0;
+    }
+    .navbar-vinclub .nav-link {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
     }
     .app-banner {
         flex-direction: column;

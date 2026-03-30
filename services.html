@@ -13,63 +13,82 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
- 
+
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css">
     <link rel="stylesheet" href="assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
 
-    
+
     <link rel="stylesheet" href="./css/globalStyle.css">
     <link rel="stylesheet" href="./css/services.css">
 </head>
 
 <body>
 
-  
-    <div class="fixed-top" style="background: white; border-bottom: 1px solid #eee;">
-        <div class="container d-flex justify-content-end py-1 header-top-links">
-            <a href="#"><i class="fa-solid fa-magnifying-glass me-1"></i></a>
-            <a href="login.html">Đăng nhập <i class="fa-solid fa-chevron-right ms-1" style="font-size: 10px;"></i></a>
-            <span class="mx-2 text-muted">/</span>
-            <a href="#"><img src="" width="16" class="me-1"> VIE <i class="fa-solid fa-chevron-down ms-1" style="font-size: 10px;"></i></a>
+
+    <div class="fixed-top shadow-sm" style="background: white; border-bottom: 1px solid #eee;">
+        <div class="container d-flex justify-content-end py-2 header-top-links">
+            <div class="d-flex align-items-center gap-4">
+                <a href="#" class="d-flex align-items-center"><i class="fa-solid fa-magnifying-glass me-2"></i> Đăng
+                    nhập <i class="fa-solid fa-chevron-right ms-2" style="font-size: 10px;"></i></a>
+                <span class="text-muted">|</span>
+                <a href="#" class="d-flex align-items-center gap-2">
+                    <img src="./assets/images/services/laco.png" width="20" height="15"
+                        class="rounded-circle object-fit-cover">
+                    VIE <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i>
+                </a>
+            </div>
         </div>
-    
-        <nav class="navbar navbar-expand-lg navbar-vinclub">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVinclub">
+
+        <nav class="navbar navbar-expand-lg navbar-vinclub py-0">
+            <div class="container position-relative">
+
+                <button class="navbar-toggler d-none d-lg-block border-0 bg-transparent ps-0" type="button">
+                    <i class="fa-solid fa-bars fs-5"></i>
+                </button>
+
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarVinclub">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse d-flex justify-content-between align-items-center" id="navbarVinclub">
-                    <ul class="navbar-nav align-items-center">
+
+                <div class="collapse navbar-collapse" id="navbarVinclub">
+
+                    <ul class="navbar-nav me-auto align-items-center">
                         <li class="nav-item"><a class="nav-link px-3" href="rooms.html">Khách sạn</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="services.html">Trải nghiệm</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="#">Ưu đãi khuyến mãi</a></li>
                     </ul>
-                    
-                    <a class="navbar-brand mx-auto text-center" href="home.html">
-                    
-                        <div style="color: #1a2b5e; font-weight: 700; font-size: 24px; font-family: 'Playfair Display', serif;">
-                            <img src="./assets/images/logo/Premier-Pearl-Logo-Horizontal-Rev-1-2-1.png" style="height:40px; filter: brightness(0) saturate(100%) invert(18%) sepia(26%) saturate(3025%) hue-rotate(204deg) brightness(97%) contrast(98%);" alt="VINPEARL" onerror="this.style.display='none';this.parentElement.innerHTML='VINPEARL'">
+
+
+                    <a class="navbar-brand-centered" href="home.html">
+                        <div class="brand-logo-container">
+                            <i class="fa-solid fa-dove bird-icon"></i>
+                            <span class="brand-text">VINPEARL</span>
                         </div>
                     </a>
 
-                    <ul class="navbar-nav align-items-center">
+
+                    <ul class="navbar-nav ms-auto align-items-center">
                         <li class="nav-item"><a class="nav-link px-3" href="news.html">News</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="#">Hội họp</a></li>
-                        <li class="nav-item"><a class="nav-link px-3 text-gold" href="#">VinClub</a></li>
-                        <li class="nav-item ms-3"><a class="btn btn-dat-ngay" href="booking.html">Đặt Ngay</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">VinClub</a></li>
+                        <li class="nav-item ms-3">
+                            <a class="btn btn-dat-ngay" href="booking.html">Đặt Ngay</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
 
-   
+
     <section id="hero" class="hero-vinclub fade-in">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-lg-7 hero-content-left">
                     <div class="hero-logo-wrapper mb-4">
-                        <img src="./assets/images/services/logo-vc_1723012907.png" alt="VinClub" class="hero-vinclub-logo" style="filter: brightness(0) invert(1);">
+                        <img src="./assets/images/services/logo-vc_1723012907.png" alt="VinClub"
+                            class="hero-vinclub-logo" style="filter: brightness(0) invert(1);">
                     </div>
                     <h1 class="hero-title">KẾT NỐI GIÁ TRỊ - TRẢI NGHIỆM TINH HOA</h1>
                     <div class="hero-btns mt-4">
@@ -81,7 +100,7 @@
         </div>
     </section>
 
-  
+
     <div class="container search-bar-wrapper fade-in-up">
         <form class="search-form">
             <div class="search-field" style="flex: 2;">
@@ -114,164 +133,170 @@
         </form>
     </div>
 
- 
+
     <div class="floating-bell">
         <i class="fa-regular fa-bell"></i>
         <div class="bell-badge">1</div>
     </div>
 
-    
+
     <section id="tiers" class="tier-section">
         <div class="container py-5">
             <div class="tier-main-card">
                 <h2 class="section-title">VinClub - Tận hưởng đặc quyền và ưu đãi bất tận</h2>
                 <p class="section-subtitle">
-                    VinClub là chương trình khách hàng thân thiết đẳng cấp của Tập đoàn Vingroup, mang đến những đặc quyền ưu việt dành riêng cho thành viên khi trải nghiệm các sản phẩm và dịch vụ của các công ty thành viên trong hệ sinh thái toàn diện của Tập đoàn.
+                    VinClub là chương trình khách hàng thân thiết đẳng cấp của Tập đoàn Vingroup, mang đến những đặc
+                    quyền ưu việt dành riêng cho thành viên khi trải nghiệm các sản phẩm và dịch vụ của các công ty
+                    thành viên trong hệ sinh thái toàn diện của Tập đoàn.
                 </p>
 
-            <div class="tier-progress" id="tierProgress" style="--progress-width: 0%;">
-                <div class="tier-step" onclick="changeTier(0, 'member')">
-                    <div class="tier-step-label">Member</div>
-                    <div class="tier-step-icon"></div>
-                </div>
-                <div class="tier-step" onclick="changeTier(1, 'gold')">
-                    <div class="tier-step-label">Gold</div>
-                    <div class="tier-step-icon"></div>
-                </div>
-                <div class="tier-step" onclick="changeTier(2, 'platinum')">
-                    <div class="tier-step-label">Platinum</div>
-                    <div class="tier-step-icon"></div>
-                </div>
-                <div class="tier-step" onclick="changeTier(3, 'diamond')">
-                    <div class="tier-step-label">Diamond</div>
-                    <div class="tier-step-icon"></div>
-                </div>
-            </div>
-
-         
-            <div class="tier-content" id="content-member">
-                <div class="tier-details-card">
-                    <div class="tier-details-title">Hạng Member</div>
-                    <div class="tier-details-subtitle">Đăng kí miễn phí và hưởng ngay ưu đãi</div>
-                    <div class="row mt-5 justify-content-center">
-                        <div class="col-md-4">
-                            <div class="benefit-icon">
-                                <i class="fa-solid fa-coins"></i>
-                            </div>
-                            <div class="benefit-text">Ưu đãi 5% trên giá phòng tốt nhất</div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="benefit-icon">
-                                <i class="fa-solid fa-scale-balanced"></i>
-                            </div>
-                            <div class="benefit-text">Ưu đãi 2% vé vào cửa VinWonders/ Safari</div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="benefit-icon">
-                                <i class="fa-solid fa-champagne-glasses"></i>
-                            </div>
-                            <div class="benefit-text">Ưu đãi 5% phí sân cỏ, ẩm thực</div>
-                        </div>
+                <div class="tier-progress" id="tierProgress" style="--progress-width: 0%;">
+                    <div class="tier-step" onclick="changeTier(0, 'member')">
+                        <div class="tier-step-label">Member</div>
+                        <div class="tier-step-icon"></div>
                     </div>
-                    <a href="contact.html" class="btn btn-outline-gold-v2">Khám phá tất cả quyền lợi</a>
-                </div>
-            </div>
-
-         
-            <div class="tier-content" id="content-gold" style="display:none;">
-                <div class="tier-details-card">
-                    <div class="tier-details-title">Hạng Gold</div>
-                    <div class="tier-details-subtitle">Tích lũy từ 10tr - &lt;50tr hoặc từ 5 - &lt;25 đêm phòng/năm</div>
-                    <div class="row mt-5 justify-content-center">
-                        <div class="col-md-4">
-                            <div class="benefit-icon">
-                                <i class="fa-solid fa-coins"></i>
-                            </div>
-                            <div class="benefit-text">Tích điểm 1% trên tất cả các dịch vụ chi tiêu trong hệ sinh thái Vinpearl</div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="benefit-icon">
-                                <i class="fa-solid fa-scale-balanced"></i>
-                            </div>
-                            <div class="benefit-text">Ưu đãi 5% trên giá phòng tốt nhất</div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="benefit-icon">
-                                <i class="fa-solid fa-champagne-glasses"></i>
-                            </div>
-                            <div class="benefit-text">Ưu đãi 5% phí sân cỏ, ẩm thực</div>
-                        </div>
+                    <div class="tier-step" onclick="changeTier(1, 'gold')">
+                        <div class="tier-step-label">Gold</div>
+                        <div class="tier-step-icon"></div>
                     </div>
-                    <a href="contact.html" class="btn btn-outline-gold-v2">Khám phá tất cả quyền lợi</a>
-                </div>
-            </div>
-
-            
-            <div class="tier-content" id="content-platinum" style="display:none;">
-                <div class="tier-details-card">
-                    <div class="tier-details-title">Hạng Platinum</div>
-                    <div class="tier-details-subtitle">Tích lũy từ 50tr - &lt;100tr hoặc từ 25 - &lt;50 đêm phòng/năm</div>
-                    <div class="row mt-5 justify-content-center">
-                        <div class="col-md-4">
-                            <div class="benefit-icon">
-                                <i class="fa-solid fa-coins"></i>
-                            </div>
-                            <div class="benefit-text">Tích điểm 1,5% trên tất cả các dịch vụ chi tiêu trong hệ sinh thái Vinpearl</div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="benefit-icon">
-                                <i class="fa-solid fa-scale-balanced"></i>
-                            </div>
-                            <div class="benefit-text">Ưu đãi 7% trên giá phòng tốt nhất</div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="benefit-icon">
-                                <i class="fa-solid fa-champagne-glasses"></i>
-                            </div>
-                            <div class="benefit-text">Ưu đãi tới 30% dịch vụ ẩm thực</div>
-                        </div>
+                    <div class="tier-step" onclick="changeTier(2, 'platinum')">
+                        <div class="tier-step-label">Platinum</div>
+                        <div class="tier-step-icon"></div>
                     </div>
-                    <a href="contact.html" class="btn btn-outline-gold-v2">Khám phá tất cả quyền lợi</a>
-                </div>
-            </div>
-
-            <div class="tier-content" id="content-diamond" style="display:none;">
-                <div class="tier-details-card">
-                    <div class="tier-details-title">Hạng Diamond</div>
-                    <div class="tier-details-subtitle">Tích lũy từ 100tr trở lên hoặc từ 50 đêm phòng/năm</div>
-                    <div class="row mt-5 justify-content-center">
-                        <div class="col-md-4">
-                            <div class="benefit-icon">
-                                <i class="fa-solid fa-coins"></i>
-                            </div>
-                            <div class="benefit-text">Tích điểm 2% trên chi tiêu và vô vàn lợi ích độc quyền</div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="benefit-icon">
-                                <i class="fa-solid fa-scale-balanced"></i>
-                            </div>
-                            <div class="benefit-text">Ưu đãi tới 10% trên giá phòng tốt nhất</div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="benefit-icon">
-                                <i class="fa-solid fa-champagne-glasses"></i>
-                            </div>
-                            <div class="benefit-text">Ưu đãi tới 50% nâng cấp trải nghiệm và ẩm thực</div>
-                        </div>
+                    <div class="tier-step" onclick="changeTier(3, 'diamond')">
+                        <div class="tier-step-label">Diamond</div>
+                        <div class="tier-step-icon"></div>
                     </div>
-                    <a href="contact.html" class="btn btn-outline-gold-v2">Khám phá tất cả quyền lợi</a>
+                </div>
+
+
+                <div class="tier-content" id="content-member">
+                    <div class="tier-details-card">
+                        <div class="tier-details-title">Hạng Member</div>
+                        <div class="tier-details-subtitle">Đăng kí miễn phí và hưởng ngay ưu đãi</div>
+                        <div class="row mt-5 justify-content-center">
+                            <div class="col-md-4">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-coins"></i>
+                                </div>
+                                <div class="benefit-text">Ưu đãi 5% trên giá phòng tốt nhất</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-scale-balanced"></i>
+                                </div>
+                                <div class="benefit-text">Ưu đãi 2% vé vào cửa VinWonders/ Safari</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-champagne-glasses"></i>
+                                </div>
+                                <div class="benefit-text">Ưu đãi 5% phí sân cỏ, ẩm thực</div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn btn-outline-gold-v2">Khám phá tất cả quyền lợi</a>
+                    </div>
+                </div>
+
+
+                <div class="tier-content" id="content-gold" style="display:none;">
+                    <div class="tier-details-card">
+                        <div class="tier-details-title">Hạng Gold</div>
+                        <div class="tier-details-subtitle">Tích lũy từ 10tr - &lt;50tr hoặc từ 5 - &lt;25 đêm phòng/năm
+                        </div>
+                        <div class="row mt-5 justify-content-center">
+                            <div class="col-md-4">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-coins"></i>
+                                </div>
+                                <div class="benefit-text">Tích điểm 1% trên tất cả các dịch vụ chi tiêu trong hệ sinh
+                                    thái Vinpearl</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-scale-balanced"></i>
+                                </div>
+                                <div class="benefit-text">Ưu đãi 5% trên giá phòng tốt nhất</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-champagne-glasses"></i>
+                                </div>
+                                <div class="benefit-text">Ưu đãi 5% phí sân cỏ, ẩm thực</div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn btn-outline-gold-v2">Khám phá tất cả quyền lợi</a>
+                    </div>
+                </div>
+
+
+                <div class="tier-content" id="content-platinum" style="display:none;">
+                    <div class="tier-details-card">
+                        <div class="tier-details-title">Hạng Platinum</div>
+                        <div class="tier-details-subtitle">Tích lũy từ 50tr - &lt;100tr hoặc từ 25 - &lt;50 đêm
+                            phòng/năm</div>
+                        <div class="row mt-5 justify-content-center">
+                            <div class="col-md-4">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-coins"></i>
+                                </div>
+                                <div class="benefit-text">Tích điểm 1,5% trên tất cả các dịch vụ chi tiêu trong hệ sinh
+                                    thái Vinpearl</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-scale-balanced"></i>
+                                </div>
+                                <div class="benefit-text">Ưu đãi 7% trên giá phòng tốt nhất</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-champagne-glasses"></i>
+                                </div>
+                                <div class="benefit-text">Ưu đãi tới 30% dịch vụ ẩm thực</div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn btn-outline-gold-v2">Khám phá tất cả quyền lợi</a>
+                    </div>
+                </div>
+
+                <div class="tier-content" id="content-diamond" style="display:none;">
+                    <div class="tier-details-card">
+                        <div class="tier-details-title">Hạng Diamond</div>
+                        <div class="tier-details-subtitle">Tích lũy từ 100tr trở lên hoặc từ 50 đêm phòng/năm</div>
+                        <div class="row mt-5 justify-content-center">
+                            <div class="col-md-4">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-coins"></i>
+                                </div>
+                                <div class="benefit-text">Tích điểm 2% trên chi tiêu và vô vàn lợi ích độc quyền</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-scale-balanced"></i>
+                                </div>
+                                <div class="benefit-text">Ưu đãi tới 10% trên giá phòng tốt nhất</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-champagne-glasses"></i>
+                                </div>
+                                <div class="benefit-text">Ưu đãi tới 50% nâng cấp trải nghiệm và ẩm thực</div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn btn-outline-gold-v2">Khám phá tất cả quyền lợi</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
     <section id="brand" class="brand-experience pb-0">
         <div class="container">
             <h2 class="experience-title mb-5">Trải nghiệm thương hiệu</h2>
             <div class="brand-grid">
-               
+
                 <div class="brand-item item-03">
                     <div class="gold-box gold-box-bottom"></div>
                     <img src="./assets/images/services/quan-the_1668419396.png" alt="">
@@ -280,7 +305,7 @@
                         <div class="brand-label">QUẦN THỂ PHÚ QUỐC - NHA TRANG - NAM HỘI AN</div>
                     </div>
                 </div>
-              
+
                 <div class="brand-item item-04">
                     <img src="./assets/images/services/san-golf_1668419317.png" alt="">
                     <div class="brand-overlay">
@@ -288,7 +313,7 @@
                         <div class="brand-label">SÂN GOLF TIÊU CHUẨN QUỐC TẾ</div>
                     </div>
                 </div>
-              
+
                 <div class="brand-item item-08">
                     <img src="./assets/images/services/cong-vien-giai-tri_1668419378.png" alt="">
                     <div class="brand-overlay">
@@ -296,7 +321,7 @@
                         <div class="brand-label">CÔNG VIÊN GIẢI TRÍ VINWONDERS, VINKE & VINPEARL SAFARI</div>
                     </div>
                 </div>
-               
+
                 <div class="brand-item item-10">
                     <img src="./assets/images/services/khach-san_1668419301.png" alt="">
                     <div class="brand-overlay">
@@ -304,7 +329,7 @@
                         <div class="brand-label">KHÁCH SẠN & RESORT</div>
                     </div>
                 </div>
-                
+
                 <div class="brand-item item-09">
                     <div class="gold-box gold-box-top"></div>
                     <img src="./assets/images/services/spa_1668419361.png" alt="">
@@ -313,7 +338,7 @@
                         <div class="brand-label">CƠ SỞ SPA</div>
                     </div>
                 </div>
-                
+
                 <div class="brand-item item-50">
                     <img src="./assets/images/services/nha-hang_1668419345.png" alt="">
                     <div class="brand-overlay">
@@ -373,7 +398,7 @@
                         <p>Quét QR để tải ứng dụng</p>
                         <img src="./assets/images/services/qr_1659078320.png" class="qr-img" alt="QR Code">
                         <div class="app-stores">
-                            
+
                         </div>
                     </div>
                     <div class="app-text ms-lg-4">
@@ -389,13 +414,14 @@
         </div>
     </section>
 
-   
+
     <footer class="footer py-5 text-white">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <h3 class="fw-bold text-gold font-playfair mb-4">Premier Pearl Hotel</h3>
-                    <p class="text-light-50">Mang đến trải nghiệm nghỉ dưỡng đích thực trong không gian sang trọng và hiện đại bên bờ biển đẹp nhất Vũng Tàu.</p>
+                    <p class="text-light-50">Mang đến trải nghiệm nghỉ dưỡng đích thực trong không gian sang trọng và
+                        hiện đại bên bờ biển đẹp nhất Vũng Tàu.</p>
                     <div class="d-flex gap-3 mt-4">
                         <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
@@ -425,31 +451,33 @@
                     <h5 class="fw-bold mb-4 font-playfair">Đăng Ký Nhận Cập Nhật</h5>
                     <p class="text-light-50">Nhận thông tin ưu đãi mới nhất từ VinClub & Premier Pearl.</p>
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control rounded-start-pill py-2 border-0" placeholder="Email của bạn">
+                        <input type="email" class="form-control rounded-start-pill py-2 border-0"
+                            placeholder="Email của bạn">
                         <button class="btn btn-gold rounded-end-pill px-4 text-dark fw-bold" type="button">Gửi</button>
                     </div>
                 </div>
             </div>
             <hr class="mt-5 border-secondary">
             <div class="text-center mt-4">
-                <p class="m-0 text-light-50 small">&copy; 2026 Premier Pearl Hotel Vũng Tàu - Demo Website. All Rights Reserved.</p>
+                <p class="m-0 text-light-50 small">&copy; 2026 Premier Pearl Hotel Vũng Tàu - Demo Website. All Rights
+                    Reserved.</p>
             </div>
         </div>
     </footer>
 
-   
+
     <script src="assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            changeTier(0, 'member'); 
+            changeTier(0, 'member');
         });
 
         function changeTier(index, tierId) {
             const progress = document.getElementById('tierProgress');
-            if(progress) {
+            if (progress) {
                 progress.style.setProperty('--progress-width', (index * (100 / 3)) + '%');
             }
 
@@ -458,7 +486,7 @@
                 const iconDiv = step.querySelector('.tier-step-icon');
                 step.classList.remove('completed', 'current');
                 iconDiv.innerHTML = '';
-                
+
                 if (i <= index) {
                     if (i < index) step.classList.add('completed');
                     if (i === index) step.classList.add('current');
@@ -471,9 +499,9 @@
                 content.style.display = 'none';
                 content.classList.remove('fade-in');
             });
-            
+
             const targetContent = document.getElementById('content-' + tierId);
-            if(targetContent) {
+            if (targetContent) {
                 targetContent.style.display = 'block';
                 void targetContent.offsetWidth;
                 targetContent.classList.add('fade-in');
