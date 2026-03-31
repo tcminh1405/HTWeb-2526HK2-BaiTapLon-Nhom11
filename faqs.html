@@ -1,73 +1,839 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Câu hỏi thường gặp - Vinpearl Luxury Nha Trang</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs - Premier Pearl Hotel Vũng Tàu - Luxury Experience</title>
-
-    <!-- Google Fonts: Playfair Display + Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Offline Font Awesome & Bootstrap -->
-    <link rel="stylesheet" href="assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css">
-    <link rel="stylesheet" href="assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/globalStyle.css">
-</head>
+    <style>
+      :root {
+        --vp-navy: #081831;
+        --vp-navy-light: #0d264f;
+        --vp-orange: #f29d38;
+        --vp-text: #555555;
+        --vp-gray: #8a99b3;
+        --font-heading: "Playfair Display", serif;
+        --font-body: "Mulish", sans-serif;
+      }
 
-<body>
-    <!-- Header / Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand text-gold fs-3 fw-bold" href="#hero">
-                Premier Pearl
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto py-4 py-lg-0 align-items-center">
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="Rooms.html">Rooms</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="Services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="Dining.html">Dining</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="Gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="Contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-gold rounded-pill px-4 text-dark fw-bold"
-                            href="#contact">Book Now</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+      /* Smooth scroll và cách khoảng an toàn cho header fixed */
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 120px;
+      }
 
-    <!-- Hero Section -->
-    <header class="hero d-flex align-items-center justify-content-center text-center fade-in" id="hero">
-        <div class="hero-overlay"></div>
-        <div class="container position-relative z-index-1">
-            <h1 class="text-white display-2 fw-bold mb-3 text-shadow">Luxury Beach Hotel Experience</h1>
-            <p class="text-white fs-4 mb-5 text-shadow">Trải nghiệm nghỉ dưỡng cao cấp ven biển Vũng Tàu</p>
-            <a class="btn btn-gold btn-lg rounded-pill px-5 py-3 fw-bold shadow-sm hover-zoom" href="#rooms">Explore
-                Now</a>
-        </div>
+      body {
+        font-family: var(--font-body);
+        color: var(--vp-text);
+        background-color: #ffffff;
+        line-height: 1.8;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: var(--font-heading);
+        color: var(--vp-navy);
+      }
+
+      /* ================= HEADER ================= */
+      .vp-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+        padding: 15px 40px;
+        transition: all 0.4s ease;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+      }
+      .vp-header.scrolled {
+        background-color: var(--vp-navy);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      .nav-link {
+        color: #fff !important;
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+      .nav-link:hover {
+        color: var(--vp-orange) !important;
+      }
+      .logo-center {
+        height: 45px;
+      }
+
+      /* ================= HERO ================= */
+      .page-hero {
+        height: 40vh;
+        min-height: 350px;
+        background: url("https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2080&auto=format&fit=crop")
+          center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(8, 24, 49, 0.5);
+      }
+      .page-hero-text {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: #fff;
+      }
+      .page-hero-text h1 {
+        font-size: 3.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      /* ================= FAQS CONTENT ================= */
+      .faq-wrap {
+        padding: 80px 0 100px 0;
+      }
+
+      /* Sticky Sidebar Menu */
+      .faq-sidebar {
+        position: sticky;
+        top: 120px;
+        border-right: 1px solid #eee;
+        padding-right: 30px;
+      }
+      .faq-nav-link {
+        display: block;
+        padding: 15px 0;
+        color: #888;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: 0.3s;
+        border-bottom: 1px solid #f5f5f5;
+      }
+      .faq-nav-link:last-child {
+        border-bottom: none;
+      }
+      .faq-nav-link:hover,
+      .faq-nav-link.active {
+        color: var(--vp-orange);
+        padding-left: 15px;
+        border-left: 3px solid var(--vp-orange);
+        background: #fafafa;
+      }
+
+      /* Accordion Style */
+      .faq-section-block {
+        margin-bottom: 60px;
+      }
+      .faq-category-title {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        font-weight: 600;
+      }
+
+      .custom-accordion .accordion-item {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 5px;
+      }
+      .custom-accordion .accordion-button {
+        background: transparent;
+        color: var(--vp-navy);
+        font-size: 1.15rem;
+        font-weight: 700;
+        padding: 25px 0;
+        box-shadow: none;
+        font-family: var(--font-heading);
+      }
+      .custom-accordion .accordion-button:not(.collapsed) {
+        color: var(--vp-orange);
+      }
+      .custom-accordion .accordion-button::after {
+        display: none;
+      }
+      .custom-accordion .accordion-button .toggle-icon {
+        margin-left: auto;
+        color: #ccc;
+        transition: transform 0.3s ease;
+        font-size: 1rem;
+      }
+      .custom-accordion .accordion-button:not(.collapsed) .toggle-icon {
+        color: var(--vp-orange);
+        transform: rotate(180deg);
+      }
+      .custom-accordion .accordion-body {
+        padding: 0 0 30px 0;
+        color: #666;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      /* ================= PRE-FOOTER ================= */
+      .pre-footer {
+        background-color: var(--vp-navy-light);
+        color: #fff;
+        padding: 70px 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .pre-footer .line {
+        width: 40px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.3);
+        margin: 0 auto 20px auto;
+      }
+      .pre-footer h2 {
+        color: #fff;
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      .pre-footer p {
+        opacity: 0.8;
+        font-size: 1.05rem;
+        margin-bottom: 40px;
+      }
+      .btn-pf-orange {
+        background: var(--vp-orange);
+        color: #fff;
+        padding: 12px 35px;
+        border-radius: 30px;
+        font-weight: 600;
+        border: none;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: 0.3s;
+        margin: 0 10px;
+      }
+      .btn-pf-orange:hover {
+        background: #d18228;
+        color: #fff;
+      }
+      .btn-pf-outline {
+        background: transparent;
+        color: #fff;
+        padding: 12px 35px;
+        border-radius: 30px;
+        font-weight: 600;
+        border: 1px solid #fff;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: 0.3s;
+        margin: 0 10px;
+      }
+      .btn-pf-outline:hover {
+        background: #fff;
+        color: var(--vp-navy);
+      }
+
+      /* ================= FOOTER ================= */
+      .footer-vp {
+        background-color: var(--vp-navy);
+        color: var(--vp-gray);
+        padding: 70px 0 30px;
+        font-size: 0.9rem;
+      }
+      .footer-logo {
+        height: 50px;
+        filter: brightness(0) invert(1);
+        margin-bottom: 25px;
+      }
+      .footer-col-title {
+        color: var(--vp-orange);
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+        font-family: var(--font-body);
+      }
+      .footer-vp ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-vp ul li {
+        margin-bottom: 15px;
+      }
+      .footer-vp ul a {
+        color: var(--vp-gray);
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .footer-vp ul a:hover {
+        color: var(--vp-orange);
+      }
+      .social-box a {
+        display: inline-flex;
+        width: 35px;
+        height: 35px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        align-items: center;
+        justify-content: center;
+        color: var(--vp-gray);
+        text-decoration: none;
+        margin-right: 10px;
+        border-radius: 2px;
+        transition: 0.3s;
+      }
+      .social-box a:hover {
+        border-color: var(--vp-orange);
+        color: var(--vp-orange);
+      }
+      .contact-list i {
+        color: var(--vp-orange);
+        width: 25px;
+      }
+      .contact-list li {
+        display: flex;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: 50px;
+        padding-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="vp-header d-flex justify-content-between align-items-center"
+      id="navbar"
+    >
+      <div class="d-flex align-items-center gap-4">
+        <a href="home.html" class="nav-link"
+          ><i class="fa-solid fa-arrow-left me-2"></i> Quay lại</a
+        >
+      </div>
+      <a href="#"
+        ><img
+          src="./assets/images/logo/lux Nha trang-02_1679990219.svg"
+          alt="Vinpearl"
+          class="logo-center"
+          onerror="
+            this.src =
+              'https://upload.wikimedia.org/wikipedia/commons/e/e1/Vinpearl_logo.svg'
+          "
+      /></a>
+      <div class="d-flex align-items-center gap-4">
+        <a href="#" class="nav-link"
+          ><i class="fa-regular fa-user"></i> Đăng nhập</a
+        >
+      </div>
     </header>
 
+    <section class="page-hero">
+      <div class="page-hero-text">
+        <h1>Câu Hỏi Thường Gặp</h1>
+        <p>Mọi thông tin cần thiết để chuẩn bị cho kỳ nghỉ hoàn hảo của bạn</p>
+      </div>
+    </section>
 
+    <section class="container faq-wrap">
+      <div class="row g-5">
+        <div class="col-lg-3 d-none d-lg-block">
+          <div class="faq-sidebar" id="faqMenu">
+            <a href="#luutru" class="faq-nav-link active"
+              >Lưu trú & Đặt phòng</a
+            >
+            <a href="#dichuyen" class="faq-nav-link">Di chuyển & Vị trí</a>
+            <a href="#amthuc" class="faq-nav-link">Ẩm thực & Nhà hàng</a>
+            <a href="#dichvu" class="faq-nav-link">Dịch vụ & Tiện ích</a>
+            <a href="#giaitri" class="faq-nav-link">Vui chơi & Giải trí</a>
+          </div>
+        </div>
 
+        <div class="col-lg-9 ps-lg-5">
+          <div id="luutru" class="faq-section-block section-spy">
+            <h2 class="faq-category-title">Lưu trú & Đặt phòng</h2>
+            <div class="accordion custom-accordion" id="faqStay">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#c1"
+                    aria-expanded="true"
+                  >
+                    Thời gian nhận/trả phòng tiêu chuẩn là mấy giờ?
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                  </button>
+                </h2>
+                <div
+                  id="c1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#faqStay"
+                >
+                  <div class="accordion-body">
+                    Thời gian nhận phòng (Check-in) là từ
+                    <strong>14:00</strong> và trả phòng (Check-out) là trước
+                    <strong>12:00 trưa</strong> theo giờ địa phương. Việc nhận
+                    phòng sớm hoặc trả phòng trễ phụ thuộc vào tình trạng phòng
+                    trống và có thể phát sinh phụ phí theo quy định của khách
+                    sạn.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#c2"
+                    aria-expanded="false"
+                  >
+                    Chính sách cho trẻ em đi cùng như thế nào?
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                  </button>
+                </h2>
+                <div
+                  id="c2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqStay"
+                >
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <strong>Trẻ dưới 4 tuổi:</strong> Miễn phí hoàn toàn khi
+                        ngủ chung giường với bố mẹ.
+                      </li>
+                      <li>
+                        <strong>Trẻ từ 4 đến dưới 12 tuổi:</strong> Bắt buộc phụ
+                        thu bữa sáng, có thể lựa chọn ngủ chung giường hoặc kê
+                        thêm giường phụ (extra bed).
+                      </li>
+                      <li>
+                        <strong>Trẻ từ 12 tuổi trở lên:</strong> Tính phí như
+                        một người lớn. Bắt buộc kê thêm giường phụ đối với phòng
+                        khách sạn. Đối với hạng biệt thự (Villa), không áp dụng
+                        kê giường phụ, chỉ áp dụng phụ thu người lớn.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#c3"
+                    aria-expanded="false"
+                  >
+                    Tôi có phải đặt cọc (Deposit) khi nhận phòng không?
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                  </button>
+                </h2>
+                <div
+                  id="c3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqStay"
+                >
+                  <div class="accordion-body">
+                    Có. Khi làm thủ tục nhận phòng, khách sạn sẽ yêu cầu quý
+                    khách đặt cọc một khoản tiền (bằng tiền mặt hoặc phong tỏa
+                    thẻ tín dụng) để đảm bảo cho các chi phí phát sinh trong
+                    thời gian lưu trú. Khoản tiền này sẽ được hoàn trả/mở phong
+                    tỏa sau khi trừ các chi phí phát sinh lúc quý khách trả
+                    phòng.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <!-- Bootstrap Bundle with Popper Offline -->
-    <!-- Mapped path for offline bootstrap js -->
-    <script src="assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+          <div id="dichuyen" class="faq-section-block section-spy">
+            <h2 class="faq-category-title">Di chuyển & Vị trí</h2>
+            <div class="accordion custom-accordion" id="faqTrans">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#t1"
+                    aria-expanded="false"
+                  >
+                    Làm thế nào để di chuyển từ sân bay đến khu nghỉ dưỡng?
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                  </button>
+                </h2>
+                <div
+                  id="t1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqTrans"
+                >
+                  <div class="accordion-body">
+                    Khu nghỉ dưỡng tọa lạc riêng biệt trên đảo Hòn Tre. Quý
+                    khách sẽ di chuyển bằng xe ô tô (taxi hoặc xe đưa đón của
+                    Vinpearl) từ Sân bay Quốc tế Cam Ranh đến bến tàu cao tốc
+                    Vinpearl trên đất liền (khoảng 40 phút). Từ đây, quý khách
+                    sẽ được sắp xếp đi cano cao tốc băng qua vịnh biển để ra đảo
+                    (khoảng 7-10 phút). Dịch vụ cano đưa đón hai chiều giữa đất
+                    liền và đảo phục vụ 24/24 cho khách lưu trú.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#t2"
+                    aria-expanded="false"
+                  >
+                    Di chuyển nội bộ trong khu nghỉ dưỡng bằng phương tiện gì?
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                  </button>
+                </h2>
+                <div
+                  id="t2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqTrans"
+                >
+                  <div class="accordion-body">
+                    Để giữ không gian yên tĩnh và trong lành, chúng tôi cung cấp
+                    dịch vụ xe điện (buggy) miễn phí hoạt động 24/7. Quý khách
+                    chỉ cần nhấc máy gọi Lễ tân từ phòng của mình, xe điện sẽ
+                    đến đón quý khách trong vòng vài phút.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <!-- Custom Scripts -->
-    <script src="js/script.js"></script>
-</body>
+          <div id="amthuc" class="faq-section-block section-spy">
+            <h2 class="faq-category-title">Ẩm thực & Nhà hàng</h2>
+            <div class="accordion custom-accordion" id="faqFood">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#f1"
+                    aria-expanded="false"
+                  >
+                    Bữa sáng phục vụ trong khung giờ nào?
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                  </button>
+                </h2>
+                <div
+                  id="f1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqFood"
+                >
+                  <div class="accordion-body">
+                    Bữa sáng tự chọn (Buffet) cao cấp được phục vụ từ
+                    <strong>06:00 đến 10:30 sáng</strong> hàng ngày tại nhà hàng
+                    Blue Lagoon. Ngoài ra, chúng tôi cũng có dịch vụ phục vụ bữa
+                    sáng tận phòng (In-room Dining) theo yêu cầu.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#f2"
+                    aria-expanded="false"
+                  >
+                    Nhà hàng có quy định về trang phục (Dress Code) không?
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                  </button>
+                </h2>
+                <div
+                  id="f2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqFood"
+                >
+                  <div class="accordion-body">
+                    Để đảm bảo trải nghiệm ẩm thực sang trọng, nhà hàng của
+                    chúng tôi yêu cầu trang phục lịch sự (Smart Casual). Quý
+                    khách vui lòng không mặc đồ bơi, áo sát nách (với nam giới)
+                    hoặc đi chân trần vào khu vực nhà hàng.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div id="dichvu" class="faq-section-block section-spy">
+            <h2 class="faq-category-title">Dịch vụ & Tiện ích</h2>
+            <div class="accordion custom-accordion" id="faqService">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#s1"
+                    aria-expanded="false"
+                  >
+                    Tôi có thể mang thú cưng vào khu nghỉ không?
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                  </button>
+                </h2>
+                <div
+                  id="s1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqService"
+                >
+                  <div class="accordion-body">
+                    Rất tiếc, để đảm bảo vệ sinh và không gian tĩnh lặng chung,
+                    Vinpearl Luxury Nha Trang hiện không cho phép mang theo thú
+                    cưng (chó, mèo,...) vào khu vực lưu trú.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#s2"
+                    aria-expanded="false"
+                  >
+                    Khách sạn có dịch vụ Spa không? Cần đặt trước không?
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                  </button>
+                </h2>
+                <div
+                  id="s2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqService"
+                >
+                  <div class="accordion-body">
+                    Chúng tôi vô cùng tự hào với dịch vụ
+                    <strong>Akoya Spa</strong> mang đậm phong cách Bali, tọa lạc
+                    trong các chòi nổi đặc biệt trên mặt biển. Vì số lượng chòi
+                    spa có hạn và luôn được săn đón, quý khách nên liên hệ Lễ
+                    tân để đặt lịch trước nhằm có khung giờ ưng ý nhất.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="giaitri" class="faq-section-block section-spy">
+            <h2 class="faq-category-title">Vui chơi & Giải trí</h2>
+            <div class="accordion custom-accordion" id="faqFun">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#g1"
+                    aria-expanded="false"
+                  >
+                    Giá phòng đã bao gồm vé vui chơi VinWonders chưa?
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                  </button>
+                </h2>
+                <div
+                  id="g1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqFun"
+                >
+                  <div class="accordion-body">
+                    Việc giá phòng bao gồm vé vui chơi Công viên giải trí
+                    VinWonders Nha Trang hay chưa phụ thuộc hoàn toàn vào
+                    <strong>Gói phòng (Rate Plan)</strong> mà quý khách đã chọn
+                    mua. Nếu quý khách mua gói phòng chỉ bao gồm ăn sáng (BB)
+                    hoặc ăn 3 bữa (FB), vé VinWonders sẽ không được bao gồm. Quý
+                    khách có thể mua vé trực tiếp tại Lễ tân khách sạn với giá
+                    ưu đãi dành riêng cho khách lưu trú.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pre-footer">
+      <div class="container">
+        <div class="line"></div>
+        <h2>Giữ Kỳ Nghỉ Trong Mơ Của Bạn</h2>
+        <p>
+          Liên hệ ngay để được tư vấn và nhận ưu đãi tốt nhất từ Vinpearl Luxury
+          Nha Trang
+        </p>
+        <div>
+          <a href="#" class="btn-pf-orange"
+            ><i class="fa-regular fa-calendar-check"></i> Đặt Phòng Ngay</a
+          >
+          <a href="contact.html" class="btn-pf-outline"
+            ><i class="fa-solid fa-phone"></i> Liên Hệ Chúng Tôi</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-vp">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <img
+              src="./assets/images/logo/lux Nha trang-02_1679990219.svg"
+              alt="Vinpearl Luxury"
+              class="footer-logo"
+              onerror="
+                this.src =
+                  'https://upload.wikimedia.org/wikipedia/commons/e/e1/Vinpearl_logo.svg'
+              "
+            />
+            <p style="margin-bottom: 30px; line-height: 1.6">
+              Khu nghỉ dưỡng biển đẳng cấp quốc tế tại bán đảo Hòn Tre, Nha
+              Trang. Mang đến trải nghiệm nghỉ dưỡng hoàn hảo và không thể nào
+              quên.
+            </p>
+            <div class="social-box">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-col-title">Về Chúng Tôi</h5>
+            <ul>
+              <li><a href="about.html">Giới thiệu</a></li>
+              <li><a href="contact.html">Liên hệ</a></li>
+              <li><a href="faqs.html">Câu hỏi thường gặp</a></li>
+              <li><a href="#">Tuyển dụng</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-col-title">Điều Khoản</h5>
+            <ul>
+              <li><a href="#">Điều khoản chung</a></li>
+              <li><a href="#">Quy định thanh toán</a></li>
+              <li><a href="#">Chính sách hủy phòng</a></li>
+              <li><a href="#">Bảo mật dữ liệu</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-col-title">Tin Tức & Sự Kiện</h5>
+            <ul>
+              <li><a href="#">Tin công ty</a></li>
+              <li><a href="#">Cẩm nang du lịch</a></li>
+              <li><a href="#">Sự kiện & Lễ hội</a></li>
+              <li><a href="#">Thành tựu</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-12">
+            <h5 class="footer-col-title">Liên Hệ</h5>
+            <ul class="contact-list">
+              <li>
+                <i class="fa-solid fa-location-dot mt-1"></i> Bán đảo Hòn Tre,
+                Vĩnh Nguyên, Nha Trang, Khánh Hoà
+              </li>
+              <li><i class="fa-solid fa-phone mt-1"></i> +84 258 359 8888</li>
+              <li>
+                <i class="fa-regular fa-envelope mt-1"></i>
+                luxury.nhatrang@vinpearl.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>© 2026 Vinpearl Luxury Nha Trang. All Rights Reserved.</div>
+          <div>Nhóm 11 – HTWeb 2526 HK2</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // 1. Header scroll effect
+      window.addEventListener("scroll", function () {
+        var navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) navbar.classList.add("scrolled");
+        else navbar.classList.remove("scrolled");
+      });
+
+      // 2. JS xử lý quay/đảo chiều icon mũi tên của phần Accordion
+      const accordionButtons = document.querySelectorAll(
+        ".custom-accordion .accordion-button",
+      );
+      accordionButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          // Đóng tất cả các icon khác
+          document.querySelectorAll(".toggle-icon").forEach((icon) => {
+            icon.style.transform = "rotate(0deg)";
+            icon.style.color = "#ccc";
+          });
+
+          // Mở icon hiện tại nếu đang mở
+          const icon = this.querySelector(".toggle-icon");
+          if (!this.classList.contains("collapsed")) {
+            icon.style.transform = "rotate(180deg)";
+            icon.style.color = "var(--vp-orange)";
+          }
+        });
+      });
+
+      // 3. ScrollSpy: Tự động highlight menu bên trái khi cuộn chuột qua mục tương ứng
+      const sections = document.querySelectorAll(".section-spy");
+      const navLinks = document.querySelectorAll(".faq-nav-link");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          // Nếu vị trí cuộn chuột vượt qua phần tiêu đề section (bù trừ độ cao của header)
+          if (pageYOffset >= sectionTop - 130) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").includes(current)) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
