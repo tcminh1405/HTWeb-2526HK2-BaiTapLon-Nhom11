@@ -1,27 +1,667 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rooms - Premier Pearl Hotel Vũng Tàu - Luxury Experience</title>
+    <title>Các Hạng Phòng - Premier Pearl Hotel Vũng Tàu</title>
 
-    <!-- Google Fonts: Playfair Display + Poppins -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
-    <!-- Offline Font Awesome & Bootstrap -->
+
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css">
     <link rel="stylesheet" href="assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/globalStyle.css">
+
+    <link rel="stylesheet" href="./css/globalStyle.css">
+    <link rel="stylesheet" href="./css/room.css">
 </head>
 
 <body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-gold fs-3 fw-bold" href="./home.html">Premier Pearl</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0 align-items-center">
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="./home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="./about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase active" href="./rooms.html">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="./services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="./dinning.html">Dining</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="./gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="./contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-gold rounded-pill px-4 text-dark fw-bold" href="./booking.html">Đặt Ngay</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="rooms-hero fade-in" id="rooms-top">
+        <div class="rooms-hero-overlay"></div>
+        <div class="container rooms-hero-content">
+            <a href="./home.html" class="back-link mb-3 d-inline-flex">
+                <i class="fa-solid fa-arrow-left"></i> Quay lại trang chủ
+            </a>
+            <h1 class="text-white fw-bold mb-0">Các hạng phòng</h1>
+        </div>
+    </header>
+
+
+    <section class="amenities-bar">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-md-2">
+                    <div class="amenity-item fade-in-up">
+                        <i class="fa-solid fa-water-ladder"></i>
+                        <span>Hồ bơi riêng</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="amenity-item fade-in-up delay-1">
+                        <i class="fa-solid fa-wifi"></i>
+                        <span>WiFi miễn phí</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="amenity-item fade-in-up delay-2">
+                        <i class="fa-solid fa-utensils"></i>
+                        <span>Bữa sáng</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="amenity-item fade-in-up delay-1">
+                        <i class="fa-solid fa-spa"></i>
+                        <span>Spa & Massage</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="amenity-item fade-in-up delay-2">
+                        <i class="fa-solid fa-car"></i>
+                        <span>Đưa đón sân bay</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="amenity-item fade-in-up delay-3">
+                        <i class="fa-solid fa-concierge-bell"></i>
+                        <span>Quản gia 24/7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="rooms-intro text-center">
+        <div class="container">
+            <div class="section-divider"></div>
+            <h2 class="fw-bold fade-in-up">Thiên đường nghỉ dưỡng biển</h2>
+            <p class="fade-in-up delay-1">
+                84 căn biệt thự xinh đẹp nằm giữa khu rừng nhiệt đới xanh mướt, ẩn mình trong tiếng sóng biển rì rào thư
+                thái sẽ mang đến một kỳ nghỉ tuyệt vời, đầy sảng khoái cho du khách. Mỗi căn biệt thự được thiết kế sang
+                trọng, tích hợp đầy đủ tiện nghi hiện đại
+                cùng không gian riêng tư hoàn hảo.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="room-listing">
+        <div class="container">
+
+
+            <div class="room-item fade-in-up" id="room-pool-villa">
+
+                <div class="room-carousel-wrapper">
+                    <div id="carouselRoom1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/images/room/b552dca59bb546648e1b37d41da0cea2_pool villa kuxx.png"
+                                    class="room-carousel-img" alt="Biệt thự hướng bể bơi - Phòng ngủ">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/1 1 1 1 1.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng bể bơi - Phòng tắm">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/1 1 1.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng bể bơi - Hồ bơi">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/1 1.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng bể bơi - Hồ bơi">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/1 1 1 1.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng bể bơi - Hồ bơi">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/1.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng bể bơi - Hồ bơi">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRoom1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselRoom1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="room-info">
+                    <h3>Biệt thự hướng bể bơi</h3>
+                    <p>
+                        Với diện tích 60m², Biệt thự 1 phòng ngủ hướng Hồ bơi là biệt thự thiết kế sang trọng, tích hợp
+                        đầy đủ tiện nghi cho kỳ lưu trú của bạn. Sở hữu không gian rộng rãi và hồ bơi riêng, Biệt thự
+                        mang đến kỳ nghỉ dưỡng thoải mái và đẳng cấp nhất dành cho bạn
+                        và người thân.
+                    </p>
+                    <div class="room-meta">
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-user-group"></i>
+                            <span>4 người</span>
+                        </div>
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-vector-square"></i>
+                            <span>60m²</span>
+                        </div>
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-bed"></i>
+                            <span>Giường lớn</span>
+                        </div>
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-wifi"></i>
+                            <span>Wifi miễn phí</span>
+                        </div>
+                    </div>
+                    <div class="room-pricing">
+                        <div class="price-original">Giá công bố ~ 7.040.000VNĐ/đêm</div>
+                        <div class="price-sale">
+                            Giá thành viên ~ <span class="price-value">6.688.000VNĐ</span> /đêm
+                        </div>
+                    </div>
+                    <div class="room-actions">
+                        <a href="./booking.html?room=pool-villa" class="btn-book-now" id="book-pool-villa">Đặt Ngay</a>
+                        <a href="./roomdetail.html?room=pool-villa" class="btn-view-more" id="view-pool-villa">Xem
+                            Thêm</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="room-item fade-in-up" id="room-ocean-villa">
+
+                <div class="room-carousel-wrapper">
+                    <div id="carouselRoom2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/images/room/6c1fb58b042e4e4d935ff3a2f2d841ae_VPLRNT__Grand_Duplex_Villa_13.png"
+                                    class="room-carousel-img" alt="Biệt thự hướng biển - Phòng ngủ">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/2.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng biển - View biển">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/2_2.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng biển - Nội thất">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/22.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng biển - Nội thất">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/222.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng biển - Nội thất">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/22222.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng biển - Nội thất">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/222.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng biển - Nội thất">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/222222.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng biển - Nội thất">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRoom2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselRoom2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="room-info">
+                    <h3>Biệt thự hướng biển</h3>
+                    <p>
+                        Với diện tích 75m², biệt thự có thiết kế sang trọng, thông minh, tích hợp đầy đủ tiện nghi cho
+                        kỳ lưu trú của bạn. Tầm nhìn hướng ra biển lặng mạn, có bể bơi riêng, biệt thự là lựa chọn lý
+                        tưởng cho những ai muốn đắm mình trong khung cảnh biển xanh mênh
+                        mông.
+                    </p>
+                    <div class="room-meta">
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-user-group"></i>
+                            <span>4 người</span>
+                        </div>
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-vector-square"></i>
+                            <span>75m²</span>
+                        </div>
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-bed"></i>
+                            <span>Giường lớn</span>
+                        </div>
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-wifi"></i>
+                            <span>Wifi miễn phí</span>
+                        </div>
+                    </div>
+                    <div class="room-pricing">
+                        <div class="price-original">Giá công bố ~ 8.570.000VNĐ/đêm</div>
+                        <div class="price-sale">
+                            Giá thành viên ~ <span class="price-value">8.141.500VNĐ</span> /đêm
+                        </div>
+                    </div>
+                    <div class="room-actions">
+                        <a href="./booking.html?room=ocean-villa" class="btn-book-now" id="book-ocean-villa">Đặt
+                            Ngay</a>
+                        <a href="./roomdetail.html?room=ocean-villa" class="btn-view-more" id="view-ocean-villa">Xem
+                            Thêm</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="room-item fade-in-up" id="room-duplex-villa">
+
+                <div class="room-carousel-wrapper">
+                    <div id="carouselRoom3" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/images/room/6c1fb58b042e4e4d935ff3a2f2d841ae_VPLRNT__Grand_Duplex_Villa_13.png"
+                                    class="room-carousel-img" alt="Biệt thự 2 tầng - Phòng ngủ chính">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/3.png" class="room-carousel-img"
+                                    alt="Biệt thự 2 tầng - Hồ bơi">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/33.png" class="room-carousel-img"
+                                    alt="Biệt thự 2 tầng - Không gian sống">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/333.png" class="room-carousel-img"
+                                    alt="Biệt thự 2 tầng - Không gian sống">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/3333.png" class="room-carousel-img"
+                                    alt="Biệt thự 2 tầng - Không gian sống">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/3_3.png" class="room-carousel-img"
+                                    alt="Biệt thự 2 tầng - Không gian sống">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRoom3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselRoom3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="room-info">
+                    <h3>Biệt thự 2 tầng</h3>
+                    <p>
+                        Với diện tích 110m², biệt thự có thiết kế 2 tầng sang trọng, rộng rãi, tích hợp đầy đủ tiện nghi
+                        cho kỳ lưu trú của bạn. Đặc biệt có bể bơi riêng, đây là lựa chọn lý tưởng dành cho các gia đình
+                        hoặc nhóm bạn muốn tận hưởng không gian nghỉ dưỡng cao cấp
+                        và riêng tư.
+                    </p>
+                    <div class="room-meta">
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-user-group"></i>
+                            <span>4 người</span>
+                        </div>
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-vector-square"></i>
+                            <span>110m²</span>
+                        </div>
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-bed"></i>
+                            <span>Giường lớn</span>
+                        </div>
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-wifi"></i>
+                            <span>Wifi miễn phí</span>
+                        </div>
+                    </div>
+                    <div class="room-pricing">
+                        <div class="price-original">Giá công bố ~ 9.660.000VNĐ/đêm</div>
+                        <div class="price-sale">
+                            Giá thành viên ~ <span class="price-value">9.177.000VNĐ</span> /đêm
+                        </div>
+                    </div>
+                    <div class="room-actions">
+                        <a href="./booking.html?room=duplex-villa" class="btn-book-now" id="book-duplex-villa">Đặt
+                            Ngay</a>
+                        <a href="./roomdetail.html?room=duplex-villa" class="btn-view-more" id="view-duplex-villa">Xem
+                            Thêm</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="room-item fade-in-up" id="room-garden-villa">
+
+                <div class="room-carousel-wrapper">
+                    <div id="carouselRoom4" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/images/room/8ccd804500c843c1b5c5467f0c691883_VPLRNT_ Garden View Villa .png"
+                                    class="room-carousel-img" alt="Biệt thự hướng vườn - Phòng ngủ">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/4.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng vườn - Khu vực ngồi">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/333.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng vườn - Sân vườn">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/33.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng vườn - Sân vườn">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/3333.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng vườn - Sân vườn">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/3_3.png" class="room-carousel-img"
+                                    alt="Biệt thự hướng vườn - Sân vườn">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRoom4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselRoom4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="room-info">
+                    <h3>Biệt thự hướng vườn</h3>
+                    <p>
+                        Với diện tích 60m², biệt thự có thiết kế sang trọng, rộng rãi, tích hợp đầy đủ tiện nghi cho kỳ
+                        lưu trú của bạn. Tầm nhìn hướng vườn tươi xanh. Biệt thự là lựa chọn lý tưởng dành cho những ai
+                        yêu thích sự yên bình, gần gũi với thiên nhiên và muốn tận
+                        hưởng không gian xanh mát trong lành.
+                    </p>
+                    <div class="room-meta">
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-user-group"></i>
+                            <span>4 người</span>
+                        </div>
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-vector-square"></i>
+                            <span>60m²</span>
+                        </div>
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-bed"></i>
+                            <span>Giường lớn</span>
+                        </div>
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-wifi"></i>
+                            <span>Wifi miễn phí</span>
+                        </div>
+                    </div>
+                    <div class="room-pricing" style="margin-bottom: 1.6rem;">
+                        <div class="price-sale" style="font-size: 1rem; color: #777; font-weight: 400;">
+                            Liên hệ khách sạn để biết giá tốt nhất
+                        </div>
+                    </div>
+                    <div class="room-actions">
+                        <a href="./contact.html" class="btn-contact-hotel" id="contact-garden-villa">
+                            <i class="fa-solid fa-phone me-2"></i>Liên Hệ Khách Sạn
+                        </a>
+                        <a href="./roomdetail.html?room=garden-villa" class="btn-view-more" id="view-garden-villa">Xem
+                            Thêm</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="room-item fade-in-up" id="room-penthouse">
+
+                <div class="room-carousel-wrapper">
+                    <div id="carouselRoom5" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/images/room/e1bb35a60c3c4ca196c1bc1dc360b181_DSC_4904 copy.png"
+                                    class="room-carousel-img" alt="Presidential Penthouse - Phòng khách">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/5.png" class="room-carousel-img"
+                                    alt="Presidential Penthouse - Phòng ngủ">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/55.png" class="room-carousel-img"
+                                    alt="Presidential Penthouse - Hồ bơi vô cực">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/22.png" class="room-carousel-img"
+                                    alt="Presidential Penthouse - Hồ bơi vô cực">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/room/222.png" class="room-carousel-img"
+                                    alt="Presidential Penthouse - Hồ bơi vô cực">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRoom5"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselRoom5"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="room-info">
+                    <h3>Presidential Penthouse</h3>
+                    <p>
+                        Trải nghiệm độc bản và thượng lưu với diện tích 120m², hồ bơi vô cực riêng tư, dịch vụ quản gia
+                        24/7 tận tâm. Penthouse thiết kế tinh tế với vật liệu cao cấp nhập khẩu, tầm nhìn 360° bao quát
+                        toàn cảnh biển Vũng Tàu hùng vĩ – đỉnh cao của sự sang trọng
+                        dành cho những vị khách VIP.
+                    </p>
+                    <div class="room-meta">
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-user-group"></i>
+                            <span>6 người</span>
+                        </div>
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-vector-square"></i>
+                            <span>120m²</span>
+                        </div>
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-bed"></i>
+                            <span>Giường King</span>
+                        </div>
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-wifi"></i>
+                            <span>Wifi miễn phí</span>
+                        </div>
+                    </div>
+                    <div class="room-pricing">
+                        <div class="price-original">Giá công bố ~ 15.800.000VNĐ/đêm</div>
+                        <div class="price-sale">
+                            Giá thành viên ~ <span class="price-value">14.260.000VNĐ</span> /đêm
+                        </div>
+                    </div>
+                    <div class="room-actions">
+                        <a href="./booking.html?room=penthouse" class="btn-book-now" id="book-penthouse">Đặt Ngay</a>
+                        <a href="./roomdetail.html?room=penthouse" class="btn-view-more" id="view-penthouse">Xem
+                            Thêm</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="booking-cta-strip fade-in">
+        <div class="container">
+            <div class="section-divider" style="background: rgba(255,255,255,0.4);"></div>
+            <h2 class="fw-bold mb-3">Giữ Kỳ Nghỉ Trong Mơ Của Bạn</h2>
+            <p>Liên hệ ngay để được tư vấn và nhận ưu đãi tốt nhất từ Premier Pearl Hotel</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <a href="./booking.html" class="btn btn-gold btn-lg rounded-pill px-5 fw-bold hover-zoom"
+                    id="cta-book-now">
+                    <i class="fa-solid fa-calendar-check me-2"></i>Đặt Phòng Ngay
+                </a>
+                <a href="./contact.html" class="btn btn-outline-light btn-lg rounded-pill px-5 fw-bold"
+                    id="cta-contact">
+                    <i class="fa-solid fa-phone me-2"></i>Liên Hệ Chúng Tôi
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer py-5 text-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="fw-bold text-gold font-playfair mb-4">Premier Pearl Hotel</h3>
+                    <p class="text-light-50">Mang đến trải nghiệm nghỉ dưỡng đích thực trong không gian sang trọng và
+                        hiện đại bên bờ biển đẹp nhất Vũng Tàu.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-4 font-playfair">Khám Phá</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="./home.html" class="footer-link">Trang Chủ</a></li>
+                        <li class="mb-2"><a href="./about.html" class="footer-link">Về Chúng Tôi</a></li>
+                        <li class="mb-2"><a href="./rooms.html" class="footer-link">Phòng Nghỉ</a></li>
+                        <li class="mb-2"><a href="./dinning.html" class="footer-link">Ẩm Thực</a></li>
+                        <li class="mb-2"><a href="./gallery.html" class="footer-link">Bộ Sưu Tập</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-4 font-playfair">Dịch Vụ</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="./services.html" class="footer-link">Spa & Massage</a></li>
+                        <li class="mb-2"><a href="./services.html" class="footer-link">Phòng Gym</a></li>
+                        <li class="mb-2"><a href="./services.html" class="footer-link">Hội Nghị</a></li>
+                        <li class="mb-2"><a href="./services.html" class="footer-link">Tổ Chức Tiệc</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="fw-bold mb-4 font-playfair">Đăng Ký Nhận Cập Nhật</h5>
+                    <p class="text-light-50">Nhận thông tin ưu đãi mới nhất từ Premier Pearl.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control rounded-start-pill py-2 border-0"
+                            placeholder="Email của bạn">
+                        <button class="btn btn-gold rounded-end-pill px-4 text-dark fw-bold" type="button">Gửi</button>
+                    </div>
+                    <div class="mt-3">
+                        <p class="text-light-50 small mb-1"><i class="fa-solid fa-location-dot me-2 text-gold"></i>69
+                            Thùy Vân, Phường 2, TP Vũng Tàu</p>
+                        <p class="text-light-50 small mb-1"><i class="fa-solid fa-phone me-2 text-gold"></i>+84 254 362
+                            6666</p>
+                        <p class="text-light-50 small mb-0"><i
+                                class="fa-solid fa-envelope me-2 text-gold"></i>info@premierpearlhotel.vn</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 border-secondary">
+            <div class="text-center mt-4">
+                <p class="m-0 text-light-50 small">&copy; 2026 Premier Pearl Hotel Vũng Tàu. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const fadeEls = document.querySelectorAll('.fade-in-up');
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.12
+            });
+            fadeEls.forEach(function (el) {
+                observer.observe(el);
+            });
+
+
+            const nav = document.getElementById('mainNav');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 60) {
+                    nav.classList.add('navbar-scrolled');
+                } else {
+                    nav.classList.remove('navbar-scrolled');
+                }
+            });
+        });
+    </script>
 
 </body>
 

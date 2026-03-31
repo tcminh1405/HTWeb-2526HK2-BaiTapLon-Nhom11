@@ -1,0 +1,98 @@
+body {
+    background-color: #fbfbfb;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.terms-content p,
+.terms-content li {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.content-box p,
+.content-box li,
+.content-box div.text-justify,
+.content-box td {
+    font-size: 14px;
+    color: #555;
+    font-weight: 400;
+}
+
+.breadcrumb-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.breadcrumb-link:hover {
+    color: var(--color-gold);
+}
+
+.vinpearl-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.vinpearl-nav-item {
+    color: #444;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.vinpearl-nav-item:hover {
+    color: var(--color-gold);
+}
+
+.vinpearl-logo {
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: var(--color-primary);
+}
+
+.vinpearl-logo img {
+    height: 40px;
+}
+
+.bg-orange {
+    background-color: #f0a030 !important;
+    color: white !important;
+    border: none;
+    font-size: 14px;
+}
+
+.bg-orange:hover {
+    background-color: #e09020 !important;
+}
+
+.terms-list {
+    padding-left: 20px;
+}
+
+.terms-list li {
+    margin-bottom: 0.5rem;
+}
+
+.content-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    color: #555;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
