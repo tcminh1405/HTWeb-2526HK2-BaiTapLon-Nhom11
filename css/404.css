@@ -1,19 +1,20 @@
 body {
-    background: linear-gradient(to bottom, #eff6ff, #ffffff);
+    background: linear-gradient(to right, #eff6ff, var(--color-navy));
+    color: var(--color-white) !important;
 }
 
 .text-primary-base {
-    color: #2563eb;
+    color: var(--color-gold-accent);
 }
 
 .btn-primary-custom {
-    background: #93c5fd;
+    background: var(--color-gold-accent);
     color: black;
-    transition: 0.3s;
+    transition: var(--transition);
 }
 
 .btn-primary-custom:hover {
-    background: #2563eb;
+    background: var(--color-gold-accent-hover);
     color: white;
 }
 
