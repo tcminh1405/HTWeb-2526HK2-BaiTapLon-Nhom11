@@ -503,11 +503,22 @@ img {
   align-items: stretch;
 }
 
+/* For sub-pages: Keep solid navy background from the start and throughout scrolling */
+#mainNav.navbar-no-shrink {
+  background-color: var(--color-navy) !important;
+}
+
 #mainNav.navbar-scrolled {
   background-color: rgba(11, 26, 55, 0.97) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+#mainNav.navbar-no-shrink.navbar-scrolled {
+  background-color: var(--color-navy) !important;
+  backdrop-filter: none !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* ---- Top Utility Bar ---- */
@@ -535,6 +546,10 @@ img {
 
 #mainNav.navbar-scrolled .top-utility {
   display: none !important;
+}
+
+#mainNav.navbar-no-shrink.navbar-scrolled .top-utility {
+  display: flex !important;
 }
 
 /* ---- Main Nav Row (3-column flex) ---- */

@@ -5,55 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Điều khoản chung | Premier Pearl Hotel Vũng Tàu</title>
+    <link rel="icon" type="image/png" href="./assets/images/logo/favicon.png">
 
+    <!-- Font Awesome & Bootstrap (offline) -->
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
-
-    <link rel="stylesheet" href="assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css">
-    <link rel="stylesheet" href="assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
-
-
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/globalStyle.css">
     <link rel="stylesheet" href="./css/term.css">
 </head>
 
 <body>
 
-    <header class="vinpearl-header py-3">
-        <div class="container-fluid px-lg-5 d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center gap-2 gap-lg-4">
-                <i class="fa-solid fa-bars fs-4 text-secondary cursor-pointer ms-2"></i>
-                <a href="#" class="vinpearl-nav-item d-none d-lg-block">Khách sạn</a>
-                <a href="#" class="vinpearl-nav-item d-none d-lg-block">Trải nghiệm</a>
-                <a href="#" class="vinpearl-nav-item d-none d-lg-block">Ưu đãi khuyến mãi</a>
-            </div>
+    <!-- ======================== NAVBAR ======================== -->
+    <nav class="navbar navbar-expand-xl navbar-dark fixed-top navbar-no-shrink" id="mainNav">
 
-            <a href="home.html"
-                class="vinpearl-logo text-uppercase d-flex flex-column align-items-center font-playfair position-absolute start-50 translate-middle-x mt-4">
-
-                <i class="fa-solid fa-dove text-gold fs-3 mb-1 mt-n2"></i> VINPEARL
-            </a>
-
-            <div class="d-flex align-items-center gap-2 gap-lg-3">
-                <a href="#" class="vinpearl-nav-item d-none d-lg-block">News</a>
-                <a href="#" class="vinpearl-nav-item d-none d-lg-block">Hội họp</a>
-                <a href="#" class="vinpearl-nav-item d-none d-lg-block">VinClub</a>
-                <div class="d-flex align-items-center gap-1 ms-lg-3">
-                    <i class="fa-solid fa-magnifying-glass text-secondary cursor-pointer me-3 d-none d-md-block"></i>
-                    <a href="#" class="text-secondary text-decoration-none font-sm d-none d-md-block">Đăng nhập <i
-                            class="fa-solid fa-chevron-right ms-1" style="font-size: 10px;"></i></a>
-                    <span class="text-secondary mx-2 d-none d-md-block">/</span>
-                    <a href="booking.html" class="btn bg-orange rounded-0 px-4 py-2 fw-bold text-uppercase ms-1">Đặt
-                        Ngay</a>
+        <!-- Top Utility Bar -->
+        <div class="top-utility w-100">
+            <div class="container-fluid px-4 px-xl-5 d-flex align-items-center justify-content-between">
+                <a href="./home.html"
+                    class="text-white text-decoration-none d-flex align-items-center gap-2 top-utility-link">
+                    <i class="fa-solid fa-arrow-left-long"></i> Quay lại trang chủ
+                </a>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="javascript:void(0)"
+                        class="text-white text-decoration-none top-utility-link search-trigger-btn">
+                        <i class="fa-solid fa-magnifying-glass me-1"></i> Tìm kiếm
+                    </a>
+                    <a href="./login.html"
+                        class="text-white text-decoration-none d-flex align-items-center gap-1 top-utility-link">
+                        Đăng nhập <i class="fa-solid fa-chevron-right" style="font-size:0.55rem;"></i>
+                    </a>
+                    <span class="text-white opacity-50">|</span>
+                    <a href="#"
+                        class="text-white text-decoration-none d-flex align-items-center gap-1 top-utility-link">
+                        <img src="./assets/images/flag-vn.png" alt="VN" class="rounded-circle"
+                            style="width:15px;height:15px;object-fit:cover;"> VIE
+                        <i class="fa-solid fa-chevron-down" style="font-size:0.55rem;"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </header>
+
+        <!-- Main Nav Row -->
+        <div class="navbar-main container-fluid px-4 px-xl-5">
+
+            <!-- Left: Hamburger + Desktop Links -->
+            <div class="nav-col nav-left d-flex align-items-center">
+                <button class="btn text-white p-0 shadow-none d-xl-none me-3" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                    <i class="fa-solid fa-bars" style="font-size:1.3rem;"></i>
+                </button>
+                <button class="btn text-white p-0 shadow-none d-none d-xl-flex me-4" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                    <i class="fa-solid fa-bars" style="font-size:1.15rem;"></i>
+                </button>
+                <div class="d-none d-xl-flex align-items-center gap-4">
+                    <a class="nav-link px-0" href="./search-results.html">Khách sạn</a>
+                    <a class="nav-link px-0" href="./rooms.html">Các hạng phòng</a>
+                    <a class="nav-link px-0" href="./dinning.html">Ẩm thực</a>
+                </div>
+            </div>
+
+            <!-- Center: Logo -->
+            <div class="nav-col nav-center">
+                <a class="d-inline-block" href="./home.html">
+                    <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Vinpearl Luxury Nha Trang"
+                        class="nav-logo">
+                </a>
+            </div>
+
+            <!-- Right: Desktop Links + CTA -->
+            <div class="nav-col nav-right d-flex align-items-center justify-content-end gap-3 gap-xl-4">
+                <div class="d-none d-xl-flex align-items-center gap-4">
+                    <a class="nav-link px-0" href="./news.html">Ưu đãi</a>
+                    <a class="nav-link px-0" href="./gallery.html">Thư viện ảnh</a>
+                    <a class="nav-link px-0" href="./services.html">VinClub</a>
+                </div>
+                <a class="btn-dat-ngay" href="./booking.html">Đặt Ngay</a>
+            </div>
+
+        </div>
+    </nav>
 
 
     <main class="container py-5">
@@ -74,8 +108,8 @@
                     Điều Khoản Chung ("<b>ĐKC</b>") này áp dụng cho các Khách và Đối Tác sử dụng hoặc đặt dịch vụ tại
                     các khách sạn, khu nghỉ dưỡng mang thương hiệu Vinpearl, và các thương hiệu khác thuộc quyền sở hữu,
                     quản lý và/hoặc khai thác của Vinpearl
-                    (nếu có) trong tương lai ("<b>Khách Sạn</b>"). Khách, Đối Tác và Vinpearl được gọi riêng là
-                    "<b>Bên</b>" và gọi chung là "<b>Các Bên</b>".
+                    (nếu có) trong tương lai ("<b>Khách Sạn</b>"). Khách, Đối Tác và Vinpearl được gọi riêng là "
+                    <b>Bên</b>" và gọi chung là "<b>Các Bên</b>".
                 </p>
 
                 <p>
@@ -87,9 +121,9 @@
                         href="https://www.vinpearl.com/dieu-khoan-chung/" target="_blank"
                         class="text-primary text-decoration-none">https://www.vinpearl.com/dieu-khoan-chung/</a> và <a
                         href="https://www.vinpearl.com/quy-dinh-chung/" target="_blank"
-                        class="text-primary text-decoration-none">https://www.vinpearl.com/quy-dinh-chung/</a>
-                    ("<b>Trang Web</b>") cũng như các chính sách cung cấp dịch vụ, báo giá dịch
-                    vụ được Vinpearl thông báo, cung cấp.
+                        class="text-primary text-decoration-none">https://www.vinpearl.com/quy-dinh-chung/</a> ("
+                    <b>Trang Web</b>") cũng như các chính sách cung cấp dịch vụ, báo giá dịch vụ được Vinpearl thông
+                    báo, cung cấp.
                 </p>
 
                 <p>
@@ -172,13 +206,15 @@
                                         <td class="text-center fw-bold py-2">BBV/BV</td>
                                         <td class="py-2 px-3 fw-bold">Bed and Breakfast with VinWonders</td>
                                         <td class="py-2 px-3">Gói Phòng BB kèm theo vui chơi không giới hạn tại
-                                            VinWonders</td>
+                                            VinWonders
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="text-center py-2">7</td>
                                         <td class="text-center fw-bold py-2">BBVS/BX</td>
                                         <td class="py-2 px-3 fw-bold">Bed and Breakfast with VinWonders and Vinpearl
-                                            Safari</td>
+                                            Safari
+                                        </td>
                                         <td class="py-2 px-3">Gói Phòng BB kèm theo vui chơi không giới hạn tại
                                             VinWonders và Vinpearl Safari</td>
                                     </tr>
@@ -194,7 +230,8 @@
                                         <td class="text-center fw-bold py-2">FBV/ FV</td>
                                         <td class="py-2 px-3 fw-bold">Full-board with VinWonders</td>
                                         <td class="py-2 px-3">Gói Phòng FB kèm theo vui chơi không giới hạn tại
-                                            VinWonders</td>
+                                            VinWonders
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="text-center py-2">10</td>
@@ -228,7 +265,8 @@
                                         <td class="text-center py-2">14</td>
                                         <td class="text-center fw-bold py-2">FXSFD</td>
                                         <td class="py-2 px-3 fw-bold">Full-board Seafood dinner VinWonders and Vinpearl
-                                            Safari</td>
+                                            Safari
+                                        </td>
                                         <td class="py-2 px-3">Gói Phòng FB với ăn tối Hải sản tại nhà hàng kèm theo vui
                                             chơi không giới hạn tại VinWonders và Vinpearl Safari</td>
                                     </tr>
@@ -256,7 +294,8 @@
                                         <td class="text-center py-2">18</td>
                                         <td class="text-center fw-bold py-2">FXBQD</td>
                                         <td class="py-2 px-3 fw-bold">Full-board BBQ dinner VinWonders and Vinpearl
-                                            Safari</td>
+                                            Safari
+                                        </td>
                                         <td class="py-2 px-3">Gói Phòng FB với ăn tối BBQ tại Biệt thự kèm theo vui chơi
                                             không giới hạn tại VinWonders và Vinpearl Safari</td>
                                     </tr>
@@ -272,14 +311,16 @@
                                         <td class="text-center fw-bold py-2">G1P</td>
                                         <td class="py-2 px-3 fw-bold">Golf for 01 player</td>
                                         <td class="py-2 px-3">Gói Phòng bao gồm đêm nghỉ và phí sân (18 hố) cho 1 người
-                                            chơi</td>
+                                            chơi
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="text-center py-2">21</td>
                                         <td class="text-center fw-bold py-2">G2P</td>
                                         <td class="py-2 px-3 fw-bold">Golf for 02 players</td>
                                         <td class="py-2 px-3">Gói Phòng bao gồm đêm nghỉ và phí sân (18 hố) cho 2 người
-                                            chơi</td>
+                                            chơi
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -291,7 +332,8 @@
                         phòng/đêm hoặc 04 biệt thự/đêm.</li>
                     <li>"<b>Khách Đoàn</b>" là 01 nhóm Khách có số lượng đặt phòng tại Yêu Cầu Đặt Phòng từ 10 phòng/đêm
                         trở lên hoặc từ 05 biệt thự/đêm trở lên và/hoặc các dịch vụ (tiệc, sự kiện, golf và các dịch vụ
-                        khác).</li>
+                        khác).
+                    </li>
                     <li>"<b>Đoàn Series</b>" là Khách Đoàn được đặt hàng loạt ít nhất từ 03 đoàn trở lên theo lịch trình
                         giống nhau.</li>
                     <li>"<b>Ngày Làm Việc</b>" là ngày từ thứ 2 đến thứ 6 hàng tuần, trừ ngày nghỉ, ngày lễ theo quy
@@ -300,7 +342,8 @@
                         hoặc thời điểm khác trong thời gian lưu trú theo thông báo của Khách/Đối Tác và Vinpearl sẽ trả
                         phòng về quỹ phòng trống để bán sau thời
                         hạn này mà không cần thông báo cho Khách/Đối Tác nếu Khách không có mặt và làm thủ tục nhận
-                        phòng.</li>
+                        phòng.
+                    </li>
                     <li>"<b>QĐC</b>" là các quy định mà Khách cần phải tuân thủ trong thời gian lưu trú và sử dụng Dịch
                         Vụ tại Khách Sạn và có thể được sửa đổi, bổ sung theo quyết định của Vinpearl tại từng thời điểm
                         và đăng tải trên Trang Web của Vinpearl.</li>
@@ -350,9 +393,9 @@
                                     <tr>
                                         <td class="py-2 px-3">Thời gian nhận phòng</td>
                                         <td class="py-2 px-3">
-                                            Trước ngày 1/1/2026: 14:00 giờ ngày Khách đến<br><br> Từ ngày
-                                            1/1/2026:<br><br> - Vinpearl Luxury Nha Trang: 14:00 giờ ngày Khách
-                                            đến<br><br> - Các khách sạn còn lại: 15:00 giờ ngày Khách đến
+                                            Trước ngày 1/1/2026: 14:00 giờ ngày Khách đến<br><br> Từ ngày 1/1/2026:
+                                            <br><br> - Vinpearl Luxury Nha Trang: 14:00 giờ ngày Khách đến
+                                            <br><br> - Các khách sạn còn lại: 15:00 giờ ngày Khách đến
                                         </td>
                                         <td class="py-2 px-3"></td>
                                     </tr>
@@ -405,7 +448,8 @@
                 </ol>
 
                 <p class="fw-bold mt-4 mb-3 fs-6" style="color: #333; text-transform: uppercase;">ĐIỀU 4. CHÍNH SÁCH ĐẶT
-                    PHÒNG</p>
+                    PHÒNG
+                </p>
                 <ol class="terms-list" style="list-style-type: decimal;">
                     <li>Tất cả các Yêu Cầu Dịch Vụ, Danh Sách Xếp Phòng của Khách/ Đối Tác phải được gửi cho Vinpearl
                         dưới hình thức email hoặc văn bản trước khi Khách làm thủ tục nhận phòng.</li>
@@ -510,7 +554,8 @@
                                                     <li>+ Áp dụng Giá Công Bố tại Khách Sạn vào ngày Khách làm thủ tục
                                                         nhận phòng và Đối Tác sẽ chịu hoàn toàn trách nhiệm giải quyết
                                                         các khiếu nại của Khách phát sinh do việc cung cấp thông tin
-                                                        muộn.</li>
+                                                        muộn.
+                                                    </li>
                                                     <li class="mt-2">+ Trong trường hợp có thêm Khách (bao gồm cả trẻ
                                                         em) không có xác nhận trước, Khách/ Đối Tác sẽ phải trả một
                                                         khoản phụ thu tương ứng theo bảng Giá Công Bố của Khách Sạn tại
@@ -599,7 +644,8 @@
                                         bố trí việc đón, tiễn. Nếu có những thay đổi hoặc yêu cầu
                                         đón, tiễn bị hủy, cần thông báo cho Khách Sạn chậm nhất 03 ngày (72 giờ) trước
                                         ngày nhận phòng. Mọi trường hợp thông báo sau thời hạn này sẽ bị áp dụng phí
-                                        hủy.</li>
+                                        hủy.
+                                    </li>
                                     <li>Lễ tân tại sân bay sẽ đón tiếp Khách tại bàn lễ tân của Vinpearl được bố trí ở
                                         khu vực sảnh đến. Vui lòng tìm kiếm bảng tên đón hoặc liên hệ với quầy lễ tân
                                         tại sân bay qua số điện thoại liên lạc được cung cấp tại xác
@@ -628,7 +674,8 @@
                 </ol>
 
                 <p class="fw-bold mt-4 mb-3 fs-6" style="color: #333; text-transform: uppercase;">ĐIỀU 6. SỬA CHỮA, CẢI
-                    TẠO</p>
+                    TẠO
+                </p>
                 <div class="terms-content text-start">
                     <div class="d-flex mb-3">
                         <div class="fw-bold me-3">6.1.</div>
@@ -675,7 +722,8 @@
                 </div>
 
                 <p class="fw-bold mt-4 mb-3 fs-6" style="color: #333; text-transform: uppercase;">ĐIỀU 8. BẢO MẬT THÔNG
-                    TIN</p>
+                    TIN
+                </p>
                 <ol class="terms-list text-justify" style="list-style-type: decimal;">
                     <li>Đối Tác và Vinpearl cam kết rằng, trong thời gian hiệu lực của Hợp Đồng và sau khi Hợp Đồng giữa
                         Đối Tác và Vinpearl chấm dứt, Bên được tiết lộ sẽ tuyệt đối bảo mật các thông tin mật ("Thông
@@ -750,7 +798,8 @@
                         qua thương lượng. Trường hợp thương lượng, đàm phán không thành công trong vòng 30 ngày kể từ
                         ngày phát sinh tranh chấp, Các Bên sẽ có quyền đưa tranh chấp ra giải quyết tại Tòa án có thẩm
                         quyền tại Việt Nam theo quy định của pháp
-                        luật.</p>
+                        luật.
+                    </p>
                 </div>
 
                 <p class="fw-bold mt-4 mb-3 fs-6" style="color: #333; text-transform: uppercase;">ĐIỀU 12. LỖI KỸ THUẬT
@@ -775,7 +824,8 @@
                             <li>bị ảnh hưởng bởi Lỗi Kỹ Thuật và/hoặc Lỗi Dữ Liệu không phụ thuộc vào nguồn gốc của các
                                 lỗi đó. Để cho rõ ràng, một lỗi dữ liệu là một lỗi trên Trang web (ví dụ về giá cả, điều
                                 kiện) mà một người lý trí sẽ không coi là bình
-                                thường.</li>
+                                thường.
+                            </li>
                         </ul>
                         <p class="mt-2 mb-2">Trong trường hợp từ chối thực hiện giao dịch, Vinpearl sẽ thông báo cho quý
                             khách qua thư điện tử mà quý khách đã cung cấp khi đặt dịch vụ, đồng thời hoàn lại khoản
@@ -1064,7 +1114,8 @@
                                 <td class="py-2 px-2">275788886666 (VND)</td>
                                 <td class="py-2 px-2" rowspan="2">VP Bank CN Bến Thành</td>
                                 <td class="py-2 px-2" rowspan="2">Số 3A-3B Tôn Đức Thắng, phường Sài Gòn, TP. Hồ Chí
-                                    Minh</td>
+                                    Minh
+                                </td>
                                 <td class="py-2 px-2" rowspan="2">VPBKVNVX</td>
                             </tr>
                             <tr>
@@ -1106,54 +1157,183 @@
     </main>
 
 
-    <footer class="footer py-5 text-white mt-5">
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="footer-vp">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h3 class="fw-bold text-gold font-playfair mb-4">Premier Pearl Hotel</h3>
-                    <p class="text-light-50">Mang đến trải nghiệm nghỉ dưỡng đích thực trong không gian sang trọng và
-                        hiện đại bên bờ biển đẹp nhất Vũng Tàu.</p>
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            <div class="footer-top">
+                <div class="row g-5">
+                    <!-- Brand -->
+                    <div class="col-lg-3 col-md-6">
+                        <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Vinpearl Luxury Nha Trang"
+                            style="height:60px;" class="mb-4">
+                        <p class="footer-desc">Khu nghỉ dưỡng biển đẳng cấp quốc tế tại bán đảo Hòn Tre, Nha Trang. Mang
+                            đến trải nghiệm nghỉ dưỡng hoàn hảo và không thể nào quên.</p>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="footer-social-icon"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" class="footer-social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
-                    <h5 class="fw-bold mb-4 font-playfair">Khám Phá</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="home.html#about" class="footer-link">Về Chúng Tôi</a></li>
-                        <li class="mb-2"><a href="home.html#rooms" class="footer-link">Phòng Nghỉ</a></li>
-                        <li class="mb-2"><a href="home.html#dining" class="footer-link">Ẩm Thực</a></li>
-                        <li class="mb-2"><a href="home.html#gallery" class="footer-link">Bộ Sưu Tập</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
-                    <h5 class="fw-bold mb-4 font-playfair">Dịch Vụ</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="home.html#services" class="footer-link">Spa & Massage</a></li>
-                        <li class="mb-2"><a href="home.html#services" class="footer-link">Phòng Gym</a></li>
-                        <li class="mb-2"><a href="home.html#services" class="footer-link">Hội Nghị</a></li>
-                        <li class="mb-2"><a href="home.html#services" class="footer-link">Tổ Chức Tiệc</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <h5 class="fw-bold mb-4 font-playfair">Đăng Ký Nhận Cập Nhật</h5>
-                    <p class="text-light-50">Nhận thông tin ưu đãi mới nhất từ Premier Pearl.</p>
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control rounded-start-pill py-2 border-0"
-                            placeholder="Email của bạn">
-                        <button class="btn btn-gold rounded-end-pill px-4 text-dark fw-bold" type="button">Gửi</button>
+
+                    <!-- Về Chúng Tôi -->
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <h5 class="footer-heading">Về Chúng Tôi</h5>
+                        <ul class="footer-links">
+                            <li><a href="./about.html">Giới thiệu</a></li>
+                            <li><a href="./contact.html">Liên hệ</a></li>
+                            <li><a href="./faqs.html">Câu hỏi thường gặp</a></li>
+                            <li><a href="#">Tuyển dụng</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Điều Khoản -->
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <h5 class="footer-heading">Điều Khoản</h5>
+                        <ul class="footer-links">
+                            <li><a href="./terms.html">Điều khoản chung</a></li>
+                            <li><a href="#">Quy định thanh toán</a></li>
+                            <li><a href="#">Chính sách hủy phòng</a></li>
+                            <li><a href="#">Bảo mật dữ liệu</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tin Tức -->
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <h5 class="footer-heading">Tin Tức & Sự Kiện</h5>
+                        <ul class="footer-links">
+                            <li><a href="./news.html">Tin công ty</a></li>
+                            <li><a href="./news.html">Cẩm nang du lịch</a></li>
+                            <li><a href="./news.html">Sự kiện & Lễ hội</a></li>
+                            <li><a href="#">Thành tựu</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <h5 class="footer-heading">Liên Hệ</h5>
+                        <ul class="footer-contact-list">
+                            <li>
+                                <i class="fa-solid fa-location-dot text-gold-accent"></i>
+                                <span>Bán đảo Hòn Tre, Vĩnh Nguyên, Nha Trang, Khánh Hòa</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone text-gold-accent"></i>
+                                <span>+84 258 359 8888</span>
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-envelope text-gold-accent"></i>
+                                <span>luxury.nhatrang@vinpearl.com</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <hr class="mt-5 border-secondary">
-            <div class="text-center mt-4">
-                <p class="m-0 text-light-50 small">&copy; 2026 Premier Pearl Hotel Vũng Tàu. All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+                <p class="mb-0 footer-copy">© 2026 Vinpearl Luxury Nha Trang. All Rights Reserved.</p>
+                <p class="mb-0 footer-copy">Nhóm 11 – HTWeb 2526 HK2</p>
             </div>
         </div>
     </footer>
+
+    <!-- ======================== MOBILE OFFCANVAS MENU ======================== -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header" style="background-color: var(--color-primary);">
+            <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Logo" style="height:45px;">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <div class="p-3 border-bottom">
+                <a href="javascript:void(0)" class="btn btn-outline-light w-100 search-trigger-btn">
+                    <i class="fa-solid fa-magnifying-glass me-2"></i> Tìm kiếm
+                </a>
+            </div>
+            <ul class="list-unstyled mb-0">
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./home.html"><i class="fa-solid fa-house me-3 text-gold-accent"></i>Trang Chủ</a></li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./rooms.html"><i class="fa-solid fa-bed me-3 text-gold-accent"></i>Khách Sạn & Phòng</a>
+                </li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./dinning.html"><i class="fa-solid fa-utensils me-3 text-gold-accent"></i>Ẩm Thực</a></li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./services.html"><i class="fa-solid fa-spa me-3 text-gold-accent"></i>Spa & Dịch Vụ</a>
+                </li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./gallery.html"><i class="fa-solid fa-images me-3 text-gold-accent"></i>Thư Viện Ảnh</a>
+                </li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./news.html"><i class="fa-solid fa-newspaper me-3 text-gold-accent"></i>Tin Tức</a></li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./about.html"><i class="fa-solid fa-circle-info me-3 text-gold-accent"></i>Giới Thiệu</a>
+                </li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./contact.html"><i class="fa-solid fa-envelope me-3 text-gold-accent"></i>Liên Hệ</a></li>
+                <li class="p-3">
+                    <a href="./search-results.html" class="btn-dat-ngay d-block text-center">Đặt Phòng Ngay</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ======================== SEARCH MODAL ======================== -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 rounded-4 overflow-hidden">
+                <div class="modal-header border-0 p-4" style="background-color: var(--color-primary);">
+                    <h5 class="modal-title text-white fw-bold" id="searchModalLabel"><i
+                            class="fa-solid fa-magnifying-glass me-2 text-gold-accent"></i>Tìm Kiếm</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control border-0 bg-light"
+                            placeholder="Tìm phòng, dịch vụ, ưu đãi...">
+                        <button class="btn px-4" style="background-color: var(--color-gold-accent); color:#fff;"
+                            type="button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-muted small mb-2 fw-bold text-uppercase">Tìm kiếm phổ biến</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="./rooms.html" class="badge bg-light text-dark text-decoration-none p-2 px-3 border"
+                                data-bs-dismiss="modal">Phòng Biển</a>
+                            <a href="./services.html"
+                                class="badge bg-light text-dark text-decoration-none p-2 px-3 border"
+                                data-bs-dismiss="modal">Spa</a>
+                            <a href="./dinning.html"
+                                class="badge bg-light text-dark text-decoration-none p-2 px-3 border"
+                                data-bs-dismiss="modal">Nhà Hàng</a>
+                            <a href="./search-results.html"
+                                class="badge bg-light text-dark text-decoration-none p-2 px-3 border"
+                                data-bs-dismiss="modal">Ưu Đãi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== SEARCH OVERLAY ======================== -->
+    <div class="search-overlay" id="globalSearchOverlay">
+        <div class="search-container">
+            <div class="close-search" id="closeSearchOverlay">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="search-input-wrapper">
+                <input type="text" id="globalSearchInput" placeholder="Bạn muốn tìm gì?">
+                <i class="fa-solid fa-magnifying-glass fs-2 text-muted"></i>
+            </div>
+            <div class="search-dropdown" id="globalSearchDropdown">
+                <!-- History and Suggestions will be here -->
+            </div>
+        </div>
+    </div>
 
 
 </body>
