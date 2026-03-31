@@ -70,7 +70,7 @@
     position: relative;
     height: 650px; /* Increased further to clear booking bar */
     min-height: 600px;
-    background: url("../assets/images/services/Tận\ hưởng\ cuộc\ sống_1670905130.png") center 30% / cover no-repeat;
+    background: url("../assets/images/services/luxury_beach_couple.png") center center / cover no-repeat;
     display: flex;
     align-items: center; /* Vertical center for the content within the larger height */
     justify-content: flex-start;
@@ -86,7 +86,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.6) 100%);
 }
 
 .hero-content {
@@ -135,14 +135,14 @@
     object-fit: contain;
 }
 
-.hero-title {
+.hero-vinclub .hero-title {
     font-family: var(--font-garamond) !important;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
     font-weight: 500;
     letter-spacing: 0.5px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
-    line-height: 1.1;
+    line-height: 1.15;
     color: #fff;
 }
 
@@ -787,9 +787,7 @@
     }
 }
 
-/* ================================================================
-   NEW SERVICE SECTIONS (SPA, DINING, FACILITIES)
-   ================================================================ */
+
 
 .services-intro .intro-divider {
     width: 60px;
@@ -861,7 +859,7 @@
     font-size: 14px;
 }
 
-/* Re-styling loyalty/brand for services hub */
+
 .experience-title {
     font-family: var(--font-garamond);
     font-size: 2.5rem;
@@ -883,7 +881,7 @@
     background: #d4a373;
 }
 
-/* Adjusting Dining Cards for better text visibility in Grid */
+
 .dining-vp-desc {
     opacity: 0.9;
     font-size: 0.9rem;
@@ -904,4 +902,37 @@
 .btn-dining-explore:hover {
     border-bottom-color: #d4a373;
     padding-left: 5px;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 0;
+    min-width: 120px;
+}
+
+.dropdown-item {
+    font-size: 14px;
+    padding: 5px 15px;
+    transition: 0.3s;
+}
+
+
+.active-lang {
+    font-weight: 500;
+}
+
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #333 !important;
+}
+
+
+.dropdown-toggle::after {
+    display: none;
+}
+.guide-text a{
+    text-decoration: none;
+    color: #333;
 }
