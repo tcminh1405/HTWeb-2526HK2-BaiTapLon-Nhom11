@@ -79,6 +79,10 @@
 
             <!-- Right: Simple Utility -->
             <div class="header-right d-flex align-items-center gap-3 gap-md-4">
+                <a href="javascript:void(0)" class="header-utility-link search-trigger-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <div class="vr bg-white opacity-25 d-none d-md-block" style="height: 20px;"></div>
                 <a href="./login.html" class="header-utility-link d-flex align-items-center gap-1">
                     Đăng nhập <i class="fa-solid fa-chevron-right" style="font-size:0.6rem; opacity:0.75;"></i>
                 </a>
@@ -451,9 +455,27 @@
         </div>
     </div>
 
+    <!-- ======================== SEARCH OVERLAY ======================== -->
+    <div class="search-overlay" id="globalSearchOverlay">
+        <div class="search-container">
+            <div class="close-search" id="closeSearchOverlay">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="search-input-wrapper">
+                <input type="text" id="globalSearchInput" placeholder="Bạn muốn tìm gì?">
+                <i class="fa-solid fa-magnifying-glass fs-2 text-muted"></i>
+            </div>
+            <div class="search-dropdown" id="globalSearchDropdown">
+                <!-- History and Suggestions will be here -->
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap & JS -->
     <script src="./assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/booking.js"></script>
+    <script src="./js/script.js"></script>
+
 </body>
 
 </html>

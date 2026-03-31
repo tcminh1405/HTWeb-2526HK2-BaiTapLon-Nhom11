@@ -44,9 +44,22 @@ const hotelData = [
 ];
 
 // --- RENDER & CAROUSEL LOGIC ---
-function renderResults() {
+function renderResults(dataToRender = hotelData) {
     const container = document.getElementById('hotelCardContainer');
-    container.innerHTML = hotelData.map((h, i) => `
+    if (!container) return;
+
+    if (dataToRender.length === 0) {
+        container.innerHTML = `
+            <div class="text-center py-5">
+                <i class="fa-solid fa-magnifying-glass fs-1 text-muted mb-3"></i>
+                <h4 class="text-muted">Không tìm thấy kết quả phù hợp cho tìm kiếm của bạn</h4>
+                <p class="text-muted">Vui lòng thử lại với từ khóa khác</p>
+            </div>
+        `;
+        return;
+    }
+
+    container.innerHTML = dataToRender.map((h, i) => `
                 <div class="hotel-card">
                     <div class="hotel-img-wrapper">
                         <div id="carouselH${i}" class="carousel slide h-100" data-bs-ride="false" data-bs-interval="false">
@@ -81,13 +94,15 @@ function renderResults() {
             `).join('');
 
     // Explicitly initialize each carousel to ensure manual-only and looping
-    hotelData.forEach((_, i) => {
+    dataToRender.forEach((h, i) => {
         const el = document.getElementById('carouselH' + i);
-        new bootstrap.Carousel(el, {
-            interval: false,
-            ride: false,
-            wrap: true
-        });
+        if (el) {
+            new bootstrap.Carousel(el, {
+                interval: false,
+                ride: false,
+                wrap: true
+            });
+        }
     });
 }
 
@@ -243,10 +258,53 @@ function toggleEO() {
     }
 }
 
-// --- STICKY GAP FIX ---
+// --- STICKY GAP FIX & SEARCH INIT ---
 window.addEventListener('load', () => {
     loadSearchData();
-    renderResults();
+
+    // --- Dynamic Search Filtering ---
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q');
+    const resultTitle = document.querySelector('.result-title');
+
+    if (query) {
+        const q = query.toLowerCase().trim();
+        
+        // Define room-to-hotel mapping for demonstration
+        const roomToHotel = {
+            "vườn": "Vinpearl Luxury Nha Trang",
+            "garden": "Vinpearl Luxury Nha Trang",
+            "grand": "Vinpearl Luxury Nha Trang",
+            "beach front": "Vinpearl Luxury Nha Trang",
+            "presidential": "Vinpearl Luxury Nha Trang",
+            "beachfront": "Vinpearl Beachfront Nha Trang",
+            "empire": "Melia Vinpearl Empire Nha Trang",
+            "tằm": "Hòn Tằm Resort",
+            "resort": "Vinpearl Resort Nha Trang"
+        };
+
+        // Filter: match hotel name OR keywords in mapping
+        const filtered = hotelData.filter(hotel => {
+            const nameMatch = hotel.name.toLowerCase().includes(q);
+            // Check if any key in mapping exists in query and matches this hotel
+            const roomMatch = Object.keys(roomToHotel).some(key => 
+                q.includes(key) && roomToHotel[key] === hotel.name
+            );
+            return nameMatch || roomMatch;
+        });
+
+        const count = filtered.length;
+        if (resultTitle) {
+            resultTitle.innerText = `Có ${count < 10 ? '0' + count : count} kết quả cho "${query}"`;
+        }
+        renderResults(filtered);
+    } else {
+        if (resultTitle) {
+            resultTitle.innerText = `Có ${hotelData.length < 10 ? '0' + hotelData.length : hotelData.length} kết quả tại/ gần địa điểm "Vinpearl Luxury Nha Trang"`;
+        }
+        renderResults(hotelData);
+    }
+
     const nav = document.getElementById('mainNav');
     const bar = document.querySelector('.booking-bar-wrapper');
 
