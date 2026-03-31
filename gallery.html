@@ -1,620 +1,557 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery | Premier Pearl Hotel Vũng Tàu - Luxury Experience</title>
 
-    <!-- Google Fonts: Playfair Display + Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Vinpearl Luxury Nha Trang</title>
+  <link rel="icon" type="image/png" href="./assets/images/logo/favicon.png">
 
-    <!-- Offline Font Awesome & Bootstrap -->
-    <link
-      rel="stylesheet"
-      href="assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/bootstrap-5.3.8-dist/css/bootstrap.min.css"
-    />
+  <!-- Offline Font Awesome & Bootstrap -->
+  <link rel="stylesheet" href="./assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/bootstrap-5.3.8-dist/css/bootstrap.min.css" />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/globalStyle.css" />
-    <link rel="stylesheet" href="css/gallery.css" />
-  </head>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/globalStyle.css" />
+  <link rel="stylesheet" href="./css/gallery.css" />
+</head>
 
-  <body>
-    <!-- Header / Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand text-gold fs-3 fw-bold" href="#hero">
-          Premier Pearl
+<body>
+  <!-- Header / Navbar -->
+  <!-- ======================== NAVBAR ======================== -->
+  <nav class="navbar navbar-expand-xl navbar-dark fixed-top navbar-no-shrink" id="mainNav">
+
+    <!-- Top Utility Bar -->
+    <div class="top-utility w-100">
+      <div class="container-fluid px-4 px-xl-5 d-flex align-items-center justify-content-between">
+        <a href="./index.html" class="text-white text-decoration-none d-flex align-items-center gap-2 top-utility-link">
+          <i class="fa-solid fa-arrow-left-long"></i> Quay lại trang chủ
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+        <div class="d-flex align-items-center gap-3">
+          <a href="javascript:void(0)" class="text-white text-decoration-none top-utility-link search-trigger-btn">
+            <i class="fa-solid fa-magnifying-glass me-1"></i> Tìm kiếm
+          </a>
+          <a href="./login.html"
+            class="text-white text-decoration-none d-flex align-items-center gap-1 top-utility-link">
+            Đăng nhập <i class="fa-solid fa-chevron-right" style="font-size:0.55rem;"></i>
+          </a>
+          <span class="text-white opacity-50">|</span>
+          <a href="#" class="text-white text-decoration-none d-flex align-items-center gap-1 top-utility-link">
+            <img src="./assets/images/flag-vn.png" alt="VN" class="rounded-circle"
+              style="width:15px;height:15px;object-fit:cover;"> VIE
+            <i class="fa-solid fa-chevron-down" style="font-size:0.55rem;"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Nav Row -->
+    <div class="navbar-main container-fluid px-4 px-xl-5">
+
+      <!-- Left: Hamburger + Desktop Links -->
+      <div class="nav-col nav-left d-flex align-items-center">
+        <button class="btn text-white p-0 shadow-none d-xl-none me-3" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+          <i class="fa-solid fa-bars" style="font-size:1.3rem;"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ms-auto py-4 py-lg-0 align-items-center">
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="./about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="./rooms.html">Rooms</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="./services.html"
-                >Services</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="./dinning.html"
-                >Dining</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="./gallery.html"
-                >Gallery</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="./contact.html"
-                >Contact</a
-              >
-            </li>
-            <li class="nav-item ms-lg-3">
-              <a
-                class="btn btn-gold rounded-pill px-4 text-dark fw-bold"
-                href="#contact"
-                >Book Now</a
-              >
-            </li>
-          </ul>
+        <button class="btn text-white p-0 shadow-none d-none d-xl-flex me-4" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+          <i class="fa-solid fa-bars" style="font-size:1.15rem;"></i>
+        </button>
+        <div class="d-none d-xl-flex align-items-center gap-4">
+          <a class="nav-link px-0" href="./search-results.html">Khách sạn</a>
+          <a class="nav-link px-0 " href="./rooms.html">Các hạng phòng</a>
+          <a class="nav-link px-0" href="./dinning.html">Ẩm thực</a>
         </div>
       </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <header
-      class="hero d-flex align-items-center justify-content-center text-center fade-in"
-      id="hero"
-    >
-      <div class="hero-overlay"></div>
-      <div class="container position-relative z-index-1">
-        <h1 class="text-white display-3 fw-bold mb-3 text-shadow">
-          Thư viện ảnh
-        </h1>
-        <p class="text-white fs-5 text-shadow">
-          Khám phá trải nghiệm sang trọng tại Vinpearl Nha Trang
-        </p>
+      <!-- Center: Logo -->
+      <div class="nav-col nav-center">
+        <a class="d-inline-block" href="./home.html">
+          <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Vinpearl Luxury Nha Trang"
+            class="nav-logo">
+        </a>
       </div>
-    </header>
 
-    <!-- Gallery Section -->
-    <section class="gallery-section py-5" id="gallery">
-      <div class="container">
-        <!-- Tabs Navigation -->
-        <div
-          class="gallery-tabs d-flex justify-content-center gap-4 mb-5 border-bottom pb-3"
-        >
-          <button class="tab-btn active" data-tab="highlights">
-            <span class="tab-text">Nối bật</span>
-            <span class="tab-underline"></span>
-          </button>
-          <button class="tab-btn" data-tab="dining">
-            <span class="tab-text">Nhà hàng</span>
-            <span class="tab-underline"></span>
-          </button>
-          <button class="tab-btn" data-tab="wellness">
-            <span class="tab-text">Chăm sóc sức khỏe</span>
-            <span class="tab-underline"></span>
-          </button>
+      <!-- Right: Desktop Links + CTA -->
+      <div class="nav-col nav-right d-flex align-items-center justify-content-end gap-3 gap-xl-4">
+        <div class="d-none d-xl-flex align-items-center gap-4">
+          <a class="nav-link px-0" href="./news.html">Ưu đãi</a>
+          <a class="nav-link px-0 active" href="./gallery.html">Thư viện ảnh</a>
+          <a class="nav-link px-0" href="./services.html">VinClub</a>
         </div>
-
-        <!-- Gallery Grid - Highlights Tab -->
-        <div class="tab-content active" id="highlights">
-          <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/vinpearl-luxury-nha-trang_1680204996.png"
-                  alt="Aerial Resort"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/Flycam VPL (32 of 55)_1729669274.png"
-                  alt="Ocean View"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/VPLNT Pool4_1729669270.png"
-                  alt="Water Pavilion"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/VPLNT Wave Bar6 (1)_1729669277.png"
-                  alt="Night Resort"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-1_1680200690.png"
-                  alt="Beach Scene"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-2_1680200691.png"
-                  alt="Family Lounge"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/VPLNT Wave Bar5_1729669276.png"
-                  alt="Sunset"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/VPLNT Spa25_1729669269.png"
-                  alt="Sunset"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/spa_1680201570.png"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery//Vinpearl-Luxury-Nha-Trang-1_1680200690.png"
-                  alt="Sunset"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/VPLNT Spa1_1729669271.png"
-                  alt="Sunset"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/DJI_0528_1729669273.png"
-                  alt="Sunset"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/VPLNT Spa2_1729669266.png"
-                  alt="Sunset"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/VPLNT Spa5_1729669267.png"
-                  alt="Sunset"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Gallery Grid - Dining Tab -->
-        <div class="tab-content" id="dining">
-          <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/Lobby-bar_1680205066.png"
-                  alt="Dining"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/nha-hang-Blue-Lagoon_1680205067.png"
-                  alt="Food"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/nha-hang-huong-viet_1680205068.png"
-                  alt="Cuisine"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/pool-bar_1680205069.png"
-                  alt="Cuisine"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/wave-bar_1680205070.png"
-                  alt="Cuisine"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/Hương Việt_Vinpearl-1_1729669816.png"
-                  alt="Cuisine"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/VPLNT Blue Lagoon1_1729669817.png"
-                  alt="Cuisine"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/VPLNT Blue Lagoon2_1729669819.png"
-                  alt="Cuisine"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/BlueLagoon_Simple-1_1729669820.png"
-                  alt="Cuisine"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/BlueLagoon_Simple-2_1729669821.png"
-                  alt="Cuisine"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/Blue Lagoon_Vinpearl-2_1729669822.png"
-                  alt="Cuisine"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/Blue Lagoon_Vinpearl-3_1729669823.png"
-                  alt="Cuisine"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/VPLNT Wave Bar7_1729669862.png"
-                  alt="Cuisine"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Gallery Grid - Wellness Tab -->
-        <div class="tab-content" id="wellness">
-          <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/VPLNT Spa1_1729669271.png"
-                  alt="Spa"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/VPLNT Spa2_1729669266.png"
-                  alt="Massage"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/spa_1680201570.png"
-                  alt="Treatment"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-wellness_1680200808.png"
-                  alt="Facial"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/VPLNT Spa25_1729669269.png"
-                  alt="Therapy"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-wellness_1680200808.png"
-                  alt="Massage"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/VPLNT Pool4_1729669270.png"
-                  alt="Massage"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-wellness-2_1680200809.png"
-                  alt="Massage"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-wellness-3_1680200810.png"
-                  alt="Massage"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-wellness-4_1680200810.png"
-                  alt="Massage"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-wellness-5_1680200811.png"
-                  alt="Massage"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        <a class="btn-dat-ngay" href="./booking.html">Đặt Ngay</a>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer py-5 text-white" style="background-color: #1a2e4a">
-      <div class="container">
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero d-flex align-items-center justify-content-center text-center fade-in" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="container position-relative z-index-1">
+      <h1 class="text-white display-3 fw-bold mb-3 text-shadow">
+        Thư viện ảnh
+      </h1>
+      <p class="text-white fs-5 text-shadow">
+        Khám phá trải nghiệm sang trọng tại Vinpearl Nha Trang
+      </p>
+    </div>
+  </header>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section py-5" id="gallery">
+    <div class="container">
+      <!-- Tabs Navigation -->
+      <div class="gallery-tabs d-flex justify-content-center gap-4 mb-5 border-bottom pb-3">
+        <button class="tab-btn active" data-tab="highlights">
+          <span class="tab-text">Nối bật</span>
+          <span class="tab-underline"></span>
+        </button>
+        <button class="tab-btn" data-tab="dining">
+          <span class="tab-text">Nhà hàng</span>
+          <span class="tab-underline"></span>
+        </button>
+        <button class="tab-btn" data-tab="wellness">
+          <span class="tab-text">Chăm sóc sức khỏe</span>
+          <span class="tab-underline"></span>
+        </button>
+      </div>
+
+      <!-- Gallery Grid - Highlights Tab -->
+      <div class="tab-content active" id="highlights">
         <div class="row g-4">
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <h3 class="fw-bold text-gold font-playfair mb-4">
-              Premier Pearl Hotel
-            </h3>
-            <p class="text-light-50">
-              Mang đến trải nghiệm nghỉ dưỡng đích thực trong không gian sang
-              trọng và hiện đại bên bờ biển đẹp nhất Vũng Tàu.
-            </p>
-            <div class="d-flex gap-3 mt-4">
-              <a href="#" class="social-icon"
-                ><i class="fa-brands fa-facebook-f"></i
-              ></a>
-              <a href="#" class="social-icon"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-              <a href="#" class="social-icon"
-                ><i class="fa-brands fa-youtube"></i
-              ></a>
-              <a href="#" class="social-icon"
-                ><i class="fa-brands fa-twitter"></i
-              ></a>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/vinpearl-luxury-nha-trang_1680204996.png" alt="Aerial Resort"
+                class="img-fluid" />
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
-            <h5 class="fw-bold mb-4 font-playfair">Khám Phá</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a href="#about" class="footer-link">Về Chúng Tôi</a>
-              </li>
-              <li class="mb-2">
-                <a href="#rooms" class="footer-link">Phòng Nghỉ</a>
-              </li>
-              <li class="mb-2">
-                <a href="#dining" class="footer-link">Ẩm Thực</a>
-              </li>
-              <li class="mb-2">
-                <a href="#gallery" class="footer-link">Bộ Sưu Tập</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
-            <h5 class="fw-bold mb-4 font-playfair">Dịch Vụ</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a href="#services" class="footer-link">Spa & Massage</a>
-              </li>
-              <li class="mb-2">
-                <a href="#services" class="footer-link">Phòng Gym</a>
-              </li>
-              <li class="mb-2">
-                <a href="#services" class="footer-link">Hội Nghị</a>
-              </li>
-              <li class="mb-2">
-                <a href="#services" class="footer-link">Tổ Chức Tiệc</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-4 col-md-4">
-            <h5 class="fw-bold mb-4 font-playfair">Đăng Ký Nhận Cập Nhật</h5>
-            <p class="text-light-50">
-              Nhận thông tin ưu đãi mới nhất từ Premier Pearl.
-            </p>
-            <div class="input-group mb-3">
-              <input
-                type="email"
-                class="form-control rounded-start-pill py-2 border-0"
-                placeholder="Email của bạn"
-              />
-              <button
-                class="btn btn-gold rounded-end-pill px-4 text-dark fw-bold"
-                type="button"
-              >
-                Gửi
-              </button>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/Flycam VPL (32 of 55)_1729669274.png" alt="Ocean View"
+                class="img-fluid" />
             </div>
           </div>
-        </div>
-        <hr class="mt-5 border-secondary" />
-        <div class="text-center mt-4">
-          <p class="m-0 text-light-50 small">
-            &copy; 2026 Premier Pearl Hotel Vũng Tàu. All Rights Reserved.
-          </p>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/VPLNT Pool4_1729669270.png" alt="Water Pavilion" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/VPLNT Wave Bar6 (1)_1729669277.png" alt="Night Resort"
+                class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-1_1680200690.png" alt="Beach Scene"
+                class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-2_1680200691.png" alt="Family Lounge"
+                class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/VPLNT Wave Bar5_1729669276.png" alt="Sunset" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/VPLNT Spa25_1729669269.png" alt="Sunset" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/spa_1680201570.png" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery//Vinpearl-Luxury-Nha-Trang-1_1680200690.png" alt="Sunset"
+                class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/VPLNT Spa1_1729669271.png" alt="Sunset" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/DJI_0528_1729669273.png" alt="Sunset" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/VPLNT Spa2_1729669266.png" alt="Sunset" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/VPLNT Spa5_1729669267.png" alt="Sunset" class="img-fluid" />
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Gallery Grid - Dining Tab -->
+      <div class="tab-content" id="dining">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/Lobby-bar_1680205066.png" alt="Dining" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/nha-hang-Blue-Lagoon_1680205067.png" alt="Food" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/nha-hang-huong-viet_1680205068.png" alt="Cuisine" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/pool-bar_1680205069.png" alt="Cuisine" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/wave-bar_1680205070.png" alt="Cuisine" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/Hương Việt_Vinpearl-1_1729669816.png" alt="Cuisine" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/VPLNT Blue Lagoon1_1729669817.png" alt="Cuisine" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/VPLNT Blue Lagoon2_1729669819.png" alt="Cuisine" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/BlueLagoon_Simple-1_1729669820.png" alt="Cuisine" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/BlueLagoon_Simple-2_1729669821.png" alt="Cuisine" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/Blue Lagoon_Vinpearl-2_1729669822.png" alt="Cuisine"
+                class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/Blue Lagoon_Vinpearl-3_1729669823.png" alt="Cuisine"
+                class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/VPLNT Wave Bar7_1729669862.png" alt="Cuisine" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-- Tab Switching & Navbar Scroll Script -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Navbar Scroll Effect
-        const navbar = document.getElementById("mainNav");
-        const onScroll = () => {
-          if (window.scrollY > 50) {
-            navbar.classList.add("navbar-scrolled");
-          } else {
-            navbar.classList.remove("navbar-scrolled");
-          }
-        };
-        // Initial check
-        onScroll();
-        window.addEventListener("scroll", onScroll);
+      <!-- Gallery Grid - Wellness Tab -->
+      <div class="tab-content" id="wellness">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/VPLNT Spa1_1729669271.png" alt="Spa" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/VPLNT Spa2_1729669266.png" alt="Massage" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/spa_1680201570.png" alt="Treatment" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-wellness_1680200808.png" alt="Facial"
+                class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/VPLNT Spa25_1729669269.png" alt="Therapy" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-wellness_1680200808.png" alt="Massage"
+                class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/VPLNT Pool4_1729669270.png" alt="Massage" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-wellness-2_1680200809.png" alt="Massage"
+                class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-wellness-3_1680200810.png" alt="Massage"
+                class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-wellness-4_1680200810.png" alt="Massage"
+                class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img src="./assets/images/gallery/Vinpearl-Luxury-Nha-Trang-wellness-5_1680200811.png" alt="Massage"
+                class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Tab Switching
-        document.querySelectorAll(".tab-btn").forEach((button) => {
-          button.addEventListener("click", function () {
-            const tabName = this.getAttribute("data-tab");
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer-vp">
+    <div class="container">
+      <div class="footer-top">
+        <div class="row g-5">
+          <!-- Brand -->
+          <div class="col-lg-3 col-md-6">
+            <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Vinpearl Luxury Nha Trang"
+              style="height:60px;" class="mb-4">
+            <p class="footer-desc">Khu nghỉ dưỡng biển đẳng cấp quốc tế tại bán đảo Hòn Tre, Nha Trang. Mang
+              đến trải nghiệm nghỉ dưỡng hoàn hảo và không thể nào quên.</p>
+            <div class="footer-social">
+              <a href="#" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="footer-social-icon"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#" class="footer-social-icon"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
 
-            // Remove active class from all tabs and contents
-            document
-              .querySelectorAll(".tab-btn")
-              .forEach((btn) => btn.classList.remove("active"));
-            document
-              .querySelectorAll(".tab-content")
-              .forEach((content) => content.classList.remove("active"));
+          <!-- Về Chúng Tôi -->
+          <div class="col-lg-2 col-md-6 col-6">
+            <h5 class="footer-heading">Về Chúng Tôi</h5>
+            <ul class="footer-links">
+              <li><a href="./about.html">Giới thiệu</a></li>
+              <li><a href="./contact.html">Liên hệ</a></li>
+              <li><a href="./faqs.html">Câu hỏi thường gặp</a></li>
+              <li><a href="#">Tuyển dụng</a></li>
+            </ul>
+          </div>
 
-            // Add active class to clicked tab and corresponding content
-            this.classList.add("active");
-            document.getElementById(tabName).classList.add("active");
-          });
+          <!-- Điều Khoản -->
+          <div class="col-lg-2 col-md-6 col-6">
+            <h5 class="footer-heading">Điều Khoản</h5>
+            <ul class="footer-links">
+              <li><a href="./terms.html">Điều khoản chung</a></li>
+              <li><a href="#">Quy định thanh toán</a></li>
+              <li><a href="#">Chính sách hủy phòng</a></li>
+              <li><a href="#">Bảo mật dữ liệu</a></li>
+            </ul>
+          </div>
+
+          <!-- Tin Tức -->
+          <div class="col-lg-2 col-md-6 col-6">
+            <h5 class="footer-heading">Tin Tức & Sự Kiện</h5>
+            <ul class="footer-links">
+              <li><a href="./news.html">Tin công ty</a></li>
+              <li><a href="./news.html">Cẩm nang du lịch</a></li>
+              <li><a href="./news.html">Sự kiện & Lễ hội</a></li>
+              <li><a href="#">Thành tựu</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-3 col-md-6 col-6">
+            <h5 class="footer-heading">Liên Hệ</h5>
+            <ul class="footer-contact-list">
+              <li>
+                <i class="fa-solid fa-location-dot text-gold-accent"></i>
+                <span>Bán đảo Hòn Tre, Vĩnh Nguyên, Nha Trang, Khánh Hòa</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone text-gold-accent"></i>
+                <span>+84 258 359 8888</span>
+              </li>
+              <li>
+                <i class="fa-regular fa-envelope text-gold-accent"></i>
+                <span>luxury.nhatrang@vinpearl.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0 footer-copy">© 2026 Vinpearl Luxury Nha Trang. All Rights Reserved.</p>
+        <p class="mb-0 footer-copy">Nhóm 11 – HTWeb 2526 HK2</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================== MOBILE OFFCANVAS MENU ======================== -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header" style="background-color: var(--color-primary);">
+      <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Logo" style="height:45px;">
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <div class="p-3 border-bottom">
+        <a href="javascript:void(0)" class="btn btn-outline-light w-100 search-trigger-btn">
+          <i class="fa-solid fa-magnifying-glass me-2"></i> Tìm kiếm
+        </a>
+      </div>
+      <ul class="list-unstyled mb-0">
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./home.html"><i
+              class="fa-solid fa-house me-3 text-gold-accent"></i>Trang Chủ</a></li>
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./rooms.html"><i
+              class="fa-solid fa-bed me-3 text-gold-accent"></i>Khách Sạn & Phòng</a>
+        </li>
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./dinning.html"><i
+              class="fa-solid fa-utensils me-3 text-gold-accent"></i>Ẩm Thực</a></li>
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./services.html"><i
+              class="fa-solid fa-spa me-3 text-gold-accent"></i>Spa & Dịch Vụ</a>
+        </li>
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./gallery.html"><i
+              class="fa-solid fa-images me-3 text-gold-accent"></i>Thư Viện Ảnh</a>
+        </li>
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./news.html"><i
+              class="fa-solid fa-newspaper me-3 text-gold-accent"></i>Tin Tức</a></li>
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./about.html"><i
+              class="fa-solid fa-circle-info me-3 text-gold-accent"></i>Giới Thiệu</a>
+        </li>
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./contact.html"><i
+              class="fa-solid fa-envelope me-3 text-gold-accent"></i>Liên Hệ</a></li>
+        <li class="p-3">
+          <a href="./search-results.html" class="btn-dat-ngay d-block text-center">Đặt Phòng Ngay</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ======================== SEARCH MODAL ======================== -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 rounded-4 overflow-hidden">
+        <div class="modal-header border-0 p-4" style="background-color: var(--color-primary);">
+          <h5 class="modal-title text-white fw-bold" id="searchModalLabel"><i
+              class="fa-solid fa-magnifying-glass me-2 text-gold-accent"></i>Tìm Kiếm</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="input-group input-group-lg">
+            <input type="text" class="form-control border-0 bg-light" placeholder="Tìm phòng, dịch vụ, ưu đãi...">
+            <button class="btn px-4" style="background-color: var(--color-gold-accent); color:#fff;" type="button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="mt-4">
+            <p class="text-muted small mb-2 fw-bold text-uppercase">Tìm kiếm phổ biến</p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="./rooms.html" class="badge bg-light text-dark text-decoration-none p-2 px-3 border"
+                data-bs-dismiss="modal">Phòng Biển</a>
+              <a href="./services.html" class="badge bg-light text-dark text-decoration-none p-2 px-3 border"
+                data-bs-dismiss="modal">Spa</a>
+              <a href="./dinning.html" class="badge bg-light text-dark text-decoration-none p-2 px-3 border"
+                data-bs-dismiss="modal">Nhà Hàng</a>
+              <a href="./search-results.html" class="badge bg-light text-dark text-decoration-none p-2 px-3 border"
+                data-bs-dismiss="modal">Ưu Đãi</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== SEARCH OVERLAY ======================== -->
+  <div class="search-overlay" id="globalSearchOverlay">
+    <div class="search-container">
+      <div class="close-search" id="closeSearchOverlay">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="search-input-wrapper">
+        <input type="text" id="globalSearchInput" placeholder="Bạn muốn tìm gì?">
+        <i class="fa-solid fa-magnifying-glass fs-2 text-muted"></i>
+      </div>
+      <div class="search-dropdown" id="globalSearchDropdown">
+        <!-- History and Suggestions will be here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Tab Switching & Navbar Scroll Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Navbar Scroll Effect
+      const navbar = document.getElementById("mainNav");
+      const onScroll = () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("navbar-scrolled");
+        } else {
+          navbar.classList.remove("navbar-scrolled");
+        }
+      };
+      // Initial check
+      onScroll();
+      window.addEventListener("scroll", onScroll);
+
+      // Tab Switching
+      document.querySelectorAll(".tab-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+          const tabName = this.getAttribute("data-tab");
+
+          // Remove active class from all tabs and contents
+          document
+            .querySelectorAll(".tab-btn")
+            .forEach((btn) => btn.classList.remove("active"));
+          document
+            .querySelectorAll(".tab-content")
+            .forEach((content) => content.classList.remove("active"));
+
+          // Add active class to clicked tab and corresponding content
+          this.classList.add("active");
+          document.getElementById(tabName).classList.add("active");
         });
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
