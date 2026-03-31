@@ -236,20 +236,122 @@
 
     <!-- ======================== RESULTS AREA ======================== -->
     <div class="booking-main-content">
-        <div class="container" style="max-width: 1140px;">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h4 class="result-title mb-0">Có 04 kết quả tại/ gần địa điểm "Vinpearl Luxury Nha Trang"</h4>
-                <div class="d-flex gap-3">
-                    <select class="filter-select shadow-sm">
-                        <option>Loại hình lưu trú</option>
-                    </select>
-                    <select class="filter-select shadow-sm">
-                        <option>Gợi ý từ Vinpearl</option>
-                    </select>
-                </div>
-            </div>
+        <div class="container" style="max-width: 1200px;">
+            <div class="row g-4">
+                <!-- Left Sidebar: Filters -->
+                <aside class="col-lg-3">
+                    <div class="filter-card">
+                        <div class="filter-header">
+                            <h5>Lọc kết quả</h5>
+                            <button class="btn-reset-filter" onclick="resetFilters()">Đặt lại</button>
+                        </div>
 
-            <div id="hotelCardContainer"></div>
+                        <!-- 1. Destination -->
+                        <div class="filter-section">
+                            <div class="filter-title">Điểm đến</div>
+                            <select class="form-select border-0 bg-light shadow-none" style="font-size: 0.9rem;" id="filterDestination" onchange="applyFilters()">
+                                <option value="all">Tất cả điểm đến</option>
+                                <option value="Hòn Tre">Đảo Hòn Tre</option>
+                                <option value="Hòn Tằm">Đảo Hòn Tằm</option>
+                                <option value="Trung tâm">Trung tâm Nha Trang</option>
+                            </select>
+                        </div>
+
+                        <!-- 2. Star Rating -->
+                        <div class="filter-section">
+                            <div class="filter-title">Xếp hạng sao</div>
+                            <div class="filter-checkbox-group">
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" class="star-filter" value="5" onchange="applyFilters()">
+                                    <span class="checkbox-box"></span>
+                                    <span>5 sao</span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" class="star-filter" value="4" onchange="applyFilters()">
+                                    <span class="checkbox-box"></span>
+                                    <span>4 sao</span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" class="star-filter" value="3" onchange="applyFilters()">
+                                    <span class="checkbox-box"></span>
+                                    <span>3 sao</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- 3. Amenities -->
+                        <div class="filter-section">
+                            <div class="filter-title">Tiện ích</div>
+                            <div class="filter-checkbox-group">
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" class="amenity-filter" value="Bể bơi ngoài trời" onchange="applyFilters()">
+                                    <span class="checkbox-box"></span>
+                                    <span>Bể bơi ngoài trời</span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" class="amenity-filter" value="Nhà hàng" onchange="applyFilters()">
+                                    <span class="checkbox-box"></span>
+                                    <span>Nhà hàng</span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" class="amenity-filter" value="Wifi miễn phí" onchange="applyFilters()">
+                                    <span class="checkbox-box"></span>
+                                    <span>Wifi miễn phí</span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" class="amenity-filter" value="Lễ tân 24h" onchange="applyFilters()">
+                                    <span class="checkbox-box"></span>
+                                    <span>Lễ tân 24h</span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" class="amenity-filter" value="Phòng có bồn tắm" onchange="applyFilters()">
+                                    <span class="checkbox-box"></span>
+                                    <span>Phòng có bồn tắm</span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" class="amenity-filter" value="Ban công/Cửa sổ" onchange="applyFilters()">
+                                    <span class="checkbox-box"></span>
+                                    <span>Ban công/Cửa sổ</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- 4. Price Price Range -->
+                        <div class="filter-section">
+                            <div class="filter-title">Khoảng giá</div>
+                            <div class="price-display">Dưới <span id="maxPriceLabel">10.000.000</span> ₫</div>
+                            <div class="range-input-container">
+                                <input type="range" class="form-range custom-range" id="priceRange" min="1000000" max="10000000" step="100000" value="10000000" oninput="updatePriceLabel(this.value)" onchange="applyFilters()">
+                            </div>
+                            <div class="price-chips">
+                                <div class="price-chip" onclick="setPriceFilter(1500000)">~ 1.5tr</div>
+                                <div class="price-chip" onclick="setPriceFilter(3000000)">~ 3tr</div>
+                                <div class="price-chip" onclick="setPriceFilter(5000000)">~ 5tr</div>
+                                <div class="price-chip" onclick="setPriceFilter(10000000)">Tất cả</div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Right Content: Results -->
+                <main class="col-lg-9">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="result-title mb-0" id="resultCountHeader">Có 05 kết quả tại Nha Trang</h4>
+                        <div class="d-flex gap-3">
+                            <select class="filter-select shadow-sm" id="sortSelect" onchange="applyFilters()">
+                                <option value="default">Gợi ý từ Vinpearl</option>
+                                <option value="price-asc">Giá thấp đến cao</option>
+                                <option value="price-desc">Giá cao đến thấp</option>
+                                <option value="rating-desc">Đánh giá cao nhất</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="hotelCardContainer">
+                        <!-- Results will be injected here -->
+                    </div>
+                </main>
+            </div>
         </div>
     </div>
 

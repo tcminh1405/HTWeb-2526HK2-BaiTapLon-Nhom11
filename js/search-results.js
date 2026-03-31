@@ -1,45 +1,55 @@
 // --- DATA ---
+// --- DATA ---
 const hotelData = [
-
     {
         name: "Melia Vinpearl Empire Nha Trang",
         images: ["./assets/images/search-results/hotel-1-1.png", "./assets/images/search-results/hotel-1-2.png", "./assets/images/search-results/hotel-1-3.png"],
         rating: "5/5", reviews: "1.916",
-        address: "44-46 Lê Thánh Tôn, Lộc Thọ, Nha Trang, Khánh Hòa",
+        stars: 5,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Ban công/Cửa sổ"],
+        address: "44-46 Lê Thánh Tôn, Lộc Thọ, Trung tâm Nha Trang",
         tags: ["Vị trí trung tâm", "Bể bơi vô cực"],
-        origPrice: "1.510.000", membPrice: "1.434.500"
+        origPrice: "1.510.000", membPrice: "1.434.500", priceValue: 1434500
     },
     {
         name: "Vinpearl Beachfront Nha Trang",
         images: ["./assets/images/search-results/hotel-2-1.png", "./assets/images/search-results/hotel-2-2.png", "./assets/images/search-results/hotel-2-3.png"],
         rating: "4.9/5", reviews: "2.103",
-        address: "78 - 80 Đường Trần Phú, Phường Lộc Thọ, Tp. Nha Trang",
+        stars: 4,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm"],
+        address: "78 - 80 Đường Trần Phú, Lộc Thọ, Trung tâm Nha Trang",
         tags: ["Vị trí sát biển", "Bãi biển riêng"],
-        origPrice: "2.190.000", membPrice: "2.080.500"
+        origPrice: "2.190.000", membPrice: "2.080.500", priceValue: 2080500
     },
     {
         name: "Hòn Tằm Resort",
         images: ["./assets/images/search-results/hotel-3-1.png", "./assets/images/search-results/hotel-3-2.png", "./assets/images/search-results/hotel-3-3.png"],
         rating: "4.7/5", reviews: "1.931",
+        stars: 4,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"],
         address: "Đảo Hòn Tằm, Phường Vĩnh Nguyên, Nha Trang",
         tags: ["Bãi biển riêng", "Trải nghiệm tắm bùn"],
-        origPrice: "2.620.000", membPrice: "2.489.000"
+        origPrice: "2.620.000", membPrice: "2.489.000", priceValue: 2489000
     },
     {
         name: "Vinpearl Resort Nha Trang",
         images: ["./assets/images/search-results/hotel-4-1.png", "./assets/images/search-results/hotel-4-2.png", "./assets/images/search-results/hotel-4-3.png"],
         rating: "4.6/5", reviews: "3.119",
+        stars: 5,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Phòng có bồn tắm", "Ban công/Cửa sổ"],
         address: "Đảo Hòn Tre, Tp. Nha Trang, Tỉnh Khánh Hòa",
         tags: ["Vinpearl Harbour", "Bể bơi rộng nhất"],
-        origPrice: "4.370.000", membPrice: "4.151.500"
+        origPrice: "4.370.000", membPrice: "4.151.500", priceValue: 4151500
     },
     {
         name: "Vinpearl Luxury Nha Trang",
         images: ["./assets/images/search-results/hotel-5-1.png", "./assets/images/search-results/hotel-5-2.png", "./assets/images/search-results/hotel-5-3.png"],
         rating: "5/5", reviews: "2.026",
+        stars: 5,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"],
         address: "Đảo Hòn Tre, Tp. Nha Trang, Tỉnh Khánh Hòa, Việt Nam",
         tags: ["Bãi biển riêng", "Bể bơi vô cực"],
-        origPrice: "5.310.000", membPrice: "5.044.500"
+        origPrice: "5.310.000", membPrice: "5.044.500", priceValue: 5044500
     },
 ];
 
@@ -80,7 +90,7 @@ function renderResults(dataToRender = hotelData) {
                     </div>
                     <div class="hotel-info">
                         <h3 class="hotel-name">${h.name}</h3>
-                        <div class="hotel-rating"><i class="fa-solid fa-star text-success"></i> <b>${h.rating}</b> <span class="text-muted">(${h.reviews} Đánh giá)</span></div>
+                        <div class="hotel-rating"><i class="fa-solid fa-star text-success"></i> <b>${h.stars} Sao</b> <span class="text-muted">(${h.rating} - ${h.reviews} Đánh giá)</span></div>
                         <div class="hotel-address small text-muted my-2"><i class="fa-solid fa-location-dot"></i> ${h.address}</div>
                         <div class="hotel-tags mt-auto">${h.tags.map(t => `<span class="hotel-tag">${t}</span>`).join('')}</div>
                     </div>
@@ -258,19 +268,91 @@ function toggleEO() {
     }
 }
 
+// --- FILTERING LOGIC ---
+function applyFilters() {
+    const destination = document.getElementById('filterDestination').value;
+    const selectedStars = Array.from(document.querySelectorAll('.star-filter:checked')).map(cb => parseInt(cb.value));
+    const selectedAmenities = Array.from(document.querySelectorAll('.amenity-filter:checked')).map(cb => cb.value);
+    const maxPrice = parseInt(document.getElementById('priceRange').value);
+    const sortBy = document.getElementById('sortSelect').value;
+
+    let filtered = hotelData.filter(hotel => {
+        // 1. Destination
+        const destMatch = destination === 'all' || hotel.address.includes(destination);
+        
+        // 2. Stars
+        const starMatch = selectedStars.length === 0 || selectedStars.includes(hotel.stars);
+        
+        // 3. Amenities
+        const amenityMatch = selectedAmenities.length === 0 || selectedAmenities.every(a => hotel.amenities.includes(a));
+        
+        // 4. Price
+        const priceMatch = hotel.priceValue <= maxPrice;
+
+        return destMatch && starMatch && amenityMatch && priceMatch;
+    });
+
+    // 5. Sorting
+    if (sortBy === 'price-asc') {
+        filtered.sort((a, b) => a.priceValue - b.priceValue);
+    } else if (sortBy === 'price-desc') {
+        filtered.sort((a, b) => b.priceValue - a.priceValue);
+    } else if (sortBy === 'rating-desc') {
+        filtered.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
+    }
+
+    // Update Header Text
+    const resultCountHeader = document.getElementById('resultCountHeader');
+    if (resultCountHeader) {
+        resultCountHeader.innerText = `Có ${filtered.length < 10 ? '0' + filtered.length : filtered.length} kết quả phù hợp`;
+    }
+
+    renderResults(filtered);
+}
+
+function updatePriceLabel(val) {
+    document.getElementById('maxPriceLabel').innerText = new Intl.NumberFormat('vi-VN').format(val);
+}
+
+function setPriceFilter(val) {
+    const range = document.getElementById('priceRange');
+    range.value = val;
+    updatePriceLabel(val);
+    
+    // Update active status for chips
+    document.querySelectorAll('.price-chip').forEach(chip => {
+        chip.classList.remove('active');
+        if (chip.innerText.includes(val / 1000000 + 'tr') || (val === 10000000 && chip.innerText === 'Tất cả')) {
+            chip.classList.add('active');
+        }
+    });
+
+    applyFilters();
+}
+
+function resetFilters() {
+    document.getElementById('filterDestination').value = 'all';
+    document.querySelectorAll('.star-filter, .amenity-filter').forEach(cb => cb.checked = false);
+    document.getElementById('priceRange').value = 10000000;
+    updatePriceLabel(10000000);
+    document.getElementById('sortSelect').value = 'default';
+    document.querySelectorAll('.price-chip').forEach(chip => chip.classList.remove('active'));
+    applyFilters();
+}
+
 // --- STICKY GAP FIX & SEARCH INIT ---
 window.addEventListener('load', () => {
     loadSearchData();
 
-    // --- Dynamic Search Filtering ---
+    // Initialize display
+    updatePriceLabel(10000000);
+
+    // --- Dynamic Search Filtering (Initial from URL) ---
     const urlParams = new URLSearchParams(window.location.search);
     const query = urlParams.get('q');
-    const resultTitle = document.querySelector('.result-title');
-
+    
     if (query) {
         const q = query.toLowerCase().trim();
-        
-        // Define room-to-hotel mapping for demonstration
         const roomToHotel = {
             "vườn": "Vinpearl Luxury Nha Trang",
             "garden": "Vinpearl Luxury Nha Trang",
@@ -283,40 +365,29 @@ window.addEventListener('load', () => {
             "resort": "Vinpearl Resort Nha Trang"
         };
 
-        // Filter: match hotel name OR keywords in mapping
         const filtered = hotelData.filter(hotel => {
             const nameMatch = hotel.name.toLowerCase().includes(q);
-            // Check if any key in mapping exists in query and matches this hotel
             const roomMatch = Object.keys(roomToHotel).some(key => 
                 q.includes(key) && roomToHotel[key] === hotel.name
             );
             return nameMatch || roomMatch;
         });
 
-        const count = filtered.length;
-        if (resultTitle) {
-            resultTitle.innerText = `Có ${count < 10 ? '0' + count : count} kết quả cho "${query}"`;
-        }
         renderResults(filtered);
-    } else {
-        if (resultTitle) {
-            resultTitle.innerText = `Có ${hotelData.length < 10 ? '0' + hotelData.length : hotelData.length} kết quả tại/ gần địa điểm "Vinpearl Luxury Nha Trang"`;
+        const resultCountHeader = document.getElementById('resultCountHeader');
+        if (resultCountHeader) {
+            resultCountHeader.innerText = `Có ${filtered.length < 10 ? '0' + filtered.length : filtered.length} kết quả cho "${query}"`;
         }
+    } else {
         renderResults(hotelData);
     }
 
+    // Scroll Effect
     const nav = document.getElementById('mainNav');
-    const bar = document.querySelector('.booking-bar-wrapper');
-
     const adjustTop = () => {
-        if (window.scrollY > 20) {
-            nav.classList.add('navbar-scrolled');
-        } else {
-            nav.classList.remove('navbar-scrolled');
-        }
+        if (window.scrollY > 20) nav.classList.add('navbar-scrolled');
+        else nav.classList.remove('navbar-scrolled');
     };
-
     window.addEventListener('scroll', adjustTop);
-    window.addEventListener('resize', adjustTop);
     adjustTop();
 });
