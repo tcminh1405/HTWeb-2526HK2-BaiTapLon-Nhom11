@@ -66,21 +66,59 @@
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <div class="card shadow-lg rounded-3">
-                        <div class="card-body p-5">
-                            <h2 class="text-center mb-4">Login</h2>
+                        <div class="card-body p-5 position-relative">
+                            <div style="position:absolute; top:20px; right:20px; font-size:14px;">
+                            <span onclick="setLang('vn')" id="vn" style="cursor:pointer; font-weight:bold;"> 🇻🇳 VN</span> |
+                            <span onclick="setLang('en')" id="en" style="cursor:pointer;"> 🇺🇸 EN</span>
+                        </div>
+                            <div class="text-center mb-4">
+                                <div style="display:flex; justify-content:center; align-items:center; gap:15px; margin-bottom:20px;">
+                                    <img src="./img/pearl.png" alt="" style="height:70px;">
+                                    <div style="width:2px; height:40px; background-color:rgba(0,0,255,0.8);"></div>
+                                    <img src="./img/clb.png" alt="" style="height:70px;">
+                                </div>
+                            </div>
+                         <div class="text-center mb-4">
+                                <span onclick="showLogin()" id="tabLogin"style="margin-right:20px; cursor:pointer; border-bottom:2px solid #f5a000;"> Login</span>
+                                <span onclick="showRegister()" id="tabRegister" style="cursor:pointer;"> Register </span>
+                        </div>
+                        <div id="loginForm">
                             <form>
-                                <div class="mb-3">
-                                    <label for="username" class="form-label">Username</label>
-                                    <input type="text" class="form-control" id="username"
-                                        placeholder="Enter your username">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="password" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="password"
-                                        placeholder="Enter your password">
-                                </div>
-                                <button type="submit" class="btn btn-gold w-100">Login</button>
+                                <input type="text" class="form-control mb-2" placeholder="Email / Phone number">
+                                <p class="text-muted small mb-3" style="text-align:left;">(Example: yourname@email.com / +84904123456)</p>
+                                <input type="password" class="form-control mb-3" placeholder="Password">
+                                <button type="submit" class="btn w-100 mb-3" style="background:#f5a000; color:white;"> LOGIN </button>
+                                <p class="text-center small"> By logging in, I agree to Vinpearl's
+                                    <a href="#">Terms and Conditions</a> and
+                                    <a href="#">Privacy Policy</a>
+                                </p>
+                                <p class="text-center"> Don't have an account?
+                                    <a href="#" onclick="showRegister()">Sign up now</a> 
+                                </p>
+
                             </form>
+                        </div>
+                        <div id="registerForm" style="display:none;">
+                            <form>
+                                <input type="text" class="form-control mb-2" placeholder="Email / Phone number">
+                                <p class="text-muted small mb-3" style="text-align:left;">(Example: yourname@email.com / +84904123456)
+                                </p>
+                               <input type="text" class="form-control mb-2" placeholder="First name">
+                               <input type="text" class="form-control mb-2" placeholder="Full name">
+                               <input type="password" class="form-control mb-2" placeholder="Password">
+                               <input type="password" class="form-control mb-3" placeholder="Confirm password">
+                               <button type="submit" class="btn w-100 mb-3" style="background:#f5a000; color:white;"> SIGN UP </button>
+                               <p class="text-center small"> By signing up, I agree to Vinpearl's
+                                   <a href="#">Terms and Conditions</a> and
+                                   <a href="#">Privacy Policy</a>
+                              </p>
+                               <p class="text-center">Already have an account?
+                                   <a href="#" onclick="showLogin()">Login</a>
+                               </p>
+                             </form>
+                        </div>
+                          
+                        
                         </div>
                     </div>
                 </div>
@@ -94,6 +132,32 @@
 
     <!-- Custom Scripts -->
     <script src="js/script.js"></script>
+    <script>
+        function setLang(lang) {
+            if (lang == 'vn') {
+                document.getElementById("vn").style.fontWeight = "bold";
+                document.getElementById("en").style.fontWeight = "normal";
+            } else {
+                document.getElementById("en").style.fontWeight = "bold";
+                document.getElementById("vn").style.fontWeight = "normal";
+            }
+        }
+
+        function showRegister() {
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("registerForm").style.display = "block";
+            document.getElementById("tabRegister").style.borderBottom = "2px solid orange";
+            document.getElementById("tabLogin").style.borderBottom = "none";
+        }
+
+        function showLogin() {
+            document.getElementById("loginForm").style.display = "block";
+            document.getElementById("registerForm").style.display = "none";
+            document.getElementById("tabLogin").style.borderBottom = "2px solid orange";
+            document.getElementById("tabRegister").style.borderBottom = "none";
+        }
+    </script>
+    
 </body>
 
 </html>
