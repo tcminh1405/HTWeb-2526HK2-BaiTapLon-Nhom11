@@ -1,150 +1,273 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Room Detail - Premier Pearl Hotel Vũng Tàu - Luxury Experience
+    </title>
+    <link rel="icon" type="image/png" href="./assets/images/logo/favicon.png" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Room Detail - Premier Pearl Hotel Vũng Tàu - Luxury Experience</title>
-
-    <!-- Google Fonts: Playfair Display + Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome & Bootstrap (offline) -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Offline Font Awesome & Bootstrap -->
-    <link rel="stylesheet" href="assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css">
-    <link rel="stylesheet" href="assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/globalStyle.css">
-</head>
+    <link rel="stylesheet" href="./css/globalStyle.css" />
+    <link rel="stylesheet" href="./css/roomdetail.css" />
+  </head>
+  <body>
+    <!-- Room Detail Modal-like View -->
+    <div id="room-modal" class="room-modal-overlay" aria-hidden="true">
+      <div class="room-modal">
+        <button class="rd-close" aria-label="Close">&times;</button>
 
-<body>
-    <!-- Header / Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand text-gold fs-3 fw-bold" href="#hero">
-                Premier Pearl
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <div class="rd-inner">
+          <h2 id="rd-title" class="rd-title">Room name</h2>
+
+          <div class="rd-gallery">
+            <button id="rd-prev" class="rd-prev" aria-label="Previous">
+              <i class="fas fa-chevron-left"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto py-4 py-lg-0 align-items-center">
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="./home.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="./about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="./rooms.html">Rooms</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="./services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="./dinning.html">Dining</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="./gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="./contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-gold rounded-pill px-4 text-dark fw-bold"
-                            href="#contact">Book Now</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+            <img id="rd-main-img" class="rd-main-img" src="" alt="Room image" />
+            <button id="rd-next" class="rd-next" aria-label="Next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
 
-    <!-- Hero Section -->
-    <header class="hero d-flex align-items-center justify-content-center text-center fade-in" id="hero">
-        <div class="hero-overlay"></div>
-        <div class="container position-relative z-index-1">
-            <h1 class="text-white display-2 fw-bold mb-3 text-shadow">Luxury Beach Hotel Experience</h1>
-            <p class="text-white fs-4 mb-5 text-shadow">Trải nghiệm nghỉ dưỡng cao cấp ven biển Vũng Tàu</p>
-            <a class="btn btn-gold btn-lg rounded-pill px-5 py-3 fw-bold shadow-sm hover-zoom"
-                href="./home.html">Explore
-                Now</a>
-        </div>
-    </header>
-
-    <!-- Room Detail Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="card border-0 shadow-sm mb-4">
-                        <img src="assets/images/room-detail.jpg" class="card-img-top" alt="Room Detail">
-                        <div class="card-body">
-                            <h2 class="card-title text-gold mb-3">Deluxe Room</h2>
-                            <p class="card-text text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                                do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <div>
-                                    <span class="text-muted">Price:</span>
-                                    <span class="text-gold fs-4 fw-bold">$199/night</span>
-                                </div>
-                                <a href="#" class="btn btn-gold rounded-pill px-4 py-2 fw-bold">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card border-0 shadow-sm mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title text-gold mb-3">Room Features</h5>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-bed me-2"></i> King Size Bed</li>
-                                <li><i class="fas fa-bath me-2"></i> Private Bathroom</li>
-                                <li><i class="fas fa-wifi me-2"></i> Free Wi-Fi</li>
-                                <li><i class="fas fa-tv me-2"></i> Flat Screen TV</li>
-                                <li><i class="fas fa-air-conditioner me-2"></i> Air Conditioning</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+          <div class="rd-content">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <p id="rd-price" class="rd-price">Giá</p>
+              <a
+                id="rd-book"
+                class="btn btn-gold rounded-pill px-4 py-2 fw-bold"
+                href="./booking.html"
+                >Book Now</a
+              >
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h5 class="text-gold mb-3">Premier Pearl Hotel</h5>
-                    <p>Luxury Beach Hotel Experience</p>
-                    <p>123 Ocean Drive, Vũng Tàu, Vietnam</p>
-                    <p>+84 123 456 789</p>
-                    <p>[EMAIL_ADDRESS]</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5 class="text-gold mb-3">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">About</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Rooms</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Services</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Dining</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Gallery</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5 class="text-gold mb-3">Follow Us</h5>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <p>&copy; 2024 Premier Pearl Hotel. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+            <p id="rd-desc" class="rd-desc text-muted">Mô tả phòng...</p>
 
+            <h5 class="mt-4">Tiện ích</h5>
+            <div id="rd-amenities" class="rd-amenities">
+              <!-- Amenities will be injected here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Bootstrap Bundle with Popper Offline -->
     <!-- Mapped path for offline bootstrap js -->
-    <script src="assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom Scripts -->
     <script src="js/script.js"></script>
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const rooms = [
+          {
+            id: "pool-villa",
+            name: "Biệt thự hướng bể bơi",
+            price: "7.040.000VNĐ / đêm",
+            description:
+              "Với diện tích 60 m², Biệt thự 1 phòng ngủ hướng Hồ bơi là biệt thư thiết kế sang trọng, tích hợp đầy đủ tiện nghi cho kỳ lưu trú của bạn. Sở hữu không gian rộng rãi và hồ bơi riêng, Biệt thự là lựa chọn lý tưởng dành cho các cặp đôi và các gia đình nhỏ đi du lịch nghỉ dưỡng.",
+            images: [
+              "b552dca59bb546648e1b37d41da0cea2_pool villa kuxx.png",
+              "1 1 1 1.png",
+              "1 1 1.png",
+              "1 1.png",
+              "1.png",
+            ],
+            amenities: [
+              { icon: "fas fa-swimming-pool", label: "Bể bơi" },
+              { icon: "fas fa-tv", label: "TV màn hình phẳng" },
+              { icon: "fas fa-wifi", label: "Wifi miễn phí" },
+              { icon: "fas fa-snowflake", label: "Điều hòa" },
+              { icon: "fas fa-bath", label: "Bồn tắm" },
+              { icon: "fas fa-wine-bottle", label: "Minibar" },
+            ],
+          },
+          {
+            id: "ocean-villa",
+            name: "Biệt thự hướng biển",
+            price: "8.570.000VNĐ / đêm",
+            description:
+              "Với diện tích 75 m², biệt thự có thiết kế sang trọng, thông minh, tích hợp đầy đủ tiện nghi cho kỳ lưu trú của bạn. Tầm nhìn hướng ra biển lãng mạn, có bể bơi riêng, biệt thự là lựa chọn lý tưởng dành cho các cặp đôi đi du lịch nghỉ dưỡng hoặc chuyến công tác 2 người.",
+            images: [
+              "6c1fb58b042e4e4d935ff3a2f2d841ae_VPLRNT__Grand_Duplex_Villa_13.png",
+              "2_2.png",
+              "22.png",
+              "222.png",
+              "22222.png",
+              "222222.png",
+            ],
+            amenities: [
+              { icon: "fas fa-water", label: "Hướng biển" },
+              { icon: "fas fa-tv", label: "TV màn hình phẳng" },
+              { icon: "fas fa-wifi", label: "Wifi miễn phí" },
+              { icon: "fas fa-umbrella-beach", label: "Ban công" },
+              { icon: "fas fa-bed", label: "Giường lớn" },
+              { icon: "fas fa-bell-concierge", label: "Dịch vụ phòng" },
+            ],
+          },
+          {
+            id: "duplex-villa",
+            name: "Biệt thự 2 tầng",
+            price: "9.660.000VNĐ / đêm",
+            description:
+              "Với diện tích 110 m², biệt thự có thiết kế 2 tầng sang trọng, rộng rãi, tích hợp đầy đủ tiện nghi cho kỳ lưu trú của bạn. Đặc biệt có bể bơi riêng, đây là lựa chọn lý tưởng dành cho các cặp đôi đi du lịch nghỉ dưỡng hoặc chuyến công tác 2 người.",
+            images: [
+              "6c1fb58b042e4e4d935ff3a2f2d841ae_VPLRNT__Grand_Duplex_Villa_13.png",
+              "3.png",
+              "33.png",
+              "333.png",
+              "3333.png",
+              "3_3.png",
+            ],
+            amenities: [
+              { icon: "fas fa-house-chimney", label: "2 tầng" },
+              { icon: "fas fa-wifi", label: "Wifi miễn phí" },
+              { icon: "fas fa-tv", label: "TV màn hình phẳng" },
+              { icon: "fas fa-couch", label: "Phòng khách" },
+              { icon: "fas fa-utensils", label: "Bếp nhỏ" },
+              { icon: "fas fa-shower", label: "Vòi sen" },
+            ],
+          },
+          {
+            id: "garden-villa",
+            name: "Biệt thự hướng vườn",
+            price: "",
+            description:
+              "Với diện tích 60 m², biệt thự có thiết kế sang trọng, rộng rãi, tích hợp đầy đủ tiện nghi cho kỳ lưu trú của bạn. Tầm nhìn hướng vườn tươi xanh, Biệt thự là lựa chọn lý tưởng dành cho các cặp đôi đi du lịch nghỉ dưỡng hoặc chuyến công tác 2 người.",
+            images: [
+              "8ccd804500c843c1b5c5467f0c691883_VPLRNT_ Garden View Villa .png",
+              "4.png",
+              "333.png",
+              "33.png",
+              "3333.png",
+              "3_3.png",
+            ],
+            amenities: [
+              { icon: "fas fa-tree", label: "Hướng vườn" },
+              { icon: "fas fa-wifi", label: "Wifi miễn phí" },
+              { icon: "fas fa-bed", label: "Giường lớn" },
+              { icon: "fas fa-bath", label: "Bồn tắm" },
+              { icon: "fas fa-wine-bottle", label: "Minibar" },
+              { icon: "fas fa-sun", label: "Sân tắm nắng" },
+            ],
+          },
+          {
+            id: "penthouse",
+            name: "Presidential Penthouse",
+            price: "15.800.000VNĐ / đêm",
+            description:
+              "Trải nghiệm độc bản và thượng lưu với diện tích 120m², hồ bơi vô cực riêng tư, dịch vụ quản gia 24/7 tận tâm. Penthouse thiết kế tinh tế với vật liệu cao cấp nhập khẩu, tầm nhìn 360° bao quát toàn cảnh biển Vũng Tàu hùng vĩ – đỉnh cao của sự sang trọng.",
+            images: [
+              "e1bb35a60c3c4ca196c1bc1dc360b181_DSC_4904 copy.png",
+              "5.png",
+              "55.png",
+              "22.png",
+              "222.png",
+            ],
+            amenities: [
+              { icon: "fas fa-city", label: "Tầm nhìn thành phố" },
+              { icon: "fas fa-bath", label: "Bồn tắm cao cấp" },
+              { icon: "fas fa-wifi", label: "Wifi miễn phí" },
+              { icon: "fas fa-tv", label: "TV lớn" },
+              { icon: "fas fa-couch", label: "Phòng khách" },
+              { icon: "fas fa-concierge-bell", label: "Dịch vụ cao cấp" },
+            ],
+          },
+        ];
 
+        const param = new URLSearchParams(location.search).get("room");
+        const room = rooms.find((r) => r.id === param);
+
+        const modal = document.getElementById("room-modal");
+        const rdTitle = document.getElementById("rd-title");
+        const rdMainImg = document.getElementById("rd-main-img");
+        const rdPrice = document.getElementById("rd-price");
+        const rdDesc = document.getElementById("rd-desc");
+        const rdAmenities = document.getElementById("rd-amenities");
+        const rdPrev = document.getElementById("rd-prev");
+        const rdNext = document.getElementById("rd-next");
+        const rdClose = document.querySelector(".rd-close");
+        const rdBook = document.getElementById("rd-book");
+
+        let currentIndex = 0;
+
+        function imgPath(name) {
+          return encodeURI("assets/images/room/" + name);
+        }
+
+        if (!room) {
+          rdTitle.textContent = "Phòng không tìm thấy";
+          rdDesc.textContent =
+            "Không tìm thấy thông tin phòng. Vui lòng quay lại danh sách phòng.";
+          rdPrice.textContent = "";
+          rdMainImg.style.display = "none";
+          rdBook.href = "./rooms.html";
+        } else {
+          modal.setAttribute("aria-hidden", "false");
+          rdTitle.textContent = room.name;
+          rdPrice.textContent = room.price;
+          rdDesc.textContent = room.description;
+          rdBook.href = "./booking.html?room=" + encodeURIComponent(room.id);
+
+          // amenities
+          rdAmenities.innerHTML = "";
+          (room.amenities || []).forEach((a) => {
+            const el = document.createElement("div");
+            el.className = "amenity";
+            el.innerHTML = `<i class="${a.icon}"></i><span>${a.label}</span>`;
+            rdAmenities.appendChild(el);
+          });
+
+          function showImage(i) {
+            if (!room.images || !room.images.length) {
+              rdMainImg.style.display = "none";
+              return;
+            }
+            currentIndex = (i + room.images.length) % room.images.length;
+            rdMainImg.style.display = "block";
+            rdMainImg.src = imgPath(room.images[currentIndex]);
+            rdMainImg.alt = room.name + " " + (currentIndex + 1);
+          }
+
+          rdPrev.addEventListener("click", function (e) {
+            e.stopPropagation();
+            showImage(currentIndex - 1);
+          });
+          rdNext.addEventListener("click", function (e) {
+            e.stopPropagation();
+            showImage(currentIndex + 1);
+          });
+          showImage(0);
+        }
+
+        function closeModal() {
+          if (document.referrer && document.referrer.includes("rooms.html"))
+            history.back();
+          else location.href = "./rooms.html";
+        }
+
+        rdClose.addEventListener("click", closeModal);
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") rdClose.click();
+          if (e.key === "ArrowLeft") rdPrev.click();
+          if (e.key === "ArrowRight") rdNext.click();
+        });
+      });
+    </script>
+  </body>
 </html>
