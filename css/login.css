@@ -1,0 +1,266 @@
+/* ================================================================
+   Vinpearl Luxury - High Fidelity Centered Login Styles
+   ================================================================ */
+
+:root {
+    --vp-gold: #D89D31;
+    --vp-navy: #0b1a37;
+    --vp-bg-light: #F7F7F7;
+    --vp-input-bg: #F9F9F9;
+    --vp-input-border: #E0E0E0;
+    --vp-text-dark: #2c2c2c;
+    --vp-text-gray: #888888;
+    --vp-error: #dc3545;
+    --font-primary: "Montserrat", sans-serif;
+    --font-heading: "EB Garamond", serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    overflow: hidden;
+}
+
+/* --- Hero Background Setup --- */
+.login-page-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('../assets/images/home/hero-2.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.login-page-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 26, 55, 0.7); /* Deep overlay for focus */
+    z-index: 0;
+}
+
+/* --- Layout Sections --- */
+header.login-header {
+    padding: 25px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+.back-home {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s;
+}
+
+.back-home:hover {
+    color: var(--vp-gold);
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;    justify-content: center;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+footer.login-footer-bottom {
+    position: relative;
+    z-index: 10;
+    padding: 25px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* --- Centered Card (Restored High-Fidelity) --- */
+.login-card-centered {
+    background: #FFFFFF;
+    width: 100%;
+    max-width: 480px;
+    padding: 50px 60px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    border: none;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.brand-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.logo-vpearl { height: 40px; }
+.logo-divider { width: 1px; height: 25px; background-color: #eee; }
+
+/* --- Tabs --- */
+.login-tabs {
+    display: flex;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.login-tab {
+    flex: 1;
+    text-align: center;
+    padding-bottom: 15px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: var(--vp-text-gray);
+    transition: all 0.3s;
+    position: relative;
+}
+
+.login-tab.active-tab {
+    color: var(--vp-navy);
+}
+
+.login-tab.active-tab::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--vp-gold);
+}
+
+/* --- Form Fields --- */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-control {
+    background-color: var(--vp-input-bg) !important;
+    border: 1px solid var(--vp-input-border);
+    height: 52px;
+    border-radius: 4px;
+    padding: 12px 18px;
+    font-size: 0.95rem;
+    color: var(--vp-text-dark);
+    transition: all 0.25s;
+}
+
+.form-control:focus {
+    border-color: var(--vp-gold);
+    box-shadow: 0 0 0 3px rgba(216, 157, 49, 0.1);
+    background-color: #fff !important;
+    outline: none;
+}
+
+.error-msg {
+    color: var(--vp-error);
+    font-size: 0.75rem;
+    font-style: italic;
+    margin-top: 6px;
+    display: block;
+    font-weight: 500;
+}
+
+.form-utils {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    font-size: 0.88rem;
+}
+
+.form-utils label {
+    color: var(--vp-text-gray);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-utils a {
+    color: var(--vp-gold);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-utils a:hover {
+    text-decoration: underline;
+}
+
+/* --- Submit Button --- */
+.btn-vp-primary {
+    background-color: var(--vp-gold);
+    color: white;
+    width: 100%;
+    height: 54px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 15px rgba(216, 157, 49, 0.3);
+    transition: all 0.3s;
+}
+
+.btn-vp-primary:hover {
+    background-color: #c4892c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(216, 157, 49, 0.4);
+}
+
+.redirect-sec {
+    margin-top: 35px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.redirect-sec a {
+    color: var(--vp-gold);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+/* Row Adjustment */
+.row.g-2 {
+    margin-bottom: 0;
+}
+
+.row.g-2 .form-group {
+    margin-bottom: 25px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 500px) {
+    .login-card-centered {
+        padding: 40px 25px;
+        margin: 0 15px;
+    }
+}

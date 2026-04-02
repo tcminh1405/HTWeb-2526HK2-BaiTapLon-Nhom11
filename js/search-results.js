@@ -117,11 +117,11 @@ function renderResults(dataToRender = hotelData) {
 }
 
 function selectHotel(name) {
-    if (name === "Vinpearl Luxury Nha Trang") {
-        window.location.href = "./booking.html";
-    } else {
-        alert("Tính năng đặt phòng hiện đang được phát triển cho khách sạn này.");
-    }
+    // if (name === "Vinpearl Luxury Nha Trang") {
+    window.location.href = "./booking.html";
+    // } else {
+    //     alert("Tính năng đặt phòng hiện đang được phát triển cho khách sạn này.");
+    // }
 }
 
 // --- SEARCH & LOCAL STORAGE LOGIC ---
@@ -279,13 +279,13 @@ function applyFilters() {
     let filtered = hotelData.filter(hotel => {
         // 1. Destination
         const destMatch = destination === 'all' || hotel.address.includes(destination);
-        
+
         // 2. Stars
         const starMatch = selectedStars.length === 0 || selectedStars.includes(hotel.stars);
-        
+
         // 3. Amenities
         const amenityMatch = selectedAmenities.length === 0 || selectedAmenities.every(a => hotel.amenities.includes(a));
-        
+
         // 4. Price
         const priceMatch = hotel.priceValue <= maxPrice;
 
@@ -318,7 +318,7 @@ function setPriceFilter(val) {
     const range = document.getElementById('priceRange');
     range.value = val;
     updatePriceLabel(val);
-    
+
     // Update active status for chips
     document.querySelectorAll('.price-chip').forEach(chip => {
         chip.classList.remove('active');
@@ -350,7 +350,7 @@ window.addEventListener('load', () => {
     // --- Dynamic Search Filtering (Initial from URL) ---
     const urlParams = new URLSearchParams(window.location.search);
     const query = urlParams.get('q');
-    
+
     if (query) {
         const q = query.toLowerCase().trim();
         const roomToHotel = {
@@ -367,7 +367,7 @@ window.addEventListener('load', () => {
 
         const filtered = hotelData.filter(hotel => {
             const nameMatch = hotel.name.toLowerCase().includes(q);
-            const roomMatch = Object.keys(roomToHotel).some(key => 
+            const roomMatch = Object.keys(roomToHotel).some(key =>
                 q.includes(key) && roomToHotel[key] === hotel.name
             );
             return nameMatch || roomMatch;

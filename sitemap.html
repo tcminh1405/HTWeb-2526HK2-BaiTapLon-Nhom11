@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap - Vinpearl Luxury Nha Trang</title>
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/globalStyle.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sitemap-header {
+            background-color: var(--color-navy);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .sitemap-container {
+            flex-grow: 1;
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .infographic-wrapper {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .infographic-wrapper:hover {
+            transform: scale(1.01);
+        }
+
+        .sitemap-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .back-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: inline-block;
+            background-color: var(--color-gold-accent);
+            color: #fff !important;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 8px 20px rgba(243, 164, 54, 0.4);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(243, 164, 54, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="sitemap-header">
+        <div class="container">
+            <h1 class="display-4 font-garamond">Sơ Đồ Trang Web</h1>
+            <p class="lead opacity-75">Bản đồ cấu trúc hệ thống Vinpearl Luxury Nha Trang</p>
+        </div>
+    </header>
+
+    <main class="sitemap-container">
+        <div class="infographic-wrapper text-center">
+            <img src="./assets/images/sitemap/sitemap-infographic.png" alt="Vinpearl Sitemap Infographic" class="sitemap-img">
+            <div class="mt-4">
+                <p class="text-muted small italic">*Đây là sơ đồ cấu trúc trực quan của toàn bộ hệ thống website.</p>
+            </div>
+        </div>
+    </main>
+
+    <a href="home.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left me-2"></i> Quay lại trang chủ
+    </a>
+
+    <!-- Footer scripts -->
+    <script src="./assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
