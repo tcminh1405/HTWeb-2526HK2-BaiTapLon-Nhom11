@@ -1,0 +1,243 @@
+/* ================================================================
+   NEWS & TRAVEL GUIDE STYLES
+   Vinpearl Luxury Nha Trang - News Rewrite
+   ================================================================ */
+
+.news-hero {
+    height: 50vh;
+    min-height: 400px;
+    background: url('../assets/images/news/hero.png') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.news-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 26, 55, 0.45);
+}
+
+.news-hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 800px;
+}
+
+.news-hero-title {
+    font-family: var(--font-garamond);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.news-hero-subtitle {
+    font-family: var(--font-montserrat);
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Categories Section */
+.categories-bar {
+    padding: 40px 0;
+    background-color: #fff;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.cat-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+
+.cat-scroll::-webkit-scrollbar {
+    height: 4px;
+}
+
+.cat-scroll::-webkit-scrollbar-thumb {
+    background: var(--color-gold-accent);
+    border-radius: 4px;
+}
+
+.cat-card {
+    min-width: 150px;
+    height: 100px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cat-card:hover {
+    transform: translateY(-5px);
+}
+
+.cat-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cat-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.cat-name {
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Featured Section */
+.featured-news-section {
+    padding: 80px 0;
+}
+
+.news-card {
+    border: none;
+    background: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.news-card-img {
+    height: 240px;
+    object-fit: cover;
+}
+
+.news-card-body {
+    padding: 25px;
+}
+
+.news-date {
+    font-size: 0.75rem;
+    color: var(--color-gold-accent);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.news-title {
+    font-family: var(--font-garamond);
+    font-size: 1.5rem;
+    color: var(--color-navy);
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news-excerpt {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news-link {
+    color: var(--color-navy);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.news-link:hover {
+    color: var(--color-gold-accent);
+}
+
+/* Sidebar */
+.sidebar-title {
+    font-family: var(--font-garamond);
+    font-size: 1.8rem;
+    color: var(--color-navy);
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.sidebar-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--color-gold-accent);
+}
+
+.search-news-box {
+    margin-bottom: 40px;
+}
+
+.search-news-input {
+    border-radius: 0;
+    border: 1px solid #ddd;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+}
+
+.search-news-btn {
+    border-radius: 0;
+    background: var(--color-navy);
+    color: #fff;
+    padding: 12px 25px;
+}
+
+.hot-offer-card {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.hot-offer-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.hot-offer-info h4 {
+    font-size: 1rem;
+    font-family: var(--font-garamond);
+    margin-bottom: 5px;
+    color: var(--color-navy);
+}
+
+.hot-offer-info p {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 0;
+}
