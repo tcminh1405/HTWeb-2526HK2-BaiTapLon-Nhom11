@@ -1,0 +1,181 @@
+/* ================================================================
+   DINING PAGE STYLES
+   Vinpearl Luxury Nha Trang - Dining Rewrite
+   ================================================================ */
+
+.dining-hero {
+    height: 60vh;
+    min-height: 400px;
+    background: url('../assets/images/dinning/hero.png') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 80px;
+}
+
+.dining-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(11, 26, 55, 0.4), rgba(11, 26, 55, 0.7));
+}
+
+.dining-hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.dining-hero-title {
+    font-family: var(--font-garamond);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 500;
+}
+
+.breadcrumbs {
+    font-family: var(--font-montserrat);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.breadcrumbs a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+    color: var(--color-gold-accent);
+}
+
+.breadcrumbs span {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+}
+
+/* Intro Section */
+.dining-intro {
+    padding: 80px 0;
+    background-color: var(--color-bg-warm);
+    text-align: center;
+}
+
+.dining-intro-heading {
+    font-family: var(--font-garamond);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    color: var(--color-navy);
+    margin-bottom: 30px;
+}
+
+.dining-intro-text {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text-mid);
+}
+
+/* Venue List Section */
+.venues-section {
+    padding: 100px 0;
+}
+
+.venue-item {
+    margin-bottom: 120px;
+}
+
+.venue-item:last-child {
+    margin-bottom: 0;
+}
+
+.venue-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.venue-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    min-height: 450px;
+}
+
+.venue-item:hover .venue-img {
+    transform: scale(1.05);
+}
+
+.venue-info {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.venue-title {
+    font-family: var(--font-garamond);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: var(--color-navy);
+    margin-bottom: 25px;
+}
+
+.venue-details {
+    margin-bottom: 25px;
+}
+
+.venue-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+    font-family: var(--font-montserrat);
+    font-size: 0.95rem;
+    color: var(--color-text-mid);
+}
+
+.venue-detail-item i {
+    color: var(--color-gold-accent);
+    width: 20px;
+    text-align: center;
+}
+
+.venue-desc {
+    line-height: 1.8;
+    color: var(--color-text-mid);
+    margin-bottom: 35px;
+}
+
+/* Responsive adjustments for alternating layout */
+@media (min-width: 992px) {
+    .venue-item:nth-child(even) .row {
+        flex-direction: row-reverse;
+    }
+    
+    .venue-item:nth-child(even) .venue-info {
+        padding-right: 60px;
+        padding-left: 0;
+    }
+    
+    .venue-item:nth-child(odd) .venue-info {
+        padding-left: 60px;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .venue-info {
+        padding: 40px 0 0 0;
+    }
+    
+    .venue-img {
+        min-height: 350px;
+    }
+    
+    .venue-item {
+        margin-bottom: 80px;
+    }
+}

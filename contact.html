@@ -1,642 +1,710 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liên hệ - Vinpearl Luxury Nha Trang</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700;italic&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liên hệ - Vinpearl Luxury Nha Trang</title>
+  <link rel="icon" type="image/png" href="./assets/images/logo/favicon.png">
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+  <!-- Font Awesome & Bootstrap (offline) -->
+  <link rel="stylesheet" href="./assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css">
+  <link rel="stylesheet" href="./assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
 
-    <style>
-      :root {
-        --vp-navy: #081831;
-        --vp-navy-light: #0d264f;
-        --vp-orange: #f29d38;
-        --vp-text: #555555;
-        --vp-gray: #8a99b3;
-        --font-heading: "Playfair Display", serif;
-        --font-body: "Mulish", sans-serif;
-      }
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/globalStyle.css">
+  <link rel="stylesheet" href="./css/about.css">
+  <style>
+    :root {
+      --vp-navy: #081831;
+      --vp-navy-light: #0d264f;
+      --vp-orange: #f29d38;
+      --vp-text: #555555;
+      --vp-gray: #8a99b3;
+      --font-heading: "Playfair Display", serif;
+      --font-body: "Mulish", sans-serif;
+    }
 
-      body {
-        font-family: var(--font-body);
-        color: var(--vp-text);
-        background-color: #fafafa;
-        line-height: 1.8;
-      }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5 {
-        font-family: var(--font-heading);
-        color: var(--vp-navy);
-      }
+    body {
+      font-family: var(--font-body);
+      color: var(--vp-text);
+      background-color: #fafafa;
+      line-height: 1.8;
+    }
 
-      /* ================= HEADER ================= */
-      .vp-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1030;
-        padding: 15px 40px;
-        transition: all 0.4s ease;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
-      }
-      .vp-header.scrolled {
-        background-color: var(--vp-navy);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      }
-      .nav-link {
-        color: #fff !important;
-        font-size: 0.95rem;
-        font-weight: 600;
-      }
-      .nav-link:hover {
-        color: var(--vp-orange) !important;
-      }
-      .logo-center {
-        height: 45px;
-      }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: var(--font-heading);
+      color: var(--vp-navy);
+    }
 
-      /* ================= HERO BANNER ================= */
-      .page-hero {
-        height: 55vh;
-        min-height: 450px;
-        background: url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop")
-          center/cover no-repeat;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-      }
-      .page-hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(8, 24, 49, 0.4);
-      }
-      .page-hero-text {
-        position: relative;
-        z-index: 1;
-        text-align: center;
-        color: #fff;
-        margin-top: -50px;
-      }
-      .page-hero-text h1 {
-        font-size: 3.5rem;
-        font-weight: 600;
-        margin-bottom: 10px;
-        color: #fff;
-        letter-spacing: 2px;
-      }
+    /* ================= HEADER ================= */
+    .vp-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1030;
+      padding: 15px 40px;
+      transition: all 0.4s ease;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+    }
 
-      /* ================= CONTACT OVERLAPPING CARD ================= */
-      .contact-container {
-        position: relative;
-        margin-top: -120px; /* Kéo khối liên hệ đè lên banner */
-        z-index: 10;
-        padding-bottom: 80px;
-      }
-      .contact-wrapper {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        display: flex;
-        flex-wrap: wrap;
-      }
+    .vp-header.scrolled {
+      background-color: var(--vp-navy);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
 
-      /* Nửa bên trái: Nền Xanh Navy */
-      .contact-info-side {
-        background-color: var(--vp-navy);
-        color: #fff;
-        padding: 60px 50px;
-      }
-      .contact-info-side h3 {
-        color: #fff;
-        font-size: 2.2rem;
-        margin-bottom: 15px;
-      }
-      .contact-info-side p.desc {
-        color: #b3b9c4;
-        font-size: 1.05rem;
-        margin-bottom: 50px;
-      }
+    .nav-link {
+      color: #fff !important;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
 
-      .info-item {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 35px;
-      }
-      .info-item-icon {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        background: rgba(242, 157, 56, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 20px;
-        color: var(--vp-orange);
-        font-size: 1.2rem;
-        border: 1px solid rgba(242, 157, 56, 0.3);
-      }
-      .info-item-content h5 {
-        font-family: var(--font-body);
-        font-weight: 700;
-        font-size: 1.1rem;
-        margin-bottom: 5px;
-        color: #fff;
-      }
-      .info-item-content p {
-        margin: 0;
-        color: #b3b9c4;
-        font-size: 0.95rem;
-      }
+    .nav-link:hover {
+      color: var(--vp-orange) !important;
+    }
 
-      /* Nửa bên phải: Form Trắng */
-      .contact-form-side {
-        padding: 60px 50px;
-        background: #fff;
-      }
-      .contact-form-side h3 {
-        font-size: 2.2rem;
-        margin-bottom: 40px;
-      }
+    .logo-center {
+      height: 45px;
+    }
 
-      /* Hiệu ứng Floating Label cực xịn */
-      .floating-group {
-        position: relative;
-        margin-bottom: 35px;
-      }
-      .floating-input {
-        width: 100%;
-        border: none;
-        border-bottom: 1px solid #ddd;
-        padding: 10px 0;
-        font-size: 1rem;
-        color: #333;
-        background: transparent;
-        outline: none;
-        transition: 0.3s;
-      }
-      .floating-label {
-        position: absolute;
-        left: 0;
-        top: 10px;
-        color: #aaa;
-        transition: 0.3s;
-        pointer-events: none;
-        font-family: var(--font-body);
-        font-size: 1rem;
-      }
-      /* Khi click vào input hoặc có dữ liệu -> nhãn trượt lên */
-      .floating-input:focus ~ .floating-label,
-      .floating-input:not(:placeholder-shown) ~ .floating-label {
-        top: -15px;
-        font-size: 0.8rem;
-        color: var(--vp-orange);
-        font-weight: 600;
-      }
-      .floating-input:focus {
-        border-bottom-color: var(--vp-orange);
-      }
+    /* ================= HERO BANNER ================= */
+    .page-hero {
+      height: 55vh;
+      min-height: 450px;
+      background: url("./assets/images/about/Hinh-anh-Vinpearl-Luxury-Nha-Trang-Banner-16x9-so-6.png") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
 
-      .btn-submit {
-        background-color: var(--vp-orange);
-        color: #fff;
-        border: none;
-        padding: 15px 40px;
-        font-weight: 600;
-        border-radius: 30px;
-        transition: 0.3s;
-        margin-top: 10px;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .btn-submit:hover {
-        background-color: var(--vp-navy);
-        color: #fff;
-      }
+    .page-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(8, 24, 49, 0.4);
+    }
 
-      /* ================= MAP SECTION ================= */
-      .map-section {
-        width: 100%;
-        height: 450px;
-        filter: grayscale(30%);
-      }
-      .map-section iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
+    .page-hero-text {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+      margin-top: -50px;
+    }
 
-      /* ================= PRE-FOOTER ================= */
-      .pre-footer {
-        background-color: var(--vp-navy-light);
-        color: #fff;
-        padding: 70px 0;
-        text-align: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      }
-      .pre-footer .line {
-        width: 40px;
-        height: 2px;
-        background: rgba(255, 255, 255, 0.3);
-        margin: 0 auto 20px auto;
-      }
-      .pre-footer h2 {
-        color: #fff;
-        font-size: 2.2rem;
-        font-weight: 600;
-        margin-bottom: 15px;
-      }
-      .pre-footer p {
-        opacity: 0.8;
-        font-size: 1.05rem;
-        margin-bottom: 40px;
-      }
-      .btn-pf-orange {
-        background: var(--vp-orange);
-        color: #fff;
-        padding: 12px 35px;
-        border-radius: 30px;
-        font-weight: 600;
-        border: none;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        transition: 0.3s;
-        margin: 0 10px;
-      }
-      .btn-pf-orange:hover {
-        background: #d18228;
-        color: #fff;
-      }
-      .btn-pf-outline {
-        background: transparent;
-        color: #fff;
-        padding: 12px 35px;
-        border-radius: 30px;
-        font-weight: 600;
-        border: 1px solid #fff;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        transition: 0.3s;
-        margin: 0 10px;
-      }
-      .btn-pf-outline:hover {
-        background: #fff;
-        color: var(--vp-navy);
-      }
+    .page-hero-text h1 {
+      font-size: 3.5rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #fff;
+      letter-spacing: 2px;
+    }
 
-      /* ================= FOOTER ================= */
-      .footer-vp {
-        background-color: var(--vp-navy);
-        color: var(--vp-gray);
-        padding: 70px 0 30px;
-        font-size: 0.9rem;
-      }
-      .footer-logo {
-        height: 50px;
-        filter: brightness(0) invert(1);
-        margin-bottom: 25px;
-      }
-      .footer-col-title {
-        color: var(--vp-orange);
-        font-size: 0.85rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 25px;
-        font-family: var(--font-body);
-      }
-      .footer-vp ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .footer-vp ul li {
-        margin-bottom: 15px;
-      }
-      .footer-vp ul a {
-        color: var(--vp-gray);
-        text-decoration: none;
-        transition: 0.3s;
-      }
-      .footer-vp ul a:hover {
-        color: var(--vp-orange);
-      }
-      .social-box a {
-        display: inline-flex;
-        width: 35px;
-        height: 35px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        align-items: center;
-        justify-content: center;
-        color: var(--vp-gray);
-        text-decoration: none;
-        margin-right: 10px;
-        border-radius: 2px;
-        transition: 0.3s;
-      }
-      .social-box a:hover {
-        border-color: var(--vp-orange);
-        color: var(--vp-orange);
-      }
-      .contact-list i {
-        color: var(--vp-orange);
-        width: 25px;
-      }
-      .contact-list li {
-        display: flex;
-        margin-bottom: 15px;
-        line-height: 1.6;
-      }
-      .footer-bottom {
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-        margin-top: 50px;
-        padding-top: 25px;
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.85rem;
-      }
-    </style>
-  </head>
-  <body>
-    <header
-      class="vp-header d-flex justify-content-between align-items-center"
-      id="navbar"
-    >
-      <div class="d-flex align-items-center gap-4">
-        <a href="home.html" class="nav-link"
-          ><i class="fa-solid fa-arrow-left me-2"></i> Quay lại</a
-        >
+    /* ================= CONTACT OVERLAPPING CARD ================= */
+    .contact-container {
+      position: relative;
+      margin-top: -120px;
+      /* Kéo khối liên hệ đè lên banner */
+      z-index: 10;
+      padding-bottom: 80px;
+    }
+
+    .contact-wrapper {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Nửa bên trái: Nền Xanh Navy */
+    .contact-info-side {
+      background-color: var(--vp-navy);
+      color: #fff;
+      padding: 60px 50px;
+    }
+
+    .contact-info-side h3 {
+      color: #fff;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+
+    .contact-info-side p.desc {
+      color: #b3b9c4;
+      font-size: 1.05rem;
+      margin-bottom: 50px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 35px;
+    }
+
+    .info-item-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: rgba(242, 157, 56, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: var(--vp-orange);
+      font-size: 1.2rem;
+      border: 1px solid rgba(242, 157, 56, 0.3);
+    }
+
+    .info-item-content h5 {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+
+    .info-item-content p {
+      margin: 0;
+      color: #b3b9c4;
+      font-size: 0.95rem;
+    }
+
+    /* Nửa bên phải: Form Trắng */
+    .contact-form-side {
+      padding: 60px 50px;
+      background: #fff;
+    }
+
+    .contact-form-side h3 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    /* Hiệu ứng Floating Label cực xịn */
+    .floating-group {
+      position: relative;
+      margin-bottom: 35px;
+    }
+
+    .floating-input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+      font-size: 1rem;
+      color: #333;
+      background: transparent;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .floating-label {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      color: #aaa;
+      transition: 0.3s;
+      pointer-events: none;
+      font-family: var(--font-body);
+      font-size: 1rem;
+    }
+
+    /* Khi click vào input hoặc có dữ liệu -> nhãn trượt lên */
+    .floating-input:focus~.floating-label,
+    .floating-input:not(:placeholder-shown)~.floating-label {
+      top: -15px;
+      font-size: 0.8rem;
+      color: var(--vp-orange);
+      font-weight: 600;
+    }
+
+    .floating-input:focus {
+      border-bottom-color: var(--vp-orange);
+    }
+
+    .btn-submit {
+      background-color: var(--vp-orange);
+      color: #fff;
+      border: none;
+      padding: 15px 40px;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: 0.3s;
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-submit:hover {
+      background-color: var(--vp-navy);
+      color: #fff;
+    }
+
+    /* ================= MAP SECTION ================= */
+    .map-section {
+      width: 100%;
+      height: 450px;
+      filter: grayscale(30%);
+    }
+
+    .map-section iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ================= PRE-FOOTER ================= */
+    .pre-footer {
+      background-color: var(--vp-navy-light);
+      color: #fff;
+      padding: 70px 0;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .pre-footer .line {
+      width: 40px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.3);
+      margin: 0 auto 20px auto;
+    }
+
+    .pre-footer h2 {
+      color: #fff;
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .pre-footer p {
+      opacity: 0.8;
+      font-size: 1.05rem;
+      margin-bottom: 40px;
+    }
+
+    .btn-pf-orange {
+      background: var(--vp-orange);
+      color: #fff;
+      padding: 12px 35px;
+      border-radius: 30px;
+      font-weight: 600;
+      border: none;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: 0.3s;
+      margin: 0 10px;
+    }
+
+    .btn-pf-orange:hover {
+      background: #d18228;
+      color: #fff;
+    }
+
+    .btn-pf-outline {
+      background: transparent;
+      color: #fff;
+      padding: 12px 35px;
+      border-radius: 30px;
+      font-weight: 600;
+      border: 1px solid #fff;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: 0.3s;
+      margin: 0 10px;
+    }
+
+    .btn-pf-outline:hover {
+      background: #fff;
+      color: var(--vp-navy);
+    }
+
+    /* ================= FOOTER ================= */
+    .footer-vp {
+      background-color: var(--vp-navy);
+      color: var(--vp-gray);
+      padding: 70px 0 30px;
+      font-size: 0.9rem;
+    }
+
+    .footer-logo {
+      height: 50px;
+      margin-bottom: 25px;
+    }
+
+    .footer-col-title {
+      color: var(--vp-orange);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+      font-family: var(--font-body);
+    }
+
+    .footer-vp ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-vp ul li {
+      margin-bottom: 15px;
+    }
+
+    .footer-vp ul a {
+      color: var(--vp-gray);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .footer-vp ul a:hover {
+      color: var(--vp-orange);
+    }
+
+    .social-box a {
+      display: inline-flex;
+      width: 35px;
+      height: 35px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      align-items: center;
+      justify-content: center;
+      color: var(--vp-gray);
+      text-decoration: none;
+      margin-right: 10px;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    .social-box a:hover {
+      border-color: var(--vp-orange);
+      color: var(--vp-orange);
+    }
+
+    .contact-list i {
+      color: var(--vp-orange);
+      width: 25px;
+    }
+
+    .contact-list li {
+      display: flex;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 50px;
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ======================== HEADER (Centered Logo Vinpearl Style) ======================== -->
+  <header class="navbar navbar-dark fixed-top px-0" id="mainNav">
+    <div class="container-fluid px-4 px-lg-5 header-container">
+      <!-- Left: Menu Icon -->
+      <div class="header-left">
+        <button class="hamburger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
-      <a href="#"
-        ><img
-          src="./assets/images/logo/lux Nha trang-02_1679990219.svg"
-          alt="Vinpearl"
-          class="logo-center"
-          onerror="
-            this.src =
-              'https://upload.wikimedia.org/wikipedia/commons/e/e1/Vinpearl_logo.svg'
-          "
-      /></a>
-      <div class="d-flex align-items-center gap-4">
-        <a href="#" class="nav-link"
-          ><i class="fa-regular fa-user"></i> Đăng nhập</a
-        >
+
+      <!-- Center: Logo -->
+      <div class="header-center">
+        <a class="navbar-brand py-0 mx-0" href="./home.html">
+          <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Vinpearl" class="nav-logo">
+        </a>
       </div>
-    </header>
 
-    <section class="page-hero">
-      <div class="page-hero-text">
-        <h1>Liên Hệ</h1>
+      <!-- Right: Simple Utility -->
+      <div class="header-right d-flex align-items-center gap-3 gap-md-4">
+        <a href="javascript:void(0)" class="header-utility-link search-trigger-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <div class="vr bg-white opacity-25 d-none d-md-block" style="height: 20px;"></div>
+        <a href="./login.html" class="header-utility-link d-flex align-items-center gap-1">
+          Đăng nhập <i class="fa-solid fa-chevron-right" style="font-size:0.6rem; opacity:0.75;"></i>
+        </a>
+        <div class="vr bg-white opacity-25 d-none d-md-block" style="height: 20px;"></div>
+        <a href="#" class="header-utility-link d-flex align-items-center gap-1">
+          VND <img src="./assets/images/flag-vn.png" alt="VN" class="rounded-circle ms-1"
+            style="width:14px;height:14px;object-fit:cover;">
+          <i class="fa-solid fa-chevron-down ms-1" style="font-size:0.6rem; opacity:0.75;"></i>
+        </a>
       </div>
-    </section>
+    </div>
+  </header>
+  <!-- ======================== END HEADER ======================== -->
 
-    <section class="container contact-container">
-      <div class="contact-wrapper">
-        <div class="col-lg-5 contact-info-side">
-          <h3>Kết Nối Với Chúng Tôi</h3>
-          <p class="desc">
-            Dù bạn đang lên kế hoạch cho một kỳ nghỉ lãng mạn hay sự kiện quan
-            trọng, Vinpearl luôn sẵn lòng hỗ trợ 24/7.
-          </p>
+  <!-- ======================== MOBILE OFFCANVAS MENU ======================== -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header" style="background-color: var(--color-primary);">
+      <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Logo" style="height:45px;">
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <ul class="list-unstyled mb-0">
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./home.html"><i
+              class="fa-solid fa-house me-3 text-gold-accent"></i>Trang Chủ</a></li>
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./rooms.html"><i
+              class="fa-solid fa-bed me-3 text-gold-accent"></i>Khách Sạn & Phòng</a>
+        </li>
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./dinning.html"><i
+              class="fa-solid fa-utensils me-3 text-gold-accent"></i>Ẩm Thực</a></li>
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./services.html"><i
+              class="fa-solid fa-spa me-3 text-gold-accent"></i>Spa & Dịch Vụ</a>
+        </li>
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./gallery.html"><i
+              class="fa-solid fa-images me-3 text-gold-accent"></i>Thư Viện Ảnh</a>
+        </li>
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./news.html"><i
+              class="fa-solid fa-newspaper me-3 text-gold-accent"></i>Tin Tức</a></li>
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./about.html"><i
+              class="fa-solid fa-circle-info me-3 text-gold-accent"></i>Giới Thiệu</a>
+        </li>
+        <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark" href="./contact.html"><i
+              class="fa-solid fa-envelope me-3 text-gold-accent"></i>Liên Hệ</a></li>
+        <li class="p-3">
+          <a href="./search-results.html" class="btn-dat-ngay d-block text-center">Đặt Phòng Ngay</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-          <div class="info-item">
-            <div class="info-item-icon">
-              <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <div class="info-item-content">
-              <h5>Địa chỉ</h5>
-              <p>
-                Đảo Hòn Tre, Phường Vĩnh Nguyên,<br />TP. Nha Trang, Tỉnh Khánh
-                Hoà
-              </p>
-            </div>
-          </div>
+  <section class="page-hero">
+    <div class="page-hero-text">
+      <h1>Liên Hệ</h1>
+    </div>
+  </section>
 
-          <div class="info-item">
-            <div class="info-item-icon"><i class="fa-solid fa-phone"></i></div>
-            <div class="info-item-content">
-              <h5>Điện thoại</h5>
-              <p>+84 258 359 8888<br />1900 23 23 89 (Nhánh 3)</p>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="info-item-icon">
-              <i class="fa-regular fa-envelope"></i>
-            </div>
-            <div class="info-item-content">
-              <h5>Email</h5>
-              <p>luxury.nhatrang@vinpearl.com</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-7 contact-form-side">
-          <h3>Gửi Lời Nhắn</h3>
-          <form id="contactForm">
-            <div class="row">
-              <div class="col-md-6 pe-md-4">
-                <div class="floating-group">
-                  <input
-                    type="text"
-                    class="floating-input"
-                    placeholder=" "
-                    required
-                  />
-                  <label class="floating-label">Họ và tên *</label>
-                </div>
-              </div>
-              <div class="col-md-6 ps-md-4">
-                <div class="floating-group">
-                  <input
-                    type="email"
-                    class="floating-input"
-                    placeholder=" "
-                    required
-                  />
-                  <label class="floating-label">Email liên hệ *</label>
-                </div>
-              </div>
-              <div class="col-md-6 pe-md-4">
-                <div class="floating-group">
-                  <input type="tel" class="floating-input" placeholder=" " />
-                  <label class="floating-label">Số điện thoại</label>
-                </div>
-              </div>
-              <div class="col-md-6 ps-md-4">
-                <div class="floating-group">
-                  <input type="text" class="floating-input" placeholder=" " />
-                  <label class="floating-label">Quốc gia</label>
-                </div>
-              </div>
-              <div class="col-12 mt-3">
-                <div class="floating-group">
-                  <textarea
-                    class="floating-input"
-                    rows="3"
-                    placeholder=" "
-                    required
-                    style="resize: none"
-                  ></textarea>
-                  <label class="floating-label"
-                    >Nội dung yêu cầu chi tiết *</label
-                  >
-                </div>
-              </div>
-              <div class="col-12 mt-2 text-end">
-                <button type="submit" class="btn-submit">
-                  GỬI YÊU CẦU <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section class="map-section">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.278363768263!2d109.23194511529148!3d12.23164969134444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3170678eb61cbbf1%3A0xc3f58a362df28362!2sVinpearl%20Resort%20Nha%20Trang!5e0!3m2!1svi!2s!4v1680000000000!5m2!1svi!2s"
-        allowfullscreen=""
-        loading="lazy"
-      ></iframe>
-    </section>
-
-    <section class="pre-footer">
-      <div class="container">
-        <div class="line"></div>
-        <h2>Giữ Kỳ Nghỉ Trong Mơ Của Bạn</h2>
-        <p>
-          Liên hệ ngay để được tư vấn và nhận ưu đãi tốt nhất từ Vinpearl Luxury
-          Nha Trang
+  <section class="container contact-container">
+    <div class="contact-wrapper">
+      <div class="col-lg-5 contact-info-side">
+        <h3>Kết Nối Với Chúng Tôi</h3>
+        <p class="desc">
+          Dù bạn đang lên kế hoạch cho một kỳ nghỉ lãng mạn hay sự kiện quan
+          trọng, Vinpearl luôn sẵn lòng hỗ trợ 24/7.
         </p>
-        <div>
-          <a href="#" class="btn-pf-orange"
-            ><i class="fa-regular fa-calendar-check"></i> Đặt Phòng Ngay</a
-          >
-          <a href="#" class="btn-pf-outline"
-            ><i class="fa-solid fa-phone"></i> Liên Hệ Chúng Tôi</a
-          >
+
+        <div class="info-item">
+          <div class="info-item-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="info-item-content">
+            <h5>Địa chỉ</h5>
+            <p>
+              Đảo Hòn Tre, Phường Vĩnh Nguyên,<br />TP. Nha Trang, Tỉnh Khánh
+              Hoà
+            </p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-item-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="info-item-content">
+            <h5>Điện thoại</h5>
+            <p>+84 258 359 8888<br />1900 23 23 89 (Nhánh 3)</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-item-icon">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <div class="info-item-content">
+            <h5>Email</h5>
+            <p>luxury.nhatrang@vinpearl.com</p>
+          </div>
         </div>
       </div>
-    </section>
 
-    <footer class="footer-vp">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-3 col-md-6">
-            <img
-              src="./assets/images/logo/lux Nha trang-02_1679990219.svg"
-              alt="Vinpearl Luxury"
-              class="footer-logo"
-              onerror="
+      <div class="col-lg-7 contact-form-side">
+        <h3>Gửi Lời Nhắn</h3>
+        <form id="contactForm">
+          <div class="row">
+            <div class="col-md-6 pe-md-4">
+              <div class="floating-group">
+                <input type="text" class="floating-input" placeholder=" " required />
+                <label class="floating-label">Họ và tên *</label>
+              </div>
+            </div>
+            <div class="col-md-6 ps-md-4">
+              <div class="floating-group">
+                <input type="email" class="floating-input" placeholder=" " required />
+                <label class="floating-label">Email liên hệ *</label>
+              </div>
+            </div>
+            <div class="col-md-6 pe-md-4">
+              <div class="floating-group">
+                <input type="tel" class="floating-input" placeholder=" " />
+                <label class="floating-label">Số điện thoại</label>
+              </div>
+            </div>
+            <div class="col-md-6 ps-md-4">
+              <div class="floating-group">
+                <input type="text" class="floating-input" placeholder=" " />
+                <label class="floating-label">Quốc gia</label>
+              </div>
+            </div>
+            <div class="col-12 mt-3">
+              <div class="floating-group">
+                <textarea class="floating-input" rows="3" placeholder=" " required style="resize: none"></textarea>
+                <label class="floating-label">Nội dung yêu cầu chi tiết *</label>
+              </div>
+            </div>
+            <div class="col-12 mt-2 text-end">
+              <button type="submit" class="btn-submit">
+                GỬI YÊU CẦU <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.278363768263!2d109.23194511529148!3d12.23164969134444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3170678eb61cbbf1%3A0xc3f58a362df28362!2sVinpearl%20Resort%20Nha%20Trang!5e0!3m2!1svi!2s!4v1680000000000!5m2!1svi!2s"
+      allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <section class="pre-footer">
+    <div class="container">
+      <div class="line"></div>
+      <h2>Giữ Kỳ Nghỉ Trong Mơ Của Bạn</h2>
+      <p>
+        Liên hệ ngay để được tư vấn và nhận ưu đãi tốt nhất từ Vinpearl Luxury
+        Nha Trang
+      </p>
+      <div>
+        <a href="#" class="btn-pf-orange"><i class="fa-regular fa-calendar-check"></i> Đặt Phòng Ngay</a>
+        <a href="#" class="btn-pf-outline"><i class="fa-solid fa-phone"></i> Liên Hệ Chúng Tôi</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-vp">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Vinpearl Luxury" class="footer-logo"
+            onerror="
                 this.src =
                   'https://upload.wikimedia.org/wikipedia/commons/e/e1/Vinpearl_logo.svg'
-              "
-            />
-            <p style="margin-bottom: 30px; line-height: 1.6">
-              Khu nghỉ dưỡng biển đẳng cấp quốc tế tại bán đảo Hòn Tre, Nha
-              Trang. Mang đến trải nghiệm nghỉ dưỡng hoàn hảo và không thể nào
-              quên.
-            </p>
-            <div class="social-box">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-youtube"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-6">
-            <h5 class="footer-col-title">Về Chúng Tôi</h5>
-            <ul>
-              <li><a href="about.html">Giới thiệu</a></li>
-              <li><a href="contact.html">Liên hệ</a></li>
-              <li><a href="faqs.html">Câu hỏi thường gặp</a></li>
-              <li><a href="#">Tuyển dụng</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-6">
-            <h5 class="footer-col-title">Điều Khoản</h5>
-            <ul>
-              <li><a href="#">Điều khoản chung</a></li>
-              <li><a href="#">Quy định thanh toán</a></li>
-              <li><a href="#">Chính sách hủy phòng</a></li>
-              <li><a href="#">Bảo mật dữ liệu</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-6">
-            <h5 class="footer-col-title">Tin Tức & Sự Kiện</h5>
-            <ul>
-              <li><a href="#">Tin công ty</a></li>
-              <li><a href="#">Cẩm nang du lịch</a></li>
-              <li><a href="#">Sự kiện & Lễ hội</a></li>
-              <li><a href="#">Thành tựu</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-12">
-            <h5 class="footer-col-title">Liên Hệ</h5>
-            <ul class="contact-list">
-              <li>
-                <i class="fa-solid fa-location-dot mt-1"></i> Bán đảo Hòn Tre,
-                Vĩnh Nguyên, Nha Trang, Khánh Hoà
-              </li>
-              <li><i class="fa-solid fa-phone mt-1"></i> +84 258 359 8888</li>
-              <li>
-                <i class="fa-regular fa-envelope mt-1"></i>
-                luxury.nhatrang@vinpearl.com
-              </li>
-            </ul>
+              " />
+          <p style="margin-bottom: 30px; line-height: 1.6">
+            Khu nghỉ dưỡng biển đẳng cấp quốc tế tại bán đảo Hòn Tre, Nha
+            Trang. Mang đến trải nghiệm nghỉ dưỡng hoàn hảo và không thể nào
+            quên.
+          </p>
+          <div class="social-box">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
-        <div class="footer-bottom">
-          <div>© 2026 Vinpearl Luxury Nha Trang. All Rights Reserved.</div>
-          <div>Nhóm 11 – HTWeb 2526 HK2</div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-col-title">Về Chúng Tôi</h5>
+          <ul>
+            <li><a href="about.html">Giới thiệu</a></li>
+            <li><a href="contact.html" style="color: var(--vp-orange)">Liên hệ</a></li>
+            <li><a href="faqs.html">Câu hỏi thường gặp</a></li>
+            <li><a href="#">Tuyển dụng</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-col-title">Điều Khoản</h5>
+          <ul>
+            <li><a href="#">Điều khoản chung</a></li>
+            <li><a href="#">Quy định thanh toán</a></li>
+            <li><a href="#">Chính sách hủy phòng</a></li>
+            <li><a href="#">Bảo mật dữ liệu</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-col-title">Tin Tức & Sự Kiện</h5>
+          <ul>
+            <li><a href="#">Tin công ty</a></li>
+            <li><a href="#">Cẩm nang du lịch</a></li>
+            <li><a href="#">Sự kiện & Lễ hội</a></li>
+            <li><a href="#">Thành tựu</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <h5 class="footer-col-title">Liên Hệ</h5>
+          <ul class="contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot mt-1"></i> Bán đảo Hòn Tre,
+              Vĩnh Nguyên, Nha Trang, Khánh Hoà
+            </li>
+            <li><i class="fa-solid fa-phone mt-1"></i> +84 258 359 8888</li>
+            <li>
+              <i class="fa-regular fa-envelope mt-1"></i>
+              luxury.nhatrang@vinpearl.com
+            </li>
+          </ul>
         </div>
       </div>
-    </footer>
+      <div class="footer-bottom">
+        <div>© 2026 Vinpearl Luxury Nha Trang. All Rights Reserved.</div>
+        <div>Nhóm 11 – HTWeb 2526 HK2</div>
+      </div>
+    </div>
+  </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script>
-      // Header đổi màu nền khi lướt
-      window.addEventListener("scroll", function () {
-        var navbar = document.getElementById("navbar");
-        if (window.scrollY > 50) navbar.classList.add("scrolled");
-        else navbar.classList.remove("scrolled");
+  <!-- ======================== SEARCH OVERLAY ======================== -->
+  <div class="search-overlay" id="globalSearchOverlay">
+    <div class="search-container">
+      <div class="close-search" id="closeSearchOverlay">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="search-input-wrapper">
+        <input type="text" id="globalSearchInput" placeholder="Bạn muốn tìm gì?">
+        <i class="fa-solid fa-magnifying-glass fs-2 text-muted"></i>
+      </div>
+      <div class="search-dropdown" id="globalSearchDropdown">
+        <!-- History and Suggestions will be here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+  <script>
+    // Header đổi màu nền khi lướt
+    window.addEventListener("scroll", function () {
+      var navbar = document.getElementById("navbar");
+      if (window.scrollY > 50) navbar.classList.add("scrolled");
+      else navbar.classList.remove("scrolled");
+    });
+
+    // Xử lý gửi form
+    document
+      .getElementById("contactForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Cảm ơn bạn! Lời nhắn đã được gửi thành công.");
+        this.reset();
       });
+  </script>
+</body>
 
-      // Xử lý gửi form
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          alert("Cảm ơn bạn! Lời nhắn đã được gửi thành công.");
-          this.reset();
-        });
-    </script>
-  </body>
 </html>
