@@ -53,7 +53,64 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fadeElements.forEach((el) => observer.observe(el));
 
-  // 4. Contact Form Validation
+  // 4. User Session Management
+  const checkUserSession = () => {
+    const userSessionArea = document.getElementById("userSessionArea");
+    if (!userSessionArea) return;
+
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    const registeredUser = JSON.parse(localStorage.getItem("registeredUser"));
+
+    if (currentUser && currentUser.loggedIn) {
+      let displayName = currentUser.fullName;
+      
+      // Fallback: If session doesn't have name, try to find it in registeredUser
+      if (!displayName && registeredUser && registeredUser.identifier) {
+        if (registeredUser.identifier.toLowerCase().trim() === currentUser.identifier.toLowerCase().trim()) {
+          displayName = registeredUser.fullName;
+        }
+      }
+      
+      // Final fallback: Use identifier but strip domain if it's a gmail to make it look cleaner, 
+      // or just use identifier if no name exists.
+      displayName = displayName || currentUser.identifier;
+
+      // In home.html, we want to keep Search and Currency.
+      // We can look for a specific login link to replace.
+      const loginLink = userSessionArea.querySelector('a[href="./login.html"]');
+      if (loginLink) {
+        const dropdownWrapper = document.createElement("div");
+        dropdownWrapper.className = "user-dropdown";
+        dropdownWrapper.innerHTML = `
+                    <a href="javascript:void(0)" class="text-white text-decoration-none d-flex align-items-center gap-1 top-utility-link">
+                        ${displayName} <i class="fa-solid fa-chevron-down ms-1" style="font-size:0.55rem;"></i>
+                    </a>
+                    <div class="user-dropdown-menu">
+                        <a href="./account.html"><i class="fa-regular fa-user"></i> Thông tin tài khoản</a>
+                        <a href="./account.html#orders"><i class="fa-solid fa-box-archive"></i> Đơn hàng của tôi</a>
+                        <a href="#"><i class="fa-solid fa-gift"></i> Ưu đãi của tôi</a>
+                        <a href="#"><i class="fa-solid fa-star"></i> Thông tin đặc quyền</a>
+                        <hr>
+                        <a href="javascript:void(0)" id="logoutBtn" class="text-danger">
+                            <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+                        </a>
+                    </div>
+                `;
+        loginLink.parentNode.replaceChild(dropdownWrapper, loginLink);
+
+        document.getElementById("logoutBtn").onclick = () => {
+          if (confirm("Bạn có chắc chắn muốn đăng xuất?")) {
+            localStorage.removeItem("currentUser");
+            window.location.reload();
+          }
+        };
+      }
+    }
+  };
+
+  checkUserSession();
+
+  // 5. Contact Form Validation
   const contactForm = document.getElementById("contactForm");
   const submitBtn = document.getElementById("submitButton");
   const successMsg = document.getElementById("submitSuccessMessage");

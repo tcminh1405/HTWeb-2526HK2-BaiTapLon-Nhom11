@@ -1002,25 +1002,12 @@ function toggleService(roomIdx, serviceId) {
 /* ================================================================
    STEP 3: PAYMENT RENDERING
    ================================================================ */
-
 function renderStep3Payment() {
     const container = document.getElementById('paymentContainer');
     if (!container) return;
 
-    // Generate Guest Rooms HTML
-    let guestRoomsHtml = '';
-    selectedRoomSelections.forEach((sel, idx) => {
-        // Vinpearl usually groups this info inside "Tôi là khách lưu trú" logic if needed, 
-        // but since we keep it simple, we just have standard names.
-        guestRoomsHtml += `
-            <div class="mt-3">
-                <label class="d-flex align-items-center gap-2 m-0 cursor-pointer mb-2">
-                    <input type="checkbox" class="form-check-input mt-0" id="sameAsContact" onchange="copyContactToGuest()">
-                    <span class="small fw-medium text-dark">Tôi là khách lưu trú</span>
-                </label>
-            </div>
-        `;
-    });
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    const isLoggedIn = currentUser && currentUser.loggedIn;
 
     container.innerHTML = `
         <style>
@@ -1039,6 +1026,7 @@ function renderStep3Payment() {
                 display: block;
             }
         </style>
+        ${!isLoggedIn ? `
         <div class="vin-login-prompt mb-4">
             <h5 class="fw-bold mb-1" style="font-size:1rem; color:#111;">Đăng nhập để hưởng thêm đặc quyền dành cho thành viên VinClub</h5>
             <p class="text-muted small mb-3">Giảm tới 10% giá phòng & tích lũy giao dịch để nâng hạng thành viên.</p>
@@ -1048,7 +1036,7 @@ function renderStep3Payment() {
                 </button>
                 <span class="small text-muted">hoặc <a href="./login.html" style="color:#e8952f; font-weight:500; text-decoration:none;">Đăng ký</a></span>
             </div>
-        </div>
+        </div>` : ''}
 
         <div class="vin-checkout-section mb-4">
             <div class="vin-section-title">Thông tin người đặt chỗ</div>
@@ -1068,17 +1056,20 @@ function renderStep3Payment() {
                 <div class="row g-3">
                     <div class="col-md-6">
                         <label class="form-label" style="font-size: 0.85rem; color:#666;">Họ <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control vin-input" id="checkout-ho" placeholder="VD: NGUYEN" aria-describedby="err-ho">
+                        <input type="text" class="form-control vin-input" id="checkout-ho" placeholder="VD: NGUYEN" 
+                            value="${isLoggedIn ? (currentUser.fullName ? currentUser.fullName.split(' ')[0] : '') : ''}" aria-describedby="err-ho">
                         <div class="field-error-msg" id="err-ho">Vui lòng nhập họ của bạn.</div>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" style="font-size: 0.85rem; color:#666;">Tên đệm và tên <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control vin-input" id="checkout-ten" placeholder="VD: VAN A" aria-describedby="err-ten">
+                        <input type="text" class="form-control vin-input" id="checkout-ten" placeholder="VD: VAN A" 
+                            value="${isLoggedIn ? (currentUser.fullName ? currentUser.fullName.split(' ').slice(1).join(' ') : '') : ''}" aria-describedby="err-ten">
                         <div class="field-error-msg" id="err-ten">Vui lòng nhập tên đệm và tên của bạn.</div>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" style="font-size: 0.85rem; color:#666;">Email nhận thông tin đơn hàng <span class="text-danger">*</span></label>
-                        <input type="email" class="form-control vin-input" id="checkout-email" placeholder="VD: email@example.com" aria-describedby="err-email">
+                        <input type="email" class="form-control vin-input" id="checkout-email" placeholder="VD: email@example.com" 
+                            value="${isLoggedIn && currentUser.identifier.includes('@') ? currentUser.identifier : ''}" aria-describedby="err-email">
                         <div class="field-error-msg" id="err-email">Vui lòng nhập địa chỉ email hợp lệ.</div>
                     </div>
                     <div class="col-md-6">
@@ -1088,7 +1079,8 @@ function renderStep3Payment() {
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">+84 (Việt Nam)</a></li>
                             </ul>
-                            <input type="text" class="form-control vin-input" id="checkout-phone" style="border-left: 1px solid #ddd;" aria-describedby="err-phone">
+                            <input type="text" class="form-control vin-input" id="checkout-phone" style="border-left: 1px solid #ddd;" 
+                                value="${isLoggedIn && !currentUser.identifier.includes('@') ? currentUser.identifier : ''}" aria-describedby="err-phone">
                         </div>
                         <div class="field-error-msg" id="err-phone">Vui lòng nhập số điện thoại hợp lệ (9–11 chữ số).</div>
                     </div>
@@ -1210,6 +1202,34 @@ function copyContactToGuest() {
 }
 
 function confirmPayment() {
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    if (!currentUser || !currentUser.loggedIn) {
+        const loginModalHtml = `
+        <div id="loginRequiredModal" class="vp-modal-overlay active" style="z-index: 9999; display: flex; align-items: center; justify-content: center; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6);">
+            <div class="vp-modal-container" style="background: #fff; border-radius: 16px; padding: 40px; text-align: center; max-width: 400px; width: 90%; box-shadow: 0 15px 40px rgba(0,0,0,0.2); animation: modalFadeIn 0.3s ease;">
+                <div style="width: 70px; height: 70px; background: #fff8e6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                    <i class="fa-solid fa-user-lock" style="font-size: 30px; color: #f3a436;"></i>
+                </div>
+                <h3 style="color: #1a2a44; font-weight: 700; font-size: 1.35rem; margin-bottom: 15px; font-family: var(--font-garamond);">Yêu cầu đăng nhập</h3>
+                <p style="color: #666; font-size: 0.95rem; margin-bottom: 30px; line-height: 1.6;">Quý khách vui lòng đăng nhập tài khoản để thực hiện thanh toán và nhận các ưu đãi dành riêng cho thành viên VinClub.</p>
+                
+                <div class="d-grid gap-2">
+                    <button onclick="window.location.href='./login.html'" class="btn py-2 fw-bold" style="background:#f19b22; color:#fff; border-radius:30px;">Đăng nhập ngay</button>
+                    <button onclick="document.getElementById('loginRequiredModal').remove()" class="btn py-2 text-muted small" style="background:transparent; border:none;">Để sau</button>
+                </div>
+            </div>
+        </div>
+        <style>
+            @keyframes modalFadeIn {
+                from { opacity: 0; transform: translateY(-20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        </style>
+        `;
+        document.body.insertAdjacentHTML('beforeend', loginModalHtml);
+        return;
+    }
+
     let isValid = true;
 
     // --- Helper: set field error state ---

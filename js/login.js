@@ -87,8 +87,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (isValid) {
                 const identifier = document.getElementById('loginIdentifier').value;
+                const password = document.getElementById('loginPassword').value;
+                const registeredUser = JSON.parse(localStorage.getItem('registeredUser'));
+
+                // Special Admin Case
+                if (identifier === 'admin' && password === 'admin123') {
+                    const adminData = { identifier: 'admin', fullName: 'Quản trị viên', loggedIn: true, role: 'admin' };
+                    localStorage.setItem('currentUser', JSON.stringify(adminData));
+                    alert("Chào mừng Quản trị viên!");
+                    window.location.href = 'admin.html';
+                    return;
+                }
+
+                let userData = { identifier, loggedIn: true };
+
+                // If this is the registered user, pull their full name
+                if (registeredUser && registeredUser.identifier && 
+                    registeredUser.identifier.toLowerCase().trim() === identifier.toLowerCase().trim()) {
+                    userData.fullName = registeredUser.fullName;
+                }
+
                 // Save session info
-                localStorage.setItem('currentUser', JSON.stringify({ identifier, loggedIn: true }));
+                localStorage.setItem('currentUser', JSON.stringify(userData));
                 alert("Đăng nhập thành công!");
                 window.location.href = 'home.html';
             }

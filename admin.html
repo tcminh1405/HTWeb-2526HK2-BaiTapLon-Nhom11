@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Vinpearl Luxury Nha Trang</title>
+    <link rel="icon" type="image/png" href="./assets/images/logo/favicon.png">
+
+    <!-- Font Awesome & Bootstrap (offline) -->
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/globalStyle.css">
+    <style>
+        :root {
+            --admin-sidebar-width: 260px;
+            --admin-bg: #f4f7fa;
+        }
+
+        body {
+            background-color: var(--admin-bg);
+            font-family: var(--font-montserrat);
+        }
+
+        /* Sidebar */
+        .admin-sidebar {
+            width: var(--admin-sidebar-width);
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: var(--color-navy);
+            color: white;
+            padding: 30px 0;
+            z-index: 1000;
+        }
+
+        .admin-logo {
+            padding: 0 30px 40px;
+            text-align: center;
+        }
+
+        .admin-logo img {
+            height: 50px;
+        }
+
+        .admin-nav {
+            list-style: none;
+            padding: 0;
+        }
+
+        .admin-nav li a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 30px;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+            border-left: 4px solid transparent;
+        }
+
+        .admin-nav li a:hover,
+        .admin-nav li a.active {
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            border-left-color: var(--color-gold-accent);
+        }
+
+        /* Main Content */
+        .admin-main {
+            margin-left: var(--admin-sidebar-width);
+            padding: 40px;
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .admin-user {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .admin-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--color-gold-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        /* Stats Cards */
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            height: 100%;
+        }
+
+        .stat-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .stat-info h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--color-navy);
+        }
+
+        .stat-info p {
+            margin: 0;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Table */
+        .admin-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .table th {
+            font-weight: 600;
+            color: #888;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            border-top: none;
+            padding: 15px;
+        }
+
+        .table td {
+            padding: 15px;
+            vertical-align: middle;
+            font-size: 0.9rem;
+        }
+
+        .status-badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .status-confirmed { background: #e6f7ef; color: #1fb46d; }
+        .status-waiting { background: #fff8e6; color: #f3a436; }
+
+        #adminLogout {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="admin-logo">
+            <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Vinpearl">
+        </div>
+        <ul class="admin-nav">
+            <li><a href="#" class="active"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fa-solid fa-calendar-check"></i> Đặt phòng</a></li>
+            <li><a href="#"><i class="fa-solid fa-bed"></i> Quản lý phòng</a></li>
+            <li><a href="#"><i class="fa-solid fa-users"></i> Khách hàng</a></li>
+            <li><a href="#"><i class="fa-solid fa-chart-line"></i> Báo cáo</a></li>
+            <li><a href="#"><i class="fa-solid fa-gear"></i> Cấu hình</a></li>
+            <li><a href="./home.html" class="mt-5"><i class="fa-solid fa-house"></i> Xem website</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <header class="admin-header">
+            <h2 class="font-garamond mb-0">Hệ thống quản trị</h2>
+            <div class="admin-user">
+                <span class="fw-bold">Admin</span>
+                <div class="admin-avatar">A</div>
+                <button class="btn btn-sm btn-outline-danger" id="adminLogout">Đăng xuất</button>
+            </div>
+        </header>
+
+        <!-- Stats -->
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-icon bg-primary bg-opacity-10 text-primary">
+                        <i class="fa-solid fa-calendar-day"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>24</h3>
+                        <p>Đơn mới hôm nay</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-icon bg-success bg-opacity-10 text-success">
+                        <i class="fa-solid fa-money-bill-trend-up"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>158M</h3>
+                        <p>Doanh thu tháng</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-icon bg-warning bg-opacity-10 text-warning">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>1.2k</h3>
+                        <p>Thành viên</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-icon bg-info bg-opacity-10 text-info">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>4.8</h3>
+                        <p>Đánh giá trung bình</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Bookings -->
+        <div class="admin-card">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="font-garamond mb-0">Đơn đặt phòng gần đây</h4>
+                <button class="btn btn-sm btn-outline-primary">Xem tất cả</button>
+            </div>
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <thead>
+                        <tr>
+                            <th>Mã đơn</th>
+                            <th>Khách hàng</th>
+                            <th>Hạng phòng</th>
+                            <th>Ngày nhận</th>
+                            <th>Giá trị</th>
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="fw-bold">#VP-123456</td>
+                            <td>Trần Công Minh</td>
+                            <td>Garden View Villa</td>
+                            <td>24/05/2026</td>
+                            <td>12,500,000 ₫</td>
+                            <td><span class="status-badge status-confirmed">Đã xác nhận</span></td>
+                            <td><button class="btn btn-sm btn-light"><i class="fa-solid fa-ellipsis"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">#VP-789012</td>
+                            <td>Lê Thị Kim Ngân</td>
+                            <td>Presidential Suite</td>
+                            <td>10/06/2026</td>
+                            <td>45,000,000 ₫</td>
+                            <td><span class="status-badge status-waiting">Chờ thanh toán</span></td>
+                            <td><button class="btn btn-sm btn-light"><i class="fa-solid fa-ellipsis"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">#VP-445566</td>
+                            <td>Nguyễn Văn Hùng</td>
+                            <td>Ocean View Room</td>
+                            <td>15/05/2026</td>
+                            <td>8,200,000 ₫</td>
+                            <td><span class="status-badge status-confirmed">Đã xác nhận</span></td>
+                            <td><button class="btn btn-sm btn-light"><i class="fa-solid fa-ellipsis"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (!currentUser || currentUser.role !== 'admin') {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            document.getElementById('adminLogout').onclick = () => {
+                localStorage.removeItem('currentUser');
+                window.location.href = 'home.html';
+            };
+        });
+    </script>
+</body>
+
+</html>

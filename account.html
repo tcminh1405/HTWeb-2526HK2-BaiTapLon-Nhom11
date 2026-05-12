@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin tài khoản - Vinpearl Luxury Nha Trang</title>
+    <link rel="icon" type="image/png" href="./assets/images/logo/favicon.png">
+
+    <!-- Font Awesome & Bootstrap (offline) -->
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-7.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/globalStyle.css">
+    <link rel="stylesheet" href="./css/account.css">
+</head>
+
+<body>
+    <!-- ======================== HEADER (Consistent with search-results) ======================== -->
+    <header class="navbar navbar-dark fixed-top px-0" id="mainNav">
+        <div class="container-fluid px-4 px-lg-5 header-container">
+            <!-- Left: Menu Icon -->
+            <div class="header-left">
+                <button class="hamburger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Center: Logo -->
+            <div class="header-center">
+                <a class="navbar-brand py-0 mx-0" href="./home.html">
+                    <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Vinpearl" class="nav-logo">
+                </a>
+            </div>
+
+            <!-- Right: Simple Utility -->
+            <div class="header-right d-flex align-items-center gap-3 gap-md-4" id="userSessionArea">
+                <a href="javascript:void(0)" class="header-utility-link search-trigger-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <div class="vr bg-white opacity-25 d-none d-md-block" style="height: 20px;"></div>
+                <a href="./login.html" class="header-utility-link d-flex align-items-center gap-1">
+                    Đăng nhập <i class="fa-solid fa-chevron-right" style="font-size:0.6rem; opacity:0.75;"></i>
+                </a>
+                <div class="vr bg-white opacity-25 d-none d-md-block" style="height: 20px;"></div>
+                <a href="#" class="header-utility-link d-flex align-items-center gap-1">
+                    VND <img src="./assets/images/flag-vn.png" alt="VN" class="rounded-circle ms-1"
+                        style="width:14px;height:14px;object-fit:cover;">
+                    <i class="fa-solid fa-chevron-down ms-1" style="font-size:0.6rem; opacity:0.75;"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- ======================== END HEADER ======================== -->
+
+    <!-- ======================== MOBILE OFFCANVAS MENU ======================== -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header" style="background-color: var(--color-primary);">
+            <img src="./assets/images/logo/lux Nha trang-02_1679990219.svg" alt="Logo" style="height:45px;">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="list-unstyled mb-0">
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./home.html"><i class="fa-solid fa-house me-3 text-gold-accent"></i>Trang Chủ</a></li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./rooms.html"><i class="fa-solid fa-bed me-3 text-gold-accent"></i>Khách Sạn & Phòng</a>
+                </li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./dinning.html"><i class="fa-solid fa-utensils me-3 text-gold-accent"></i>Ẩm Thực</a></li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./services.html"><i class="fa-solid fa-spa me-3 text-gold-accent"></i>Spa & Dịch Vụ</a>
+                </li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./gallery.html"><i class="fa-solid fa-images me-3 text-gold-accent"></i>Thư Viện Ảnh</a>
+                </li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./news.html"><i class="fa-solid fa-newspaper me-3 text-gold-accent"></i>Tin Tức</a></li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./about.html"><i class="fa-solid fa-circle-info me-3 text-gold-accent"></i>Giới Thiệu</a>
+                </li>
+                <li class="border-bottom"><a class="d-block py-3 px-4 text-decoration-none text-dark"
+                        href="./contact.html"><i class="fa-solid fa-envelope me-3 text-gold-accent"></i>Liên Hệ</a></li>
+                <li class="p-3">
+                    <a href="./search-results.html" class="btn-dat-ngay d-block text-center">Đặt Phòng Ngay</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ======================== HERO ======================== -->
+    <section class="account-hero">
+        <div class="container">
+            <h1 class="font-garamond">Tài khoản của tôi</h1>
+            <p class="opacity-75">Quản lý thông tin cá nhân và đặc quyền VinClub</p>
+        </div>
+    </section>
+
+    <!-- ======================== MAIN CONTENT ======================== -->
+    <div class="container account-container">
+        <div class="account-card row g-0">
+            <!-- Sidebar -->
+            <div class="col-lg-4 account-sidebar">
+                <div class="text-center">
+                    <div class="user-profile-circle" id="userInitial">U</div>
+                    <h4 class="mb-1" id="sideFullName">Người dùng</h4>
+                    <p class="text-muted small" id="sideIdentifier">email@example.com</p>
+                </div>
+
+                <ul class="sidebar-menu">
+                    <li><a href="javascript:void(0)" class="tab-link active" data-tab="profile"><i class="fa-regular fa-user"></i> Thông tin cá nhân</a></li>
+                    <li><a href="javascript:void(0)" class="tab-link" data-tab="orders"><i class="fa-solid fa-box-archive"></i> Đơn hàng của tôi</a></li>
+                    <li><a href="javascript:void(0)" class="tab-link" data-tab="wishlist"><i class="fa-solid fa-heart"></i> Danh sách yêu thích</a></li>
+                    <li><a href="javascript:void(0)" class="tab-link" data-tab="security"><i class="fa-solid fa-lock"></i> Đổi mật khẩu</a></li>
+                    <li><a href="javascript:void(0)" id="sidebarLogout" class="text-danger mt-4"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a></li>
+                </ul>
+            </div>
+
+            <!-- Content -->
+            <div class="col-lg-8 account-main">
+                <!-- Profile Tab -->
+                <div id="profile" class="tab-content active">
+                    <h3 class="font-garamond mb-4">Thông tin cá nhân</h3>
+                    <div class="row">
+                        <div class="col-md-6 info-group">
+                            <span class="info-label">Họ và tên</span>
+                            <div class="d-flex align-items-center">
+                                <span class="info-value" id="displayFullName">---</span>
+                                <span class="edit-badge">Sửa</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 info-group">
+                            <span class="info-label">Email / Số điện thoại</span>
+                            <div class="info-value" id="displayIdentifier">---</div>
+                        </div>
+                        <div class="col-md-6 info-group">
+                            <span class="info-label">Ngày sinh</span>
+                            <div class="d-flex align-items-center">
+                                <span class="info-value">14/05/2000</span>
+                                <span class="edit-badge">Sửa</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 info-group">
+                            <span class="info-label">Giới tính</span>
+                            <div class="d-flex align-items-center">
+                                <span class="info-value">Nam</span>
+                                <span class="edit-badge">Sửa</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vinclub-card mt-5">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <div class="rank-badge mb-2">Thẻ Vàng (Gold)</div>
+                                <h4 class="mb-0">VinClub Member</h4>
+                                <p class="small opacity-75 mb-0 mt-1">Mã thành viên: VC-88992211</p>
+                            </div>
+                            <img src="./assets/images/logo/favicon.png" alt="Star" style="height: 40px; filter: brightness(0) invert(1);">
+                        </div>
+                        <div class="mt-4">
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>Điểm tích lũy</span>
+                                <span>15,400 V-Point</span>
+                            </div>
+                            <div class="progress" style="height: 6px; background: rgba(255,255,255,0.2);">
+                                <div class="progress-bar bg-white" style="width: 65%;"></div>
+                            </div>
+                            <p class="small mt-2 mb-0 opacity-75">Tích lũy thêm 4,600 điểm để lên hạng Kim Cương</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orders Tab -->
+                <div id="orders" class="tab-content">
+                    <h3 class="font-garamond mb-4">Đơn hàng của tôi</h3>
+                    
+                    <!-- Mock Order 1 -->
+                    <div class="order-card d-flex justify-content-between align-items-center">
+                        <div class="d-flex gap-3">
+                            <div class="order-img" style="width: 80px; height: 80px; background: url('./assets/images/booking/hotel_flycam.png') center/cover; border-radius: 8px;"></div>
+                            <div>
+                                <h6 class="mb-1">Biệt thự hướng vườn (Garden View Villa)</h6>
+                                <p class="small text-muted mb-0">Thời gian: 24/05/2026 - 26/05/2026 (2 đêm)</p>
+                                <p class="small text-muted">Mã đơn hàng: #VP-123456</p>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <div class="mb-1"><span class="order-status status-completed">Đã hoàn thành</span></div>
+                            <div class="fw-bold text-navy">12,500,000 ₫</div>
+                        </div>
+                    </div>
+
+                    <!-- Mock Order 2 -->
+                    <div class="order-card d-flex justify-content-between align-items-center">
+                        <div class="d-flex gap-3">
+                            <div class="order-img" style="width: 80px; height: 80px; background: url('./assets/images/booking/hotel_lux.png') center/cover; border-radius: 8px;"></div>
+                            <div>
+                                <h6 class="mb-1">Presidential Suite</h6>
+                                <p class="small text-muted mb-0">Thời gian: 10/06/2026 - 12/06/2026 (2 đêm)</p>
+                                <p class="small text-muted">Mã đơn hàng: #VP-789012</p>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <div class="mb-1"><span class="order-status status-pending">Đang xử lý</span></div>
+                            <div class="fw-bold text-navy">45,000,000 ₫</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wishlist Tab -->
+                <div id="wishlist" class="tab-content">
+                    <h3 class="font-garamond mb-4">Danh sách yêu thích</h3>
+                    <p class="text-muted">Bạn chưa có phòng nào trong danh sách yêu thích.</p>
+                </div>
+
+                <!-- Security Tab -->
+                <div id="security" class="tab-content">
+                    <h3 class="font-garamond mb-4">Đổi mật khẩu</h3>
+                    <div class="row g-3" style="max-width: 400px;">
+                        <div class="col-12">
+                            <label class="form-label small fw-bold">Mật khẩu hiện tại</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label small fw-bold">Mật khẩu mới</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label small fw-bold">Xác nhận mật khẩu mới</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button class="btn btn-primary w-100 py-2">Cập nhật mật khẩu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="footer-vp">
+        <div class="container py-5 text-center">
+            <p class="mb-0 footer-copy">© 2026 Vinpearl Luxury Nha Trang. All Rights Reserved.</p>
+            <p class="mb-0 footer-copy">Nhóm 11 – HTWeb 2526 HK2</p>
+        </div>
+    </footer>
+
+    <script src="./assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (!currentUser || !currentUser.loggedIn) {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            const fullName = currentUser.fullName || currentUser.identifier;
+            const identifier = currentUser.identifier;
+
+            // Fill data
+            document.getElementById('sideFullName').innerText = fullName;
+            document.getElementById('displayFullName').innerText = fullName;
+            document.getElementById('sideIdentifier').innerText = identifier;
+            document.getElementById('displayIdentifier').innerText = identifier;
+            document.getElementById('userInitial').innerText = fullName.charAt(0).toUpperCase();
+
+            document.getElementById('sidebarLogout').onclick = () => {
+                if (confirm('Bạn có chắc chắn muốn đăng xuất?')) {
+                    localStorage.removeItem('currentUser');
+                    window.location.href = 'home.html';
+                }
+            };
+
+            // Tab Switching Logic
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            function showTab(tabId) {
+                // Update Sidebar
+                tabLinks.forEach(link => {
+                    if (link.getAttribute('data-tab') === tabId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+
+                // Update Content
+                tabContents.forEach(content => {
+                    if (content.id === tabId) {
+                        content.classList.add('active');
+                    } else {
+                        content.classList.remove('active');
+                    }
+                });
+
+                // Update URL Hash without jumping
+                history.pushState(null, null, `#${tabId}`);
+            }
+
+            tabLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    const tabId = link.getAttribute('data-tab');
+                    showTab(tabId);
+                });
+            });
+
+            // Check URL Hash on load
+            const hash = window.location.hash.replace('#', '');
+            if (hash && document.getElementById(hash)) {
+                showTab(hash);
+            }
+        });
+    </script>
+</body>
+
+</html>
